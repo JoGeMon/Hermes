@@ -1,0 +1,670 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"la",
+				"label"
+			],
+			[
+				"bigIn",
+				"bigInteger"
+			],
+			[
+				"big",
+				"bigInteger"
+			],
+			[
+				"tblC",
+				"tblCliente"
+			],
+			[
+				"on",
+				"onDelete"
+			],
+			[
+				"tbl",
+				"tblRegion"
+			],
+			[
+				"tblc",
+				"tblCliente"
+			],
+			[
+				"cas",
+				"cascade"
+			],
+			[
+				"fore",
+				"foreign"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"utf",
+				"utf8_encode"
+			],
+			[
+				"mysq",
+				"mysql_fetch_array"
+			],
+			[
+				"fun",
+				"fun	function …"
+			],
+			[
+				"l",
+				"li	Tag"
+			],
+			[
+				"mysql_fec",
+				"mysql_fetch_assoc"
+			],
+			[
+				"id",
+				"idNoticia"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"form",
+				"formCrear"
+			],
+			[
+				"mysql_e",
+				"mysql_error"
+			],
+			[
+				"mysql_fe",
+				"mysql_fetch_assoc"
+			],
+			[
+				"Err",
+				"error_log"
+			],
+			[
+				"db",
+				"dbname"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"s",
+				"style	Tag"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"li",
+				"li	Tag"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"mr",
+				"margin-top"
+			],
+			[
+				"imgM",
+				"imgMatricula"
+			],
+			[
+				"mari",
+				"margin-top"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"nav",
+				"navbar"
+			],
+			[
+				"Tip",
+				"tipddy_backend"
+			],
+			[
+				"Ba",
+				"BackendBundle"
+			],
+			[
+				"typ",
+				"typeRol"
+			],
+			[
+				"User",
+				"UserInterface"
+			],
+			[
+				"tit",
+				"setTitle"
+			],
+			[
+				"t",
+				"title"
+			],
+			[
+				"Surve",
+				"SurveyBundle"
+			],
+			[
+				"sl",
+				"slug"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"na",
+				"namespace"
+			],
+			[
+				"S",
+				"SurveyBundle"
+			],
+			[
+				"Ans",
+				"answerType"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/layout.blade.php",
+			"settings":
+			{
+				"buffer_size": 723,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/ficha.blade.php",
+			"settings":
+			{
+				"buffer_size": 1543,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"selected_items":
+		[
+			[
+				"pacl	",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Fun",
+				"Snippet: Function"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/xampp/htdocs/hermes/app/config/app.php",
+		"/C/Users/JoGe/Downloads/jquery-ui-1.11.2/jquery-ui-1.11.2/jquery-ui.js",
+		"/C/Users/JoGe/Downloads/jquery-ui-1.11.2/jquery-ui-1.11.2/jquery-ui.min.js",
+		"/D/xampp/htdocs/pHermes/capacitacion.php",
+		"/D/xampp/htdocs/hermes/app/config/database.php",
+		"/D/xampp/htdocs/hermes/app/database/migrations/2014_10_07_023417_primeraCarga.php",
+		"/D/xampp/htdocs/hermes/app/routes.php",
+		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
+		"/D/xampp/htdocs/hermes/app/views/ficha.php",
+		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
+		"/D/xampp/htdocs/ayekantun/admin/DB/dbNoticias.php",
+		"/D/xampp/htdocs/ayekantun/admin/loginController.php",
+		"/D/Pentaho/biserver-ce/tomcat/conf/server.xml",
+		"/D/descargas/hxh/Chat de WhatsApp con Gibson.txt",
+		"/D/creando datos3.sql",
+		"/D/xampp/htdocs/pHermes/index.php",
+		"/D/xampp/htdocs/pHermes/home.php",
+		"/D/creando datos.sql",
+		"/D/xampp/htdocs/pHermes/administracion.php",
+		"/D/xampp/htdocs/pHermes/video.php",
+		"/D/xampp/htdocs/pHermes/sig.php",
+		"/D/xampp/htdocs/pHermes/sk",
+		"/D/xampp/htdocs/ayekantun/ayekantun.php",
+		"/D/xampp/htdocs/ayekantun/cabecera.php",
+		"/D/xampp/htdocs/ayekantun/cabecera2.php",
+		"/D/xampp/htdocs/ayekantun/index.php",
+		"/D/xampp/htdocs/ayekantun/actividades.php",
+		"/D/xampp/htdocs/ayekantun/propuesta.php",
+		"/D/xampp/htdocs/ayekantun/admin/makeNoticia.php",
+		"/D/xampp/htdocs/ayekantun/admin/setNoticia.php",
+		"/D/xampp/htdocs/ayekantun/admin/noticiasController.php",
+		"/D/xampp/htdocs/ayekantun/css/mineduc.css",
+		"/D/xampp/htdocs/ayekantun/compromiso.php",
+		"/D/xampp/htdocs/ayekantun/admin/noticias.php",
+		"/D/xampp/htdocs/ayekantun/admin/imgNoticia.php",
+		"/D/xampp/htdocs/ayekantun/noticia.php",
+		"/D/xampp/htdocs/ayekantun/compromiso2.php",
+		"/D/xampp/htdocs/ayekantun/css/fotoEstilo.css",
+		"/D/xampp/htdocs/ayekantun/js/jquery.galleryview-3.0-dev.js",
+		"/D/xampp/htdocs/ayekantun/css/jquery.fancybox.css",
+		"/D/xampp/htdocs/ayekantun/js/jquery.easing.1.3.js",
+		"/D/xampp/htdocs/ayekantun/js/jquery.timers-1.2.js",
+		"/D/xampp/htdocs/ayekantun/css/fancybox_overlay.png",
+		"/D/xampp/htdocs/ayekantun/footer2.php",
+		"/D/xampp/htdocs/ayekantun/contacto.php",
+		"/D/xampp/htdocs/ayekantun/contacto2.php",
+		"/D/xampp/htdocs/ayekantun/js/ckeditor.js",
+		"/D/xampp/htdocs/ayekantun/noticia1.php",
+		"/C/Users/JoGe/AppData/Local/Temp/Rar$DR01.109/ckeditor/README.md",
+		"/D/xampp/htdocs/Eurogen/inc/conecta.php",
+		"/D/xampp/htdocs/hermo/class/conectaDB.php",
+		"/D/xampp/htdocs/Eurogen/inc/BDConexion.php",
+		"/D/xampp/htdocs/Eurogen/admin/productosListar.php",
+		"/D/xampp/htdocs/ayekantun/engine2/wowslider.js",
+		"/D/xampp/htdocs/ayekantun/engine2/script.js",
+		"/D/xampp/htdocs/ayekantun/engine2/style.mod.css",
+		"/D/xampp/htdocs/ayekantun/engine2/style.css",
+		"/D/xampp/htdocs/ayekantun/css/contenido.css",
+		"/D/xampp/htdocs/ayekantun/engine2/wowslider.mod.js",
+		"/D/xampp/htdocs/wow/index.html",
+		"/D/xampp/htdocs/ayekantun/header.php",
+		"/D/xampp/htdocs/ayekantun/footer.php",
+		"/D/xampp/htdocs/Aye/deWeb/index.php",
+		"/D/xampp/htdocs/Aye/deWeb/engine2/wowslider.js",
+		"/D/xampp/htdocs/Aye/deWeb/engine2/script.js",
+		"/D/xampp/htdocs/Aye/deWeb/engine2/wowslider.mod.js",
+		"/D/xampp/htdocs/Aye/deWeb/engine2/play.png",
+		"/D/xampp/htdocs/Aye/deWeb/engine2/style.mod.css",
+		"/D/xampp/htdocs/Aye/deWeb/js/jquery.featureList-1.0.js",
+		"/D/xampp/htdocs/Aye/deWeb/css/mineduc.css",
+		"/D/xampp/htdocs/Aye/deWeb/engine2/style.css",
+		"/D/xampp/htdocs/Aye/deWeb/engine2/jquery.js",
+		"/D/xampp/htdocs/Aye/deWeb/css/contenido.css",
+		"/D/xampp/htdocs/Aye/deWeb/css/jquery.fancybox.css",
+		"/D/xampp/htdocs/Aye/deWeb/css/featured-list.css",
+		"/D/xampp/htdocs/Aye/index.php",
+		"/D/xampp/htdocs/Aye/deWeb/index2.php",
+		"/D/xampp/htdocs/Aye/deWeb/engine2/stylenew.css",
+		"/D/xampp/htdocs/wow/engine1/style.css",
+		"/D/xampp/htdocs/Aye/deWeb/header.php",
+		"/D/xampp/htdocs/Aye/deWeb/css/header.css",
+		"/D/xampp/htdocs/Aye/deWeb/footer.php",
+		"/D/xampp/htdocs/Aye/deWeb/data2/images/dsc01544.jpg",
+		"/D/xampp/htdocs/Aye/deWeb/test.php",
+		"/D/xampp/htdocs/Aye/deWeb/js/jquery-1.10.2.js",
+		"/D/xampp/htdocs/Aye/deWeb/js/jquery.js",
+		"/D/xampp/htdocs/Aye/deWeb/_header.php",
+		"/C/Users/JoGe/Desktop/bomberman/README",
+		"/C/Users/JoGe/Desktop/Saturn.Bomberman/README",
+		"/D/xampp/htdocs/Aye/asset/css/mineduc.css",
+		"/D/xampp/htdocs/Aye/deWeb/js/jquery.fancybox.js",
+		"/C/Users/JoGe/Desktop/jquery.featureList.js",
+		"/D/xampp/htdocs/bs3/examples/offcanvas/index.html",
+		"/C/Users/JoGe/Desktop/jquery.featureList-1.0",
+		"/D/xampp/htdocs/Aye/deWeb/css/bootstrap.min.css",
+		"/D/xampp/htdocs/Aye/deWeb/engine1/style.css",
+		"/C/Users/JoGe/Desktop/Slides-SlidesJS-1/Slides-SlidesJS-1/examples/Linking/css/global.css",
+		"/D/xampp/htdocs/Aye/deWeb/header.css",
+		"/D/xampp/htdocs/Aye/web2.html",
+		"/D/xampp/htdocs/Aye/asset/css/estilo.css",
+		"/D/xampp/htdocs/Aye/indexST.php",
+		"/D/xampp/htdocs/ayekantun/index2.php",
+		"/D/xampp/htdocs/Aye/web2.hmtl.html",
+		"/D/xampp/htdocs/Aye/css/estilo.css",
+		"/D/Aye/index.php",
+		"/D/xampp/htdocs/ayekantun/asset/css/bootstrap.css",
+		"/D/xampp/htdocs/hermes/app/config/parameters.yml",
+		"/D/xampp/htdocs/tipsurvey/app/config/parameters.yml",
+		"/D/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Resources/views/Question/index.html.twig",
+		"/D/xampp/htdocs/tipsurvey/app/config/routing.yml",
+		"/D/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Controller/QuestionController.php",
+		"/D/xampp/htdocs/tipsurvey/app/config/security.yml",
+		"/D/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Resources/views/includes/top-bars-right.html.twig",
+		"/D/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Resources/config/routing.yml",
+		"/D/xampp/htdocs/tipsurvey/src/Tipddy/SecurityBundle/Resources/config/routing.yml",
+		"/D/xampp/htdocs/tipsurvey/app/config/parameters.yml.dist",
+		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Twig/Extension/UtilExtension.php",
+		"/C/xampp/htdocs/tipsurvey/app/config/routing.yml",
+		"/C/xampp/htdocs/tipsurvey/app/config/services.yml",
+		"/C/xampp/htdocs/tipsurvey/app/config/config.yml",
+		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Resources/config/services.yml",
+		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Listener/SessionControlListener.php",
+		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Resources/views/includes/left-menu.html.twig",
+		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Resources/views/includes/top-bars-left.html.twig",
+		"/C/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Resources/config/routing/survey.yml",
+		"/C/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Entity/Survey.php",
+		"/C/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Resources/views/Survey/index.html.twig",
+		"/C/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Controller/QuestionController.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Pie",
+			" ",
+			"'NULL'",
+			"hr",
+			"<div class=\"caption\">\n                                   <h4 class=\"media-heading\">Inducción a las bombas de agua</h4>\n                                   <p>El siguiente curso le enseñará a cómo se debe trabajar el mantenimiento de las bombas de agua, siguiendo los instructivos y procedimientos que la empresa le otorga</p>\n                                </div><!--<div class=\"caption\">-->",
+			"<div class=\"caption\">\n                                    <a href=\"video.php\">\n                                    <h4 class=\"media-heading\">Inducción a las bombas de agua</h4>\n                                    <p>El siguiente curso le enseñará a cómo se debe trabajar el mantenimiento de las bombas de agua, siguiendo los instructivos y procedimientos que la empresa le otorga</p>\n                                    </a>\n                                </div><!--<div class=\"caption\">-->",
+			"md-3",
+			"150",
+			"400",
+			"400x150",
+			"tblInfo",
+			"foot",
+			"width",
+			"img",
+			"noticias",
+			"medios",
+			"#header_contenedor",
+			"header_contenedor",
+			"#header_contenedor",
+			"header_contenedor",
+			"imgMineduc",
+			">\n",
+			"hei",
+			"createElem",
+			"createE",
+			"outerWidth",
+			"gv_galleryWrap",
+			"panelWrap",
+			"755",
+			"panel_wrap",
+			"width",
+			"755",
+			"width",
+			"gv_galleryWrap",
+			"wrap",
+			"footer",
+			"editor",
+			"titular",
+			"detalle",
+			"Titular",
+			"bajada",
+			"titular",
+			"makeNoticia",
+			"load",
+			"editNoticia",
+			"ckedit",
+			"$noticia",
+			"titular",
+			"news",
+			"<?",
+			"$noticia['id']",
+			"id",
+			"                    ",
+			"z-inde",
+			"z-index",
+			"abso",
+			"z-inde",
+			"228",
+			"paddin",
+			"z-inde",
+			"Lucida",
+			"JPG",
+			"#wowslider-container1",
+			"container1",
+			"wowslider-container1",
+			"engine1",
+			"data1",
+			"minedu",
+			"medios",
+			"medio",
+			"slide",
+			"header_contenedor_jardin",
+			"p",
+			"11",
+			"css",
+			"z-index",
+			"11",
+			"1",
+			"11",
+			"prev",
+			"wowslider-container1",
+			"data",
+			"11",
+			"data1",
+			"contai",
+			"current",
+			"tabs",
+			"/i",
+			"tabs li a",
+			"#tabs li a",
+			"img",
+			"imgMa",
+			"ul",
+			"#wow-sli",
+			"col",
+			"article",
+			"col-lg",
+			"article",
+			"ver_",
+			"ima",
+			"arti",
+			"row",
+			"lg-",
+			"feat",
+			"featu",
+			"feature",
+			"images",
+			"img",
+			"images",
+			"bottom",
+			"ws_ima",
+			"add",
+			"nth-child",
+			"div:nth-child",
+			" div:nth-child(3)",
+			"#wowslider-container2 > div.ws_images > div:nth-child(3)",
+			"z-index",
+			"#wowslider-container2",
+			"#wowslider-container2 > div.ws_images > div:nth-child",
+			"#wowslider-container2 > div.ws_images > div:nth-child(3)",
+			"imgMatri",
+			"wowslider-container2",
+			"wowslider-container",
+			"slider",
+			"130px",
+			"header_min",
+			"minedu",
+			"header_contenedor"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"NULL"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/layout.blade.php",
+					"settings":
+					{
+						"buffer_size": 723,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								634,
+								634
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/ficha.blade.php",
+					"settings":
+					{
+						"buffer_size": 1543,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1467,
+								1467
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 290.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 185.0,
+	"status_bar_visible": true
+}
