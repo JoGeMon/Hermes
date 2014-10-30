@@ -211,7 +211,7 @@
 			"file": "app/views/layout.blade.php",
 			"settings":
 			{
-				"buffer_size": 723,
+				"buffer_size": 827,
 				"line_ending": "Windows"
 			}
 		},
@@ -219,7 +219,7 @@
 			"file": "app/views/ficha.blade.php",
 			"settings":
 			{
-				"buffer_size": 1543,
+				"buffer_size": 2092,
 				"line_ending": "Windows"
 			}
 		}
@@ -551,7 +551,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -559,20 +559,21 @@
 					"file": "app/views/layout.blade.php",
 					"settings":
 					{
-						"buffer_size": 723,
+						"buffer_size": 827,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								634,
-								634
+								447,
+								447
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -585,23 +586,24 @@
 					"file": "app/views/ficha.blade.php",
 					"settings":
 					{
-						"buffer_size": 1543,
+						"buffer_size": 2092,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1467,
-								1467
+								1710,
+								1725
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 290.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

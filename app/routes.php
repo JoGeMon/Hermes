@@ -11,12 +11,17 @@
 |
 */
 
-Route::get('/', function()
+Route::GET('/', function()
 {
 	return View::make('hello');
 });
 
-Route::get('/ficha', function()
-{
-	return View::make('ficha');
-});
+Route::GET('/ficha', array(
+	'as' => 'ficha',
+	'uses' => 'FichaController@index'
+));
+
+Route::POST('/ficha/guardar', array(
+	'as' => 'ficha/guardar',
+	'uses' => 'FichaController@store'
+));

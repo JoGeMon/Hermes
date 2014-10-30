@@ -6,8 +6,10 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	{{ HTML::script('assets/js/jquery.js'); }}
+	{{ HTML::script('assets/js/jquery.dataTables.js'); }}
 	{{ HTML::script('assets/js/bootstrap.js'); }}
 	{{ HTML::style('assets/css/bootstrap.min.css'); }}
+	{{ HTML::style('assets/css/dataTables.css'); }}
 	<body>
 		<div class="container">
 			<div class="row">

@@ -1,49 +1,104 @@
 @extends('layout')
 	@section('contenido')
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#atenciones').dataTable({
+				"oLanguage" : {
+					"sProcessing":     "Procesando...",
+				    "sLengthMenu":     "Mostrar _MENU_ registros",
+				    "sZeroRecords":    "No se encontraron resultados",
+				    "sEmptyTable":     "Ningún dato disponible en esta tabla",
+				    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+				    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+				    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+				    "sInfoPostFix":    "",
+				    "sSearch":         "Buscar:",
+				    "sUrl":            "",
+				    "sInfoThousands":  ",",
+				    "sLoadingRecords": "Cargando...",
+				    "oPaginate": {
+				        "sFirst":    "Primero",
+				        "sLast":     "Último",
+				        "sNext":     "Siguiente",
+				        "sPrevious": "Anterior"
+				    },
+				    "oAria": {
+				        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+				        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+				    }
+				}
+			});
+		});
+	</script>
 		<p>La siguiente ficha tiene por objetivo, informar sobre las distintas atenciones realizadas por el área de producción. Se solicita rigurosidad a la hora de llenar los datos.</p>
-		<div class="panel panel-default">
+		{{'Traigo: '.$fichas}};
+
+		<div class="panel panel-primary">
 			<div class="panel-heading">Ingresode requerimiento</div>
 			<div class="panel-body">
-				{{ Form::open(array('url' => 'foo/bar', )) }}
+				{{ Form::open(array('route' => 'ficha/guardar')) }}
 				<div class="row">
-					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-						{{ Form::label('nombreCliente','Cliente')}}
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						{{ Form::label('idCliente','N° cliente')}}
+						{{ Form::text('idCliente','',array('class' => 'form-control'))}}
+					</div>
+					<div class="col-lg-6 col-md-6 col-sd-6 col-xs-6">
+						{{ Form::label('nombreCliente','Nombre Cliente')}}
 						{{ Form::text('nombreCliente','',array('class' => 'form-control'))}}
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-						{{ Form::label('rutCliente','Rut Empresa')}}
-						{{ Form::text('rutCliente','',array('class' => 'form-control'))}}
+						{{ Form::label('tipoAtencion','Tipo de atención')}}
+						{{ Form::select('tipoAtencion',array(
+							'' => 'Selecciona una opción',
+							'Mantencion' => "Mantención",
+							'Emergencia' => "Emeregencia"
+						),'',array('class' => 'form-control'))}}
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sd-12 col-xs-12">
 						{{Form::label('direccionCliente', 'Dirección cliente')}}
-						{{Form::text('direccionCliente', '', array('class'=> 'form-control' ))}}
+						{{Form::text('direccionCliente', '', array('class'=> 'form-control', 'readonly' => 'readonly'  ))}}
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sd-12 col-xs-12">
-						{{ Form::label('tipoAtencion','Tipo de atención')}}
-						{{ Form::select('tipoAtencion',array(
-							'Mantencion' => "Mantención",
-							'Emergencia' => "Emeregencia"
-						))}}
+						{{Form::label('detalleAtencion', 'Detalle de atenci&oacute;n')}}
+						{{Form::textarea('detalleAtencion','',array('class' => 'form-control'))}}
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 ol-sd-12 col-xs-12" align="right">
+						{{Form::submit('Crear',array('class' => 'btn btn-primary'))}}
 					</div>
 				</div>
 				{{ Form::close() }}
 			</div>
 		</div>
-		<div class="well">
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>Cliente</th>
-						<th>Motivo</th>
-						<th>Acciones</th>
-					</tr>
-				</thead>
-				<tbody>
-				</tbody>
-			</table>
+		<div class="panel panel-primary">
+			<div class="panel-heading">Detalle de atenciones</div>
+			<div class="panel-body">
+				<button class="btn btn-primary pull-right">Ingesar atención</button>
+				<br/><br/><br/>
+				<table id="atenciones">
+					<thead>
+						<tr class="active">
+							<th>Cliente</th>
+							<th>Motivo</th>
+							<th>Acciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach($fichas as $ficha)
+							<tr>
+								<td>{{$ficha->nombreCliente}}</td>
+								<td>{{$ficha->motivo}}</td>
+								<td>Acciones</td>
+							</tr>
+						@endforeach
+					</tbody>
+				</table>
+			</div>
 		</div>
 	@stop
