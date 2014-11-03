@@ -43,15 +43,15 @@
 						{{ Form::text('idCliente','',array('class' => 'form-control'))}}
 					</div>
 					<div class="col-lg-6 col-md-6 col-sd-6 col-xs-6">
-						{{ Form::label('nombreCliente','Nombre Cliente')}}
-						{{ Form::text('nombreCliente','',array('class' => 'form-control'))}}
+						{{ Form::label('cliente','Nombre Cliente')}}
+						{{ Form::select('cliente',$clientes,'',array('class' => 'form-control'))}}
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 						{{ Form::label('tipoAtencion','Tipo de atención')}}
 						{{ Form::select('tipoAtencion',array(
 							'' => 'Selecciona una opción',
-							'Mantencion' => "Mantención",
-							'Emergencia' => "Emeregencia"
+							'1' => "Mantención",
+							'2' => "Emeregencia"
 						),'',array('class' => 'form-control'))}}
 					</div>
 				</div>
@@ -92,8 +92,8 @@
 					<tbody>
 						@foreach($fichas as $ficha)
 							<tr>
-								<td>{{$ficha->nombreCliente}}</td>
-								<td>{{$ficha->motivo}}</td>
+								<td>{{$ficha->idCliente}}</td>
+								<td>{{$ficha->detalleProblema}}</td>
 								<td>Acciones</td>
 							</tr>
 						@endforeach

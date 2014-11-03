@@ -10,7 +10,12 @@ class fichaController extends \BaseController {
 	public function index()
 	{
 		$fichas = Ficha::all();
-		return(View::make('ficha',array('fichas' => $fichas)));
+		$clientes = Cliente::lists('nombreCliente','idCliente');
+		return(View::make('ficha',array(
+			'fichas' => $fichas, 
+			'clientes' => $clientes
+			)
+		));
 	}
 
 
@@ -34,10 +39,9 @@ class fichaController extends \BaseController {
 	{
 		$ficha = new Ficha();
 		$formFicha = Input::all();
-		dd($formFicha);
-		$ficha->idTipoServicio = $formFicha->tipoAtencion;
-		$ficha->idCliente = $formFicha->idCliente;
-		$ficha->detalleProblema = $formFicha->detalleAtencion;
+		$ficha->idTipoServicio = $formFicha['tipoAtencion'];
+		$ficha->idCliente = $formFicha['cliente'];
+		$ficha->detalleProblema = $formFicha['detalleAtencion'];
 		$ficha->save();
 	}
 
