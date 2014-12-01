@@ -18,6 +18,23 @@ class fichaController extends \BaseController {
 		));
 	}
 
+	/**
+	 * Despliega todas las atenciones realizadas
+	 *
+	 * @return Response
+	 */
+	public function listar()
+	{
+		$fichas = Ficha::all();
+		$clientes = Cliente::lists('nombreCliente','idCliente');
+		return(View::make('listaAtenciones',array(
+			'fichas' => $fichas, 
+			'clientes' => $clientes
+			)
+		));
+	}
+
+
 
 	/**
 	 * Show the form for creating a new resource.

@@ -21,6 +21,12 @@ Route::GET('/ficha', array(
 	'uses' => 'FichaController@index'
 ));
 
+Route::get('/ficha/listar/',array(
+	'as' => 'lista',
+	'uses' => 'FichaController@listar'
+
+));
+
 Route::POST('/ficha/guardar', array(
 	'as' => 'ficha/guardar',
 	'uses' => 'FichaController@store'

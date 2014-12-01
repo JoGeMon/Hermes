@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"te",
+				"text"
+			],
+			[
+				"fic",
+				"fichas"
+			],
+			[
+				"form",
+				"formFicha"
+			],
+			[
 				"la",
 				"label"
 			],
@@ -70,10 +82,6 @@
 			[
 				"in",
 				"input	Tag"
-			],
-			[
-				"form",
-				"formCrear"
 			],
 			[
 				"mysql_e",
@@ -208,18 +216,43 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/layout.blade.php",
+			"file": "app/views/listaAtenciones.blade.php",
 			"settings":
 			{
-				"buffer_size": 827,
-				"line_ending": "Windows"
+				"buffer_size": 1650,
+				"line_ending": "Windows",
+				"name": "lista"
 			}
 		},
 		{
 			"file": "app/views/ficha.blade.php",
 			"settings":
 			{
-				"buffer_size": 2092,
+				"buffer_size": 3683,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/routes.php",
+			"settings":
+			{
+				"buffer_size": 740,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/FichaController.php",
+			"settings":
+			{
+				"buffer_size": 1692,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layout.blade.php",
+			"settings":
+			{
+				"buffer_size": 1124,
 				"line_ending": "Windows"
 			}
 		}
@@ -260,18 +293,27 @@
 	},
 	"file_history":
 	[
+		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
+		"/D/xampp/htdocs/ayekantun/admin/noticias.php",
+		"/D/xampp/htdocs/ayekantun/admin/index.php",
+		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
+		"/D/xampp/htdocs/ayekantun/admin/loginController.php",
+		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
+		"/D/xampp/htdocs/hermes/app/models/Ficha.php",
+		"/D/xampp/htdocs/hermes/app/routes.php",
+		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
+		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
+		"/D/xampp/htdocs/hermes/public/assets/js/jquery.dataTables.js",
+		"/D/xampp/htdocs/hermes/app/models/User.php",
+		"/D/xampp/htdocs/hermes/app/controllers/fichaController.php",
 		"/D/xampp/htdocs/hermes/app/config/app.php",
 		"/C/Users/JoGe/Downloads/jquery-ui-1.11.2/jquery-ui-1.11.2/jquery-ui.js",
 		"/C/Users/JoGe/Downloads/jquery-ui-1.11.2/jquery-ui-1.11.2/jquery-ui.min.js",
 		"/D/xampp/htdocs/pHermes/capacitacion.php",
 		"/D/xampp/htdocs/hermes/app/config/database.php",
 		"/D/xampp/htdocs/hermes/app/database/migrations/2014_10_07_023417_primeraCarga.php",
-		"/D/xampp/htdocs/hermes/app/routes.php",
-		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
 		"/D/xampp/htdocs/hermes/app/views/ficha.php",
-		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
 		"/D/xampp/htdocs/ayekantun/admin/DB/dbNoticias.php",
-		"/D/xampp/htdocs/ayekantun/admin/loginController.php",
 		"/D/Pentaho/biserver-ce/tomcat/conf/server.xml",
 		"/D/descargas/hxh/Chat de WhatsApp con Gibson.txt",
 		"/D/creando datos3.sql",
@@ -293,7 +335,6 @@
 		"/D/xampp/htdocs/ayekantun/admin/noticiasController.php",
 		"/D/xampp/htdocs/ayekantun/css/mineduc.css",
 		"/D/xampp/htdocs/ayekantun/compromiso.php",
-		"/D/xampp/htdocs/ayekantun/admin/noticias.php",
 		"/D/xampp/htdocs/ayekantun/admin/imgNoticia.php",
 		"/D/xampp/htdocs/ayekantun/noticia.php",
 		"/D/xampp/htdocs/ayekantun/compromiso2.php",
@@ -379,15 +420,7 @@
 		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Twig/Extension/UtilExtension.php",
 		"/C/xampp/htdocs/tipsurvey/app/config/routing.yml",
 		"/C/xampp/htdocs/tipsurvey/app/config/services.yml",
-		"/C/xampp/htdocs/tipsurvey/app/config/config.yml",
-		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Resources/config/services.yml",
-		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Listener/SessionControlListener.php",
-		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Resources/views/includes/left-menu.html.twig",
-		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Resources/views/includes/top-bars-left.html.twig",
-		"/C/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Resources/config/routing/survey.yml",
-		"/C/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Entity/Survey.php",
-		"/C/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Resources/views/Survey/index.html.twig",
-		"/C/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Controller/QuestionController.php"
+		"/C/xampp/htdocs/tipsurvey/app/config/config.yml"
 	],
 	"find":
 	{
@@ -405,6 +438,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"iCliente",
+			"$formFicha",
+			"9",
+			"8",
+			"8 col-md-8 col-sd-8 col-xs-8",
+			"detalleAtencion",
+			"\"next\"",
+			"next",
+			"empty",
 			"Pie",
 			" ",
 			"'NULL'",
@@ -523,16 +565,7 @@
 			"#wowslider-container2 > div.ws_images > div:nth-child(3)",
 			"z-index",
 			"#wowslider-container2",
-			"#wowslider-container2 > div.ws_images > div:nth-child",
-			"#wowslider-container2 > div.ws_images > div:nth-child(3)",
-			"imgMatri",
-			"wowslider-container2",
-			"wowslider-container",
-			"slider",
-			"130px",
-			"header_min",
-			"minedu",
-			"header_contenedor"
+			"#wowslider-container2 > div.ws_images > div:nth-child"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -551,32 +584,33 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layout.blade.php",
+					"file": "app/views/listaAtenciones.blade.php",
 					"settings":
 					{
-						"buffer_size": 827,
+						"buffer_size": 1650,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								447,
-								447
+								1469,
+								1469
 							]
 						],
 						"settings":
 						{
+							"auto_name": "lista",
 							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 342.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -586,15 +620,15 @@
 					"file": "app/views/ficha.blade.php",
 					"settings":
 					{
-						"buffer_size": 2092,
+						"buffer_size": 3683,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1710,
-								1725
+								3178,
+								3178
 							]
 						],
 						"settings":
@@ -603,7 +637,87 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 1311.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/routes.php",
+					"settings":
+					{
+						"buffer_size": 740,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								577,
+								577
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/FichaController.php",
+					"settings":
+					{
+						"buffer_size": 1692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								449,
+								449
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/layout.blade.php",
+					"settings":
+					{
+						"buffer_size": 1124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								260,
+								263
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 342.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
