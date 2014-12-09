@@ -36,8 +36,10 @@
 			<thead>
 				<tr class="active">
 					<th>Cliente</th>
-					<th>Motivo</th>
-					<th>Acciones</th>
+					<th>Tipo</th>
+					<th>Fecha recibida</th>
+					<th>Fecha pactada</th>
+					<th>Estado</th>
 				</tr>
 			</thead>
 			<tbody>
