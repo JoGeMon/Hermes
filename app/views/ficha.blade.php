@@ -98,6 +98,11 @@
 					
 					{{ Form::label('detalleAtencion','Detalle atención')}}
 					{{ Form::textarea('detalleAtencion','',array('class' => 'form-control'))}}
+					{{ Form::label('precio','Valorización')}}
+					<div class="input-group">
+						<span class="input-group-addon">$</span>
+						{{ Form::text('precio','',array('class' => 'form-control'))}}
+					</div>
       				{{ Form::close()}}
       			</div>
       			<div class="modal-footer">
