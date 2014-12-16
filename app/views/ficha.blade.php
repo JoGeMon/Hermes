@@ -8,8 +8,11 @@
 				$('#crear').hide();
 			});
 			$( "#datepicker" ).datepicker({ dateFormat: "dd-mm-yy" });
-	
 		});
+
+		function getCliente(idCliente){
+			$('#boxCliente').load('ficha/cliente/'+idCliente);
+		}
 	</script>
 
 	<div class="row">
@@ -30,7 +33,7 @@
 						<div class="row">
 							<div class="col-lg-6">
 								{{ Form::label('rutCliente','RUT cliente')}}
-								{{ Form::text('rutCliente','',array('class' => 'form-control'))}}
+								{{ Form::text('rutCliente','',array('class' => 'form-control', 'onBlur' => 'getCliente(1)'))}}
 							</div>
 							<div class="col-lg-3">
 								{{ Form::label('tipoAtencion','Tipo de atención')}}
@@ -46,9 +49,9 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-12">
+							<div class="col-lg-12" id="boxCliente">
 								{{ Form::label('cliente','Nombre Cliente')}}
-								{{ Form::text('cliente','',array('class' => 'form-control', 'readonly' =>  'true'))}}
+								{{ Form::text('cliente','',array('class' => 'form-control', 'readonly' =>  'true', 'id' => 'cliente'))}}
 							</div>
 						</div>
 						<br/>
@@ -95,7 +98,6 @@
 								'4' => "Calderas",
 								'5' => "Proyectos",
 								),'',array('class' => 'form-control'))}}
-					
 					{{ Form::label('detalleAtencion','Detalle atención')}}
 					{{ Form::textarea('detalleAtencion','',array('class' => 'form-control'))}}
 					{{ Form::label('precio','Valorización')}}

@@ -13,7 +13,7 @@
 
 Route::GET('/', function()
 {
-	return View::make('hello');
+	return View::make('home');
 });
 
 Route::GET('/ficha', array(
@@ -21,7 +21,7 @@ Route::GET('/ficha', array(
 	'uses' => 'FichaController@index'
 ));
 
-Route::get('/ficha/listar/',array(
+Route::GET('/ficha/listar/',array(
 	'as' => 'lista',
 	'uses' => 'FichaController@listar'
 
@@ -30,4 +30,14 @@ Route::get('/ficha/listar/',array(
 Route::POST('/ficha/guardar', array(
 	'as' => 'ficha/guardar',
 	'uses' => 'FichaController@store'
+));
+
+Route::POST('/ficha/agregar', array(
+	'as' => 'ficha/agregar',
+	'uses' => 'FichaController@store'
+));
+
+Route::GET('/ficha/cliente/{id}',array(
+	'as' => 'cliente',
+	'uses' => 'FichaController@pinta'
 ));

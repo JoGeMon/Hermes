@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"head",
+				"header	Tag"
+			],
+			[
+				"cont",
+				"container"
+			],
+			[
+				"ac",
+				"actionNoticia"
+			],
+			[
+				"array_co",
+				"array_count_values"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
 				"te",
 				"text"
 			],
@@ -216,19 +236,26 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/listaAtenciones.blade.php",
-			"settings":
-			{
-				"buffer_size": 1650,
-				"line_ending": "Windows",
-				"name": "lista"
-			}
-		},
-		{
 			"file": "app/views/ficha.blade.php",
 			"settings":
 			{
-				"buffer_size": 3683,
+				"buffer_size": 4046,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/layout.blade.php",
+			"settings":
+			{
+				"buffer_size": 1141,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/xampp/htdocs/ayekantun/cabecera2.php",
+			"settings":
+			{
+				"buffer_size": 3955,
 				"line_ending": "Windows"
 			}
 		},
@@ -236,23 +263,15 @@
 			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 740,
+				"buffer_size": 841,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/FichaController.php",
+			"file": "app/views/home.blade.php",
 			"settings":
 			{
-				"buffer_size": 1692,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/layout.blade.php",
-			"settings":
-			{
-				"buffer_size": 1124,
+				"buffer_size": 1322,
 				"line_ending": "Windows"
 			}
 		}
@@ -293,16 +312,31 @@
 	},
 	"file_history":
 	[
-		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
+		"/D/xampp/htdocs/ayekantun/noticia.php",
+		"/D/xampp/htdocs/ayekantun/_header.php",
+		"/D/xampp/htdocs/html5/index.php",
 		"/D/xampp/htdocs/ayekantun/admin/noticias.php",
+		"/D/xampp/htdocs/Aye/deWeb/index.php",
+		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
+		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
+		"/D/xampp/htdocs/Eurogen/admin/ingresa.php",
+		"/D/xampp/htdocs/Eurogen/inc/_sesion.php",
+		"/D/xampp/htdocs/Eurogen/admin/marcas.php",
+		"/D/xampp/htdocs/Eurogen/admin/login.php",
+		"/D/xampp/htdocs/Eurogen/css/estilo.css",
+		"/D/xampp/htdocs/ayekantun/admin/makeNoticia.php",
+		"/D/xampp/htdocs/Eurogen/menu.php",
+		"/D/xampp/htdocs/Eurogen/cabecera.php",
+		"/D/xampp/htdocs/Eurogen/index.php",
+		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
+		"/D/xampp/htdocs/hermes/app/views/listaAtenciones.blade.php",
+		"/D/xampp/htdocs/hermes/app/routes.php",
+		"/C/Users/JoGe/Downloads/playlist.m3u",
 		"/D/xampp/htdocs/ayekantun/admin/index.php",
 		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
 		"/D/xampp/htdocs/ayekantun/admin/loginController.php",
 		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
 		"/D/xampp/htdocs/hermes/app/models/Ficha.php",
-		"/D/xampp/htdocs/hermes/app/routes.php",
-		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
-		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
 		"/D/xampp/htdocs/hermes/public/assets/js/jquery.dataTables.js",
 		"/D/xampp/htdocs/hermes/app/models/User.php",
 		"/D/xampp/htdocs/hermes/app/controllers/fichaController.php",
@@ -330,13 +364,11 @@
 		"/D/xampp/htdocs/ayekantun/index.php",
 		"/D/xampp/htdocs/ayekantun/actividades.php",
 		"/D/xampp/htdocs/ayekantun/propuesta.php",
-		"/D/xampp/htdocs/ayekantun/admin/makeNoticia.php",
 		"/D/xampp/htdocs/ayekantun/admin/setNoticia.php",
 		"/D/xampp/htdocs/ayekantun/admin/noticiasController.php",
 		"/D/xampp/htdocs/ayekantun/css/mineduc.css",
 		"/D/xampp/htdocs/ayekantun/compromiso.php",
 		"/D/xampp/htdocs/ayekantun/admin/imgNoticia.php",
-		"/D/xampp/htdocs/ayekantun/noticia.php",
 		"/D/xampp/htdocs/ayekantun/compromiso2.php",
 		"/D/xampp/htdocs/ayekantun/css/fotoEstilo.css",
 		"/D/xampp/htdocs/ayekantun/js/jquery.galleryview-3.0-dev.js",
@@ -363,7 +395,6 @@
 		"/D/xampp/htdocs/wow/index.html",
 		"/D/xampp/htdocs/ayekantun/header.php",
 		"/D/xampp/htdocs/ayekantun/footer.php",
-		"/D/xampp/htdocs/Aye/deWeb/index.php",
 		"/D/xampp/htdocs/Aye/deWeb/engine2/wowslider.js",
 		"/D/xampp/htdocs/Aye/deWeb/engine2/script.js",
 		"/D/xampp/htdocs/Aye/deWeb/engine2/wowslider.mod.js",
@@ -408,19 +439,7 @@
 		"/D/Aye/index.php",
 		"/D/xampp/htdocs/ayekantun/asset/css/bootstrap.css",
 		"/D/xampp/htdocs/hermes/app/config/parameters.yml",
-		"/D/xampp/htdocs/tipsurvey/app/config/parameters.yml",
-		"/D/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Resources/views/Question/index.html.twig",
-		"/D/xampp/htdocs/tipsurvey/app/config/routing.yml",
-		"/D/xampp/htdocs/tipsurvey/src/Tipddy/SurveyBundle/Controller/QuestionController.php",
-		"/D/xampp/htdocs/tipsurvey/app/config/security.yml",
-		"/D/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Resources/views/includes/top-bars-right.html.twig",
-		"/D/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Resources/config/routing.yml",
-		"/D/xampp/htdocs/tipsurvey/src/Tipddy/SecurityBundle/Resources/config/routing.yml",
-		"/D/xampp/htdocs/tipsurvey/app/config/parameters.yml.dist",
-		"/C/xampp/htdocs/tipsurvey/src/Tipddy/BackendBundle/Twig/Extension/UtilExtension.php",
-		"/C/xampp/htdocs/tipsurvey/app/config/routing.yml",
-		"/C/xampp/htdocs/tipsurvey/app/config/services.yml",
-		"/C/xampp/htdocs/tipsurvey/app/config/config.yml"
+		"/D/xampp/htdocs/tipsurvey/app/config/parameters.yml"
 	],
 	"find":
 	{
@@ -438,6 +457,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"charset",
+			"img",
+			"gray",
+			".container",
+			"col-md",
 			"iCliente",
 			"$formFicha",
 			"9",
@@ -560,19 +584,15 @@
 			"ws_ima",
 			"add",
 			"nth-child",
-			"div:nth-child",
-			" div:nth-child(3)",
-			"#wowslider-container2 > div.ws_images > div:nth-child(3)",
-			"z-index",
-			"#wowslider-container2",
-			"#wowslider-container2 > div.ws_images > div:nth-child"
+			"div:nth-child"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"col-lg",
 			"NULL"
 		],
 		"reverse": false,
@@ -584,51 +604,50 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/listaAtenciones.blade.php",
+					"file": "app/views/ficha.blade.php",
 					"settings":
 					{
-						"buffer_size": 1650,
+						"buffer_size": 4046,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1469,
-								1469
+								1568,
+								1568
 							]
 						],
 						"settings":
 						{
-							"auto_name": "lista",
 							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 342.0,
+						"translation.y": 627.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/ficha.blade.php",
+					"file": "app/views/layout.blade.php",
 					"settings":
 					{
-						"buffer_size": 3683,
+						"buffer_size": 1141,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3178,
-								3178
+								891,
+								891
 							]
 						],
 						"settings":
@@ -637,51 +656,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1311.0,
+						"translation.y": 171.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/routes.php",
+					"file": "/D/xampp/htdocs/ayekantun/cabecera2.php",
 					"settings":
 					{
-						"buffer_size": 740,
+						"buffer_size": 3955,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								577,
-								577
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/controllers/FichaController.php",
-					"settings":
-					{
-						"buffer_size": 1692,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								449,
-								449
+								0,
+								3955
 							]
 						],
 						"settings":
@@ -696,28 +689,54 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/views/layout.blade.php",
+					"buffer": 3,
+					"file": "app/routes.php",
 					"settings":
 					{
-						"buffer_size": 1124,
+						"buffer_size": 841,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								260,
-								263
+								447,
+								447
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/home.blade.php",
+					"settings":
+					{
+						"buffer_size": 1322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1176,
+								1176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 342.0,
+						"translation.y": 252.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

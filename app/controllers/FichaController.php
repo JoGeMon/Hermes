@@ -110,5 +110,16 @@ class fichaController extends \BaseController {
 		//
 	}
 
+	/**
+	 * Muestra los datos de un cliente en particular
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function pinta($id)
+	{
+		$nombreCliente = "No existe el  cliente buscado";
+		return View::make("nombreCliente",array('nombreCliente' => $nombreCliente));
+	}
 
 }
