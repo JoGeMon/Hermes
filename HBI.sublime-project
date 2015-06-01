@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "/D/xampp/htdocs/hermes"
+		},
+		{
+			"path": "/D/xampp/htdocs/startbootstrap-simple-sidebar-1.0.4"
 		}
 	]
 }

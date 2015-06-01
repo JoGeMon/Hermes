@@ -37,16 +37,26 @@
 				<tr class="active">
 					<th>Cliente</th>
 					<th>Tipo</th>
-					<th>Fecha recibida</th>
 					<th>Fecha pactada</th>
 					<th>Estado</th>
+					<th>Acciones</th>
 				</tr>
 			</thead>
 			<tbody>
 				@foreach($fichas as $ficha)
 					<tr>
-						<td>{{$ficha->idCliente}}</td>
-						<td>{{$ficha->detalleProblema}}</td>
+						<td>{{$ficha->nombreCliente}}</td>
+						@if($ficha->idTipoAtencion == 1)
+							<td>Matención</td>
+						@elseif($ficha->idTipoAtencion == 2)
+							<td>Emergencia</td>
+						@endif
+						<td>{{$ficha->fechaPactada}}</td>
+						@if($ficha->estado)
+							<td>Realizada</td>
+						@else
+							<td>No realizada</td>
+						@endif
 						<td>Acciones</td>
 					</tr>
 				@endforeach

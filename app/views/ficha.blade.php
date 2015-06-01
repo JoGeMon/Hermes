@@ -16,26 +16,18 @@
 	</script>
 
 	<div class="row">
-		<div class="col-lg-12 text-center">
-			<div class="alert alert-warning">
-				<p>La siguiente ficha tiene por objetivo, informar sobre las distintas atenciones realizadas por el área de producción. Se solicita rigurosidad a la hora de llenar los datos.</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-lg-12">
+		<div class="col-md-12">
 			<div id="crear">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Ingreso de requerimiento</div>
 					<div class="panel-body">
 						{{ Form::open(array('route' => 'ficha/guardar')) }}
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-md-6">
 								{{ Form::label('rutCliente','RUT cliente')}}
-								{{ Form::text('rutCliente','',array('class' => 'form-control', 'onBlur' => 'getCliente(1)'))}}
+								{{ Form::text('rutCliente','',array('class' => 'form-control', 'onBlur' => 'getCliente(3)'))}}
 							</div>
-							<div class="col-lg-3">
+							<div class="col-md-3">
 								{{ Form::label('tipoAtencion','Tipo de atención')}}
 								{{ Form::select('tipoAtencion',array(
 									'' => 'Selecciona una opción',
@@ -43,26 +35,26 @@
 									'2' => "Emeregencia"
 									),'',array('class' => 'form-control'))}}
 							</div>
-							<div class="col-lg-3">
+							<div class="col-md-3">
 								{{Form::label('fechaPactada','Fecha de atención')}}
 								{{Form::text('fechaPactada','',array('class' => 'form-control', 'id' => 'datepicker'))}}
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-12" id="boxCliente">
+							<div class="col-md-12" id="boxCliente">
 								{{ Form::label('cliente','Nombre Cliente')}}
 								{{ Form::text('cliente','',array('class' => 'form-control', 'readonly' =>  'true', 'id' => 'cliente'))}}
 							</div>
 						</div>
 						<br/>
 						<div class="row">
-							<div class="col-lg-3">
+							<div class="col-md-3">
 								<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalProducto"><span class="glyphicon glyphicon-plus-sign"></span> Añadir atención</button>
 							</div>
 						</div>
 						<br/>
 						<div class="row">
-							<div class="col-lg-12" align="right">
+							<div class="col-md-12" align="right">
 								<a href="" class="btn btn-danger" id="cerrar">Cerrar</a>
 								{{Form::submit('Crear',array('class' => 'btn btn-primary'))}}
 							</div>
@@ -75,7 +67,7 @@
 	</div>
 	
 	<div class="row">
-		<div class="col-lg-12">
+		<div class="col-md-12">
 			<div id="lista"></div>
 		</div>
 	</div>

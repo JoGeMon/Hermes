@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"cl",
+				"cliente"
+			],
+			[
 				"head",
 				"header	Tag"
 			],
@@ -236,42 +240,53 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/ficha.blade.php",
+			"file": "/D/Dropbox/Cargas Hermes/Julio.sql",
 			"settings":
 			{
-				"buffer_size": 4046,
+				"buffer_size": 13773,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/layout.blade.php",
+			"contents": "INSERT INTO tblDetalleAtencion VALUES\n(NULL, '1', '1', '1', NULL),\n(NULL, '2', '1', '1', NULL),\n(NULL, '3', '1', '1', NULL),\n(NULL, '4', '1', '1', NULL),\n(NULL, '5', '1', '1', NULL),\n(NULL, '6', '1', '1', NULL),\n(NULL, '7', '1', '1', NULL),\n(NULL, '8', '1', '1', NULL),\n(NULL, '9', '1', '1', NULL),\n(NULL, '10', '1', '1', NULL),\n(NULL, '11', '1', '1', NULL),\n(NULL, '12', '1', '1', NULL),\n(NULL, '13', '1', '1', NULL),\n(NULL, '14', '1', '5', NULL),\n(NULL, '15', '1', '1', NULL),\n(NULL, '16', '1', '5', NULL),\n(NULL, '17', '1', '5', NULL),\n(NULL, '18', '1', '1', NULL),\n(NULL, '19', '1', '1', NULL),\n(NULL, '20', '1', '1', NULL),\n(NULL, '21', '1', '1', NULL),\n(NULL, '22', '1', '5', NULL),\n(NULL, '23', '1', '1', NULL),\n(NULL, '24', '1', '5', NULL),\n(NULL, '25', '1', '1', NULL),\n(NULL, '26', '1', '5', NULL),\n(NULL, '27', '1', '1', NULL),\n(NULL, '28', '1', '1', NULL),\n(NULL, '29', '1', '5', NULL),\n(NULL, '30', '1', '5', NULL),\n(NULL, '31', '1', '5', NULL),\n(NULL, '32', '1', '1', NULL),\n(NULL, '33', '1', '5', NULL),\n(NULL, '34', '1', '1', NULL),\n(NULL, '35', '1', '5', NULL),\n(NULL, '36', '1', '1', NULL),\n(NULL, '37', '1', '3', NULL),\n(NULL, '38', '1', '1', NULL),\n(NULL, '39', '1', '1', NULL),\n(NULL, '40', '1', '1', NULL),\n(NULL, '41', '1', '1', NULL),\n(NULL, '42', '1', '1', NULL),\n(NULL, '43', '1', '1', NULL),\n(NULL, '44', '1', '1', NULL),\n(NULL, '45', '1', '1', NULL),\n(NULL, '46', '1', '1', NULL),\n(NULL, '47', '1', '1', NULL),\n(NULL, '48', '1', '1', NULL),\n(NULL, '49', '1', '3', NULL),\n(NULL, '50', '1', '4', NULL),\n(NULL, '51', '1', '4', NULL),\n(NULL, '52', '1', '4', NULL),\n(NULL, '53', '1', '4', NULL),\n(NULL, '54', '1', '4', NULL),\n(NULL, '55', '1', '4', NULL),\n(NULL, '56', '1', '4', NULL),\n(NULL, '57', '1', '4', NULL),\n(NULL, '58', '1', '4', NULL),\n(NULL, '59', '1', '4', NULL),\n(NULL, '60', '1', '4', NULL),\n(NULL, '61', '1', '4', NULL),\n(NULL, '62', '1', '4', NULL),\n(NULL, '63', '1', '4', NULL),\n(NULL, '64', '1', '3', NULL),\n(NULL, '65', '1', '4', NULL),\n(NULL, '66', '1', '4', NULL),\n(NULL, '67', '1', '4', NULL),\n(NULL, '68', '1', '4', NULL),\n(NULL, '69', '1', '1', NULL),\n(NULL, '70', '1', '5', NULL),\n(NULL, '71', '1', '4', NULL),\n(NULL, '72', '1', '4', NULL),\n(NULL, '73', '1', '4', NULL),\n(NULL, '74', '1', '5', NULL),\n(NULL, '75', '1', '4', NULL),\n(NULL, '76', '1', '4', NULL),\n(NULL, '77', '1', '4', NULL),\n(NULL, '78', '1', '4', NULL),\n(NULL, '79', '1', '4', NULL),\n(NULL, '80', '1', '4', NULL),\n(NULL, '81', '1', '3', NULL),\n(NULL, '82', '1', '5', NULL),\n(NULL, '83', '1', '1', NULL),\n(NULL, '84', '1', '3', NULL),\n(NULL, '85', '1', '3', NULL),\n(NULL, '86', '1', '5', NULL),\n(NULL, '87', '1', '4', NULL),\n(NULL, '88', '1', '4', NULL),\n(NULL, '89', '1', '4', NULL),\n(NULL, '90', '1', '4', NULL),\n(NULL, '91', '1', '4', NULL),\n(NULL, '92', '1', '3', NULL),\n(NULL, '93', '1', '5', NULL),\n(NULL, '94', '1', '4', NULL),\n(NULL, '95', '1', '5', NULL),\n(NULL, '96', '1', '3', NULL),\n(NULL, '98', '1', '4', NULL),\n(NULL, '99', '1', '4', NULL),\n(NULL, '100', '1', '1', NULL),\n(NULL, '101', '1', '4', NULL),\n(NULL, '102', '1', '3', NULL),\n(NULL, '103', '1', '1', NULL),\n(NULL, '104', '1', '4', NULL),\n(NULL, '105', '1', '4', NULL),\n(NULL, '106', '1', '5', NULL),\n(NULL, '107', '1', '5', NULL);",
+			"file": "/D/Dropbox/Cargas Hermes/Enero.sql",
+			"file_size": 14314,
+			"file_write_time": 130746636717727201,
 			"settings":
 			{
-				"buffer_size": 1141,
+				"buffer_size": 3216,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/xampp/htdocs/ayekantun/cabecera2.php",
+			"file": "/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
 			"settings":
 			{
-				"buffer_size": 3955,
+				"buffer_size": 769,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/routes.php",
+			"file": "app/controllers/FichaController.php",
 			"settings":
 			{
-				"buffer_size": 841,
+				"buffer_size": 1874,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/home.blade.php",
+			"file": "app/models/Ficha.php",
 			"settings":
 			{
-				"buffer_size": 1322,
+				"buffer_size": 375,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/listaAtenciones.blade.php",
+			"settings":
+			{
+				"buffer_size": 1952,
 				"line_ending": "Windows"
 			}
 		}
@@ -312,13 +327,36 @@
 	},
 	"file_history":
 	[
+		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
+		"/D/Dropbox/Cargas Hermes/Junio.sql",
+		"/D/Dropbox/Cargas Hermes/Abril.sql",
+		"/D/Dropbox/Cargas Hermes/Clientes.sql",
+		"/D/Dropbox/Cargas Hermes/Marzo.sql",
+		"/D/Dropbox/Cargas Hermes/Enero.sql",
+		"/C/Users/JoGe/Downloads/playlist (1).m3u8",
+		"/D/xampp/htdocs/hermes/app/config/database.php",
+		"/C/Users/JoGe/Downloads/ss_playlist_20150407.m3u",
+		"/D/Dropbox/canales.m3u",
+		"/C/Users/JoGe/Downloads/ssiptvPlaylist20141222.m3u",
+		"/D/xampp/htdocs/hermes/app/views/nombreCliente.blade.php",
+		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
+		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
+		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
+		"/D/Pentaho/biserver-ce/pentaho-cdf/readme.txt",
+		"/D/xampp/htdocs/ajax.php",
+		"/D/Program Files (x86)/ESET/MiNODLogin/servidores.xml",
+		"/D/xampp/htdocs/hermes/app/routes.php",
+		"/C/Users/JoGe/Downloads/start.xml",
+		"/D/Pentaho/biserver-ce/tomcat/logs/catalina.out",
+		"/C/Users/JoGe/Downloads/Multi lista.m3u",
+		"/D/descargas/contacts.csv",
+		"/D/xampp/htdocs/hermes/app/views/home.blade.php",
+		"/D/xampp/htdocs/ayekantun/cabecera2.php",
 		"/D/xampp/htdocs/ayekantun/noticia.php",
 		"/D/xampp/htdocs/ayekantun/_header.php",
 		"/D/xampp/htdocs/html5/index.php",
 		"/D/xampp/htdocs/ayekantun/admin/noticias.php",
 		"/D/xampp/htdocs/Aye/deWeb/index.php",
-		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
-		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
 		"/D/xampp/htdocs/Eurogen/admin/ingresa.php",
 		"/D/xampp/htdocs/Eurogen/inc/_sesion.php",
 		"/D/xampp/htdocs/Eurogen/admin/marcas.php",
@@ -328,14 +366,11 @@
 		"/D/xampp/htdocs/Eurogen/menu.php",
 		"/D/xampp/htdocs/Eurogen/cabecera.php",
 		"/D/xampp/htdocs/Eurogen/index.php",
-		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
 		"/D/xampp/htdocs/hermes/app/views/listaAtenciones.blade.php",
-		"/D/xampp/htdocs/hermes/app/routes.php",
 		"/C/Users/JoGe/Downloads/playlist.m3u",
 		"/D/xampp/htdocs/ayekantun/admin/index.php",
 		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
 		"/D/xampp/htdocs/ayekantun/admin/loginController.php",
-		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
 		"/D/xampp/htdocs/hermes/app/models/Ficha.php",
 		"/D/xampp/htdocs/hermes/public/assets/js/jquery.dataTables.js",
 		"/D/xampp/htdocs/hermes/app/models/User.php",
@@ -344,7 +379,6 @@
 		"/C/Users/JoGe/Downloads/jquery-ui-1.11.2/jquery-ui-1.11.2/jquery-ui.js",
 		"/C/Users/JoGe/Downloads/jquery-ui-1.11.2/jquery-ui-1.11.2/jquery-ui.min.js",
 		"/D/xampp/htdocs/pHermes/capacitacion.php",
-		"/D/xampp/htdocs/hermes/app/config/database.php",
 		"/D/xampp/htdocs/hermes/app/database/migrations/2014_10_07_023417_primeraCarga.php",
 		"/D/xampp/htdocs/hermes/app/views/ficha.php",
 		"/D/xampp/htdocs/ayekantun/admin/DB/dbNoticias.php",
@@ -360,7 +394,6 @@
 		"/D/xampp/htdocs/pHermes/sk",
 		"/D/xampp/htdocs/ayekantun/ayekantun.php",
 		"/D/xampp/htdocs/ayekantun/cabecera.php",
-		"/D/xampp/htdocs/ayekantun/cabecera2.php",
 		"/D/xampp/htdocs/ayekantun/index.php",
 		"/D/xampp/htdocs/ayekantun/actividades.php",
 		"/D/xampp/htdocs/ayekantun/propuesta.php",
@@ -421,25 +454,7 @@
 		"/D/xampp/htdocs/Aye/deWeb/_header.php",
 		"/C/Users/JoGe/Desktop/bomberman/README",
 		"/C/Users/JoGe/Desktop/Saturn.Bomberman/README",
-		"/D/xampp/htdocs/Aye/asset/css/mineduc.css",
-		"/D/xampp/htdocs/Aye/deWeb/js/jquery.fancybox.js",
-		"/C/Users/JoGe/Desktop/jquery.featureList.js",
-		"/D/xampp/htdocs/bs3/examples/offcanvas/index.html",
-		"/C/Users/JoGe/Desktop/jquery.featureList-1.0",
-		"/D/xampp/htdocs/Aye/deWeb/css/bootstrap.min.css",
-		"/D/xampp/htdocs/Aye/deWeb/engine1/style.css",
-		"/C/Users/JoGe/Desktop/Slides-SlidesJS-1/Slides-SlidesJS-1/examples/Linking/css/global.css",
-		"/D/xampp/htdocs/Aye/deWeb/header.css",
-		"/D/xampp/htdocs/Aye/web2.html",
-		"/D/xampp/htdocs/Aye/asset/css/estilo.css",
-		"/D/xampp/htdocs/Aye/indexST.php",
-		"/D/xampp/htdocs/ayekantun/index2.php",
-		"/D/xampp/htdocs/Aye/web2.hmtl.html",
-		"/D/xampp/htdocs/Aye/css/estilo.css",
-		"/D/Aye/index.php",
-		"/D/xampp/htdocs/ayekantun/asset/css/bootstrap.css",
-		"/D/xampp/htdocs/hermes/app/config/parameters.yml",
-		"/D/xampp/htdocs/tipsurvey/app/config/parameters.yml"
+		"/D/xampp/htdocs/Aye/asset/css/mineduc.css"
 	],
 	"find":
 	{
@@ -457,6 +472,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"idCliente",
+			"getCliente",
+			"java",
+			" http",
+			"http",
+			"#EXTINF",
+			"Nick",
+			"#EXTINF:-1, ",
+			"MTV",
 			"charset",
 			"img",
 			"gray",
@@ -575,19 +599,10 @@
 			"row",
 			"lg-",
 			"feat",
-			"featu",
-			"feature",
-			"images",
-			"img",
-			"images",
-			"bottom",
-			"ws_ima",
-			"add",
-			"nth-child",
-			"div:nth-child"
+			"featu"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -604,69 +619,41 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/ficha.blade.php",
+					"file": "/D/Dropbox/Cargas Hermes/Julio.sql",
 					"settings":
 					{
-						"buffer_size": 4046,
+						"buffer_size": 13773,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1568,
-								1568
+								13269,
+								13269
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/SQL/SQL.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 627.0,
+						"translation.y": 1482.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/layout.blade.php",
+					"file": "/D/Dropbox/Cargas Hermes/Enero.sql",
 					"settings":
 					{
-						"buffer_size": 1141,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								891,
-								891
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 171.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/xampp/htdocs/ayekantun/cabecera2.php",
-					"settings":
-					{
-						"buffer_size": 3955,
+						"buffer_size": 3216,
 						"regions":
 						{
 						},
@@ -674,7 +661,88 @@
 						[
 							[
 								0,
-								3955
+								3216
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1430.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
+					"settings":
+					{
+						"buffer_size": 769,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/FichaController.php",
+					"settings":
+					{
+						"buffer_size": 1874,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								483,
+								483
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/models/Ficha.php",
+					"settings":
+					{
+						"buffer_size": 375,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								353,
+								353
 							]
 						],
 						"settings":
@@ -689,54 +757,28 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/routes.php",
+					"buffer": 5,
+					"file": "app/views/listaAtenciones.blade.php",
 					"settings":
 					{
-						"buffer_size": 841,
+						"buffer_size": 1952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								447,
-								447
+								1860,
+								1860
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 171.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/home.blade.php",
-					"settings":
-					{
-						"buffer_size": 1322,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1176,
-								1176
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 252.0,
+						"translation.y": 627.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

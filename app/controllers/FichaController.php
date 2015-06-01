@@ -25,11 +25,10 @@ class fichaController extends \BaseController {
 	 */
 	public function listar()
 	{
-		$fichas = Ficha::all();
-		$clientes = Cliente::lists('nombreCliente','idCliente');
+		$fichas = Ficha::getFichas();
+		//dd($fichas);
 		return(View::make('listaAtenciones',array(
-			'fichas' => $fichas, 
-			'clientes' => $clientes
+			'fichas' => $fichas
 			)
 		));
 	}
@@ -118,8 +117,8 @@ class fichaController extends \BaseController {
 	 */
 	public function pinta($id)
 	{
-		$nombreCliente = "No existe el  cliente buscado";
-		return View::make("nombreCliente",array('nombreCliente' => $nombreCliente));
+		$cliente = Cliente::getCliente($id);	
+		return View::make("nombreCliente",array('cliente' => $cliente));
 	}
 
 }
