@@ -267,27 +267,49 @@
 			}
 		},
 		{
-			"file": "app/controllers/FichaController.php",
-			"settings":
-			{
-				"buffer_size": 1874,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/Ficha.php",
-			"settings":
-			{
-				"buffer_size": 375,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "app/views/listaAtenciones.blade.php",
 			"settings":
 			{
 				"buffer_size": 1952,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/layout.blade.php",
+			"settings":
+			{
+				"buffer_size": 2528,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"description\" content=\"\">\n    <meta name=\"author\" content=\"\">\n\n    <title>Simple Sidebar - Start Bootstrap Template</title>\n\n    <!-- Bootstrap Core CSS -->\n    <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- Custom CSS -->\n    <link href=\"css/simple-sidebar.css\" rel=\"stylesheet\">\n    \n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n        <script src=\"https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js\"></script>\n        <script src=\"https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n\n<body>\n\n    <div id=\"wrapper\">\n\n        <!-- Sidebar -->\n        <div id=\"sidebar-wrapper\">\n            <ul class=\"sidebar-nav\">\n                <li class=\"sidebar-brand\">\n                    <a href=\"#\">\n                        Start Bootstrap\n                    </a>\n                </li>\n                <li>\n                    <a href=\"#\">Dashboard</a>\n                </li>\n                <li>\n                    <a href=\"#\">Shortcuts</a>\n                </li>\n                <li>\n                    <a href=\"#\">Overview</a>\n                </li>\n                <li>\n                    <a href=\"#\">Events</a>\n                </li>\n                <li>\n                    <a href=\"#\">About</a>\n                </li>\n                <li>\n                    <a href=\"#\">Services</a>\n                </li>\n                <li>\n                    <a href=\"#\">Contact</a>\n                </li>\n            </ul>\n        </div>\n        <!-- /#sidebar-wrapper -->\n\n        <!-- Page Content -->\n        <div id=\"page-content-wrapper\">\n            <div class=\"container-fluid\">\n                <div class=\"row\">\n                    <div class=\"col-lg-12\">\n                        <h1>Simple Sidebar</h1>\n                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>\n                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>\n                        <a href=\"#menu-toggle\" class=\"btn btn-default\" id=\"menu-toggle\">Toggle Menu</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <!-- /#page-content-wrapper -->\n\n    </div>\n    <!-- /#wrapper -->\n\n    <!-- jQuery -->\n    <script src=\"js/jquery.js\"></script>\n\n    <!-- Bootstrap Core JavaScript -->\n    <script src=\"js/bootstrap.min.js\"></script>\n\n    <!-- Menu Toggle Script -->\n    <script>\n    $(\"#menu-toggle\").click(function(e) {\n        e.preventDefault();\n        $(\"#wrapper\").toggleClass(\"toggled\");\n    });\n    </script>\n\n</body>\n\n</html>\n",
+			"file": "/D/xampp/htdocs/startbootstrap-simple-sidebar-1.0.4/index.html",
+			"file_size": 3163,
+			"file_write_time": 130729807120000000,
+			"settings":
+			{
+				"buffer_size": 3167,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "	<!DOCTYPE html>\n<html lang=\"en\">\n	<head>\n		<meta charset=\"UTF-8\" />\n		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> \n		<title>Cloud Admin Dashboard</title>\n		<meta name=\"description\" content=\"Cloud Admin Panel\" />\n		<meta name=\"keywords\" content=\"Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Bootstrap, Light weight Admin Dashboard,Light weight, Light weight Admin, Light weight Dashboard\" />\n		<meta name=\"author\" content=\"Bootstrap Gallery\" />\n		<link rel=\"shortcut icon\" href=\"img/favicon.ico\">\n		\n		<!-- Bootstrap CSS -->\n		<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">\n\n		<!-- Animate CSS -->\n		<link href=\"css/animate.css\" rel=\"stylesheet\" media=\"screen\">\n\n		<!-- date range -->\n		<link rel=\"stylesheet\" type=\"text/css\" href=\"css/daterange.css\">\n\n		<!-- Main CSS -->\n		<link href=\"css/main.css\" rel=\"stylesheet\" media=\"screen\">\n\n		<!-- Slidebar CSS -->\n		<link rel=\"stylesheet\" type=\"text/css\" href=\"css/slidebars.css\">\n\n		<!-- Font Awesome -->\n		<link href=\"fonts/font-awesome.min.css\" rel=\"stylesheet\">\n\n		<!-- Metrize Fonts -->\n		<link href=\"fonts/metrize.css\" rel=\"stylesheet\">\n\n		<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->\n		<!--[if lt IE 9]>\n			<script src=\"js/html5shiv.js\"></script>\n			<script src=\"js/respond.min.js\"></script>\n		<![endif]-->\n\n	</head>  \n\n	<body>\n\n		<!-- Left sidebar start -->\n		<aside id=\"sidebar\">\n\n			<!-- Logo starts -->\n			<a href=\"#\" class=\"logo\">\n				<img src=\"img/logo.png\" alt=\"logo\">\n			</a>\n			<!-- Logo ends -->\n\n			<!-- Menu start -->\n			<div id='menu'>\n				<ul>\n					<li class='highlight'>\n						<a href='index.html'>\n							<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe007;\"></div>\n							<span>Dashboard</span>\n						</a>\n					</li>\n					<li>\n						<a href='graphs.html'>\n							<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0f8;\"></div>\n							<span>Graphs</span>\n						</a>\n					</li>\n					<li class='has-sub'>\n						<a href='#'>\n							<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe052;\"></div>\n							<span>Ui Elements</span>\n						</a>\n						<ul>\n							<li>\n								<a href='panels.html'>\n									<span>Panel &amp; List Groups</span>\n								</a>\n							</li>\n							<li>\n								<a href='buttons.html'>\n									<span>Buttons</span>\n								</a>\n							</li>\n							<li>\n								<a href='grid.html'>\n									<span>Grid</span>\n								</a>\n							</li>\n							<li>\n								<a href='ui-elements.html'>\n									<span>More</span>\n								</a>\n							</li>\n						</ul>\n					</li>\n					<li class='has-sub'>\n						<a href='#'>\n							<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0ab;\"></div>\n							<span>Forms</span>\n						</a>\n						<ul>\n							<li>\n								<a href='form.html'>\n									<span>Form Elements</span>\n								</a>\n							</li>\n							<li>\n								<a href='form-wizard.html'>\n									<span>Form Wizards</span>\n								</a>\n							</li>\n							<li>\n								<a href=\"editor.html\">\n									<span>Wysihtml Editor</span>\n								</a>\n							</li>\n						</ul>\n					</li>\n					<li>\n						<a href='gallery.html'>\n							<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0e6;\"></div>\n							<span>Gallery</span>\n						</a>\n					</li>\n					<li>\n						<a href=\"tables.html\">\n							<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0f2;\"></div>\n							<span>Tables</span>\n						</a>\n					</li>\n					<li class='has-sub'>\n						<a href='#'>\n							<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0a0;\"></div>\n							<span>Bonus Pages</span>\n						</a>\n						<ul>\n							<li>\n								<a href='invoice.html'>\n									<span>Invoice</span>\n								</a>\n							</li>\n							<li>\n								<a href='calendar.html'>\n									<span>Calendar</span>\n								</a>\n							</li>\n							<li>\n								<a href='login.html'>\n									<span>Login</span>\n								</a>\n							</li>\n							<li>\n								<a href='404.html'>\n									<span>404</span>\n								</a>\n							</li>\n							<li>\n								<a href='default.html'>\n									<span>Default</span>\n								</a>\n							</li>\n						</ul>\n					</li>\n					<li>\n						<a href='maps.html'>\n							<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe089;\"></div>\n							<span>Vector Maps</span>\n						</a>\n					</li>\n					<li>\n						<a href='notifications.html'>\n							<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0e9;\"></div>\n							<span>Notifications</span>\n						</a>\n					</li>\n					<li>\n						<a href='typography.html'>\n							<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe019;\"></div>\n							<span>Typography</span>\n						</a>\n					</li>\n				</ul>\n			</div>\n			<!-- Menu End -->\n\n			<!-- Extras starts -->\n			<div class=\"extras\">\n				<div class=\"ex-wrapper\">\n					<div class=\"alert alert-info\">\n						<strong>Heads up!</strong> This alert needs your attention, but it's not super important.\n					</div>\n				</div>\n			</div>\n			<!-- Extras ends -->\n		</aside>\n		<!-- Left sidebar end -->\n\n		<!-- Dashboard Wrapper Start -->\n		<div class=\"dashboard-wrapper\">\n\n			<!-- Header start -->\n			<header>\n				<ul class=\"pull-left\" id=\"left-nav\">\n					<li class=\"hidden-lg hidden-md hidden-sm\">\n						<div class=\"logo-mob clearfix\">\n							<h2><div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0db;\"></div><span>Cloud Admin</span></h2>\n						</div>\n					</li>\n					<li class=\"hidden-xs\">\n						<a href=\"#\" class=\"btn btn-info btn-sm\">V1</a>\n					</li>\n					<li>\n						<div class=\"custom-search hidden-sm hidden-xs pull-left\">\n							<input type=\"text\" class=\"search-query\" placeholder=\"Search here\">\n							<i class=\"fa fa-search\"></i>\n						</div>\n					</li>\n				</ul>\n				<div class=\"pull-right\">\n					<ul id=\"mini-nav\" class=\"clearfix\">\n						<li class=\"list-box hidden-xs\">\n							<a id=\"drop1\" href=\"#\" role=\"button\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n								<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe129;\"></div>\n							</a>\n							<span class=\"info-label red-bg animated rubberBand\">7</span>\n							<ul class=\"dropdown-menu flipInX animated messages\">\n								<li class=\"dropdown-header\">You have 7 messages</li>\n								<li>\n									<div class=\"icon\">\n										<img src=\"img/admin10.png\" alt=\"Browser\">\n									</div>\n									<div class=\"details\">\n										<strong class=\"text-danger\">Willams</strong>\n										<span>Firefox is a free, open-source web browser from Mozilla.</span>\n									</div>\n								</li>\n								<li>\n									<div class=\"icon\">\n										<img src=\"img/admin6.png\" alt=\"Browser\">\n									</div>\n									<div class=\"details\">\n										<strong class=\"text-info\">Sunny</strong>\n										<span>Internet Explorer is a free web browser from Microsoft.</span>\n									</div>\n								</li>\n								<li>\n									<div class=\"icon\">\n										<img src=\"img/admin3.png\" alt=\"Browser\">\n									</div>\n									<div class=\"details\">\n										<strong class=\"text-info\">James</strong>\n										<span>Safari is known for its sleek design and ease of use.</span>\n									</div>\n								</li>\n							</ul>\n						</li>\n						<li class=\"list-box hidden-xs\">\n							<a id=\"drop2\" href=\"#\" role=\"button\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n								<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0e3;\"></div>\n							</a>\n							<span class=\"info-label blue-bg animated rubberBand\">3</span>\n							<ul class=\"dropdown-menu fadeInUp animated messages\">\n								<li class=\"dropdown-header\">Recent Chat</li>\n								<div class=\"chats clearfix\">\n									<p class=\"chat them\">\n									James, I'm going to be a little late.\n									</p>\n									<p class=\"chat me\">\n									S'Okay, Dude. You know your lines...?\n									</p>\n									<p class=\"chat them\">\n									I know em, I don't know what order they come in...\n									</p>\n									<p class=\"chat me\">\n									We'll work it out...\n									</p>\n								</div>\n							</ul>\n						</li>\n						<li class=\"list-box hidden-xs dropdown\">\n							<a id=\"drop3\" href=\"#\" role=\"button\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n								<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0ca;\"></div>\n							</a>\n							<span class=\"info-label green-bg animated rubberBand\">6</span>\n							<ul class=\"flipInX animated dropdown-menu stats-widget clearfix\">\n							<li>\n								<h5 class=\"text-success\">$37895</h5>\n								<p>Revenue <span class=\"text-success\">+2%</span></p>\n								<div class=\"progress progress-xs\">\n									<div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 40%\">\n										<span class=\"sr-only\">40% Complete (success)</span>\n									</div>\n								</div>\n							</li>\n							<li>\n								<h5 class=\"text-info\">47,892</h5>\n								<p>Downloads <span class=\"text-info\">+39%</span></p>\n								<div class=\"progress progress-xs\">\n									<div class=\"progress-bar progress-bar-info\" role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 40%\">\n										<span class=\"sr-only\">40% Complete (info)</span>\n									</div>\n								</div>\n							</li>\n							<li>\n								<h5 class=\"text-danger\">28214</h5>\n								<p>Uploads <span class=\"text-danger\">-7%</span></p>\n								<div class=\"progress progress-xs\">\n									<div class=\"progress-bar progress-bar-danger\" role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 40%\">\n										<span class=\"sr-only\">40% Complete (danger)</span>\n									</div>\n								</div>\n							</li>\n						</ul>\n						</li>\n						<li class=\"list-box hidden-xs dropdown\">\n							<a id=\"drop1\" href=\"#\" role=\"button\" class=\"dropdown-toggle current-user\" data-toggle=\"dropdown\">\n								Sandy <b class=\"caret\"></b>\n							</a>\n							<ul class=\"dropdown-menu sm fadeInUp animated messages\">\n								<li class=\"dropdown-content\">\n									<a href=\"#\">Edit Profile</a>\n									<a href=\"#\">Change Password</a>\n									<a href=\"#\">Settings</a>\n									<a href=\"login.html\">Logout</a>\n								</li>\n							</ul>\n						</li>\n						<li class=\"list-box hidden-lg hidden-md hidden-sm\" id=\"mob-nav\">\n							<a href=\"#\">\n								<i class=\"fa fa-reorder\"></i>\n							</a>\n						</li>\n					</ul>\n				</div>\n			</header>\n			<!-- Header ends -->\n\n			<!-- Right sidebar start -->\n			<div class=\"sb-slidebar sb-right sb-close\">\n\n				<!-- User Profile Start -->\n        <section class=\"user-profile\">\n          <div class=\"profile-container\">\n            <img src=\"img/admin1.png\" class=\"user-img\" alt=\"User Image\">\n            <div class=\"desc\">\n              <h4>John Doe</h4>\n              <p class=\"text-info\">UX Designer</p>\n            </div>\n          </div>\n          <ul class=\"ftr-link\">\n            <li class=\"active\">\n              <a href=\"javascript:;\">\n                <div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe033;\"></div>985\n              </a>\n            </li>\n            <li>\n              <a href=\"javascript:;\" class=\"text-success\">\n                <div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0b9;\"></div> 999\n              </a>\n            </li>\n            <li>\n              <a href=\"javascript:;\" class=\"text-pink\">\n                <div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0e3;\"></div> 143\n              </a>\n            </li>\n          </ul>\n        </section>\n        <!-- User Profile End -->\n\n        <!-- Online Users start -->\n        <div class=\"block\">\n          <div class=\"heading\">Users Online</div>\n          <div class=\"wrapper\">\n            <!-- Online Users Start -->\n            <ul class=\"online-users\">\n              <li>\n                <a href=\"\" data-lastname=\"Sandhya\" data-status=\"online\" data-original-title=\"\">\n                  <span>Sunny</span>\n                  <div class=\"user-status online\"></div>\n                </a>\n              </li>\n              <li>\n                <a href=\"\" data-lastname=\"Sandhya\" data-status=\"online\" data-original-title=\"\">\n                  <span>Henrik</span>\n                  <div class=\"user-status online\"></div>\n                </a>\n              </li>\n              <li>\n                <a href=\"\" data-lastname=\"Sandhya\" data-status=\"online\" data-original-title=\"\">\n                  <span>John Doe</span>\n                  <div class=\"user-status busy\"></div>\n                </a>\n              </li>\n              <li>\n                <a href=\"\" data-lastname=\"Sandhya\" data-status=\"online\" data-original-title=\"\">\n                  <span>Fleming</span>\n                  <div class=\"user-status away\"></div>\n                </a>\n              </li>\n              <li>\n                <a href=\"\" data-lastname=\"Sandhya\" data-status=\"online\" data-original-title=\"\">\n                  <span>Wills</span>\n                  <div class=\"user-status\"></div>\n                </a>\n              </li>\n            </ul>\n            <!-- Online Users End -->\n          </div>\n        </div>\n        <!-- Online Users end -->\n\n        <!-- Checkout start -->\n        <div class=\"block\">\n          <div class=\"heading\">Checkout</div>\n          <ul class=\"cart\">\n            <li class=\"cart-item\">\n              <span class=\"cart-item-pic\">\n                <img src=\"img/admin2.png\" alt=\"EarthSquare\">\n              </span>\n              Item #1\n              <span class=\"cart-item-desc\">Description</span>\n              <span class=\"cart-item-price\">$16.80</span>\n            </li>\n            <li class=\"cart-item\">\n              <span class=\"cart-item-pic\">\n                <img src=\"img/admin4.png\" alt=\"EarthSquare\">\n              </span>\n              Item #2\n              <span class=\"cart-item-desc\">Description</span>\n              <span class=\"cart-item-price\">$15.00</span>\n            </li>\n            <li class=\"cart-item\">\n              <span class=\"cart-item-pic\">\n                <img src=\"img/admin8.png\" alt=\"EarthSquare\">\n              </span>\n              Item #3\n              <span class=\"cart-item-desc\">Description</span>\n              <span class=\"cart-item-price\">$23.00</span>\n            </li>\n          </ul>\n          <div class=\"cart-bottom\">\n            Total: $54.80\n            <a href=\"#\" class=\"cart-button\">Continue</a>\n          </div>\n        </div>\n        <!-- Checkout end -->\n\n        <!-- Notifications Start -->\n        <div class=\"block\">\n          <div class=\"heading\">Notifications</div>\n          <!-- Notifications -->\n          <ul class=\"infos\">\n            <li>\n              <span class=\"label label-success pull-left\">\n                <div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe128;\"></div>\n              </span>\n              <div class=\"info\">\n                <h6>Guru Tweeted</h6>\n                <p class=\"designation\">Few seconds ago</p>\n              </div>\n            </li>\n            <li>\n              <span class=\"label label-danger pull-left\">\n                <div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0e9;\"></div>\n              </span>\n              <div class=\"info\">\n                <h6>Server #999 Crashed</h6>\n                <p class=\"designation\">2 minutes ago</p>\n              </div>\n            </li>\n            <li>\n              <span class=\"label label-info pull-left\">\n                <div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe0e3;\"></div>\n              </span>\n              <div class=\"info\">\n                <h6>Kiri's account was created</h6>\n                <p class=\"designation\">5 days ago</p>\n              </div>\n            </li>\n          </ul>\n        </div>\n        <!-- Notifications End -->\n\n			</div>\n			<!-- Right sidebar end -->\n\n			<!-- Main Container Start -->\n			<div class=\"main-container\">\n\n				<!-- Top Bar Starts -->\n				<div class=\"top-bar clearfix\">\n					<div class=\"page-title\">\n						<h4><div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe007;\"></div>Dashboard <a href=\"#\" class=\"samll\">Breadcrumb</a></h4>\n					</div>\n					<ul class=\"right-stats hidden-xs\" id=\"mini-nav-right\">\n						<li class=\"reportrange btn btn-success\">\n							<i class=\"fa fa-calendar\"></i>\n							<span></span> <b class=\"caret\"></b>\n						</li>\n						<li>\n							<a href=\"#\" class=\"btn btn-info sb-open-right sb-close\">\n								<div class=\"fs1\" aria-hidden=\"true\" data-icon=\"&#xe06a;\"></div>\n							</a>\n						</li>\n					</ul>\n				</div>\n				<!-- Top Bar Ends -->\n\n				<!-- Container fluid Starts -->\n				<div class=\"container-fluid\">\n\n					<!-- Spacer starts -->\n					<div class=\"spacer-xs\">\n						<!-- Row Starts -->\n						<div class=\"row no-gutter\">\n							<div class=\"col-lg-4 col-md-4 col-sm-6 col-xs-12\">\n								<div class=\"panel\">\n									<div class=\"panel-heading\">\n										<h4>Sales</h4>\n										<ul class=\"links\">\n											<li>\n												<a href=\"#\">\n													<i class=\"fa fa-shopping-cart\"></i>\n												</a>\n											</li>\n										</ul>\n									</div>\n									<div class=\"panel-body\">\n										<div class=\"daily-stats\">\n											<h1 class=\"number\">\n												<span>00</span>$4595\n											</h1>\n											<p class=\"avg\">Total</p>\n											<ul class=\"details\">\n												<li>\n													<h4 class=\"num\">1795</h4>\n													<small>Customers</small>\n												</li>\n												<li>\n													<h4 class=\"num\">125</h4>\n													<small>Products</small>\n												</li>\n												<li>\n													<h4 class=\"num\">8291</h4>\n													<small>Orders</small>\n												</li>\n											</ul>\n										</div>\n									</div>\n								</div>\n							</div>\n							<div class=\"col-lg-4 col-md-4 col-sm-6 col-xs-12\">\n								<div class=\"panel\">\n									<div class=\"panel-heading\">\n										<h4>Conversion Rate</h4>\n										<ul class=\"links\">\n											<li>\n												<a href=\"#\">\n													<i class=\"fa fa-line-chart\"></i>\n												</a>\n											</li>\n										</ul>\n									</div>\n									<div class=\"panel-body\">\n										<div class=\"daily-stats\">\n											<h1 class=\"number primary\">\n												<span>000</span>76<sup>%</sup>\n											</h1>\n											<p class=\"avg\">Total</p>\n											<div class=\"progress progress-sm\">\n												<div class=\"progress-bar progress-bar-success\" style=\"width: 40%\">\n												</div>\n												<div class=\"progress-bar progress-bar-primary\" style=\"width: 60%\">\n												</div>\n											</div>\n											<ul class=\"min-max\">\n												<li>\n													<h4 class=\"num\"><small>Min</small>2579</h4>\n												</li>\n												<li>\n													<h4 class=\"num\"><small>Max</small>4475</h4>\n												</li>\n											</ul>\n										</div>\n									</div>\n								</div>\n							</div>\n							<div class=\"col-lg-4 col-md-4 col-sm-12 col-xs-12\">\n								<div class=\"panel\">\n									<div class=\"panel-heading\">\n										<h4>Demography</h4>\n										<ul class=\"links\">\n											<li>\n												<a href=\"#\">\n													<i class=\"fa fa-mars-double\"></i>\n												</a>\n											</li>\n										</ul>\n									</div>\n									<div class=\"panel-body\">\n										<div class=\"daily-stats\">\n											<h1 class=\"number primary\">\n												<span>00</span>3295\n											</h1>\n											<p class=\"avg\">Average</p>\n											<ul class=\"demography\">\n												<li>\n													<i class=\"fa fa-male text-info\"></i>\n													<h4 class=\"num\">47239 <small>Male</small></h4>\n												</li>\n												<li>\n													<i class=\"fa fa-female text-pink\"></i>\n													<h4 class=\"num\">21925 <small>Female</small></h4>\n												</li>\n											</ul>\n										</div>\n									</div>\n								</div>\n							</div>\n						</div>\n						<!-- Row Ends -->\n\n						<!-- Row Starts -->\n						<div class=\"row no-gutter\">\n							<div class=\"col-lg-8 col-md-8 col-sm-12 col-xs-12\">\n								<div class=\"panel\">\n									<div class=\"panel-heading\">\n										<h4>Statistics</h4>\n										<ul class=\"links\">\n											<li>\n												<a href=\"#\">\n													<i class=\"fa fa-expand\"></i>\n												</a>\n											</li>\n										</ul>\n									</div>\n									<div class=\"panel-body\">\n										<div id=\"combineChart\" class=\"chart-height\"></div>\n										<hr class=\"hidden-xs\">\n										<div class=\"row hidden-xs\">\n											<div class=\"col-md-3 col-sm-3 col-xs-3 center-align-text\">\n												<h3 class=\"no-margin no-padding\">23373</h3>\n												<small class=\"text-muted\">Orders</small>\n											</div>\n											<div class=\"col-md-3 col-sm-3 col-xs-3 center-align-text\">\n												<h3 class=\"no-margin no-padding\">5575</h3>\n												<small class=\"text-muted\">Products</small>\n											</div>\n											<div class=\"col-md-3 col-sm-3 col-xs-3 center-align-text\">\n												<h3 class=\"no-margin no-padding\">1189</h3>\n												<small class=\"text-muted\">Customers</small>\n											</div>\n											<div class=\"col-md-3 col-sm-3 col-xs-3 center-align-text\">\n												<h3 class=\"no-margin no-padding\">$5854</h3>\n												<small class=\"text-muted\">Income</small>\n											</div>\n										</div>\n									</div>\n								</div>\n							</div>\n							<div class=\"col-lg-4 col-md-4 col-sm-12 col-xs-12\">\n								<div class=\"panel\">\n									<div class=\"panel-heading\">\n										<h4>Social Mertics</h4>\n										<ul class=\"links\">\n											<li>\n												<a href=\"#\">\n													<i class=\"fa fa-bar-chart\"></i>\n												</a>\n											</li>\n										</ul>\n									</div>\n									<div class=\"panel-body\">\n										<ul class=\"progress-stats\">\n											<li>\n												<div class=\"details\">\n													<span>Foreign Visits</span>\n													<span class=\"pull-right\">70%</span>\n												</div>\n												<div class=\"progress progress-sm no-margin\">\n													<div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"70\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 70%\">\n														<span class=\"sr-only\">70% Complete (success)</span>\n													</div>\n												</div>\n											</li>\n											<li>\n												<div class=\"details\">\n													<span>Local Visits</span>\n													<span class=\"pull-right\">40%</span>\n												</div>\n												<div class=\"progress progress-sm no-margin\">\n													<div class=\"progress-bar progress-bar-info\" role=\"progressbar\" aria-valuenow=\"40\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 40%\">\n														<span class=\"sr-only\">40% Complete</span>\n													</div>\n												</div>\n											</li>\n											<li>\n												<div class=\"details\">\n													<span>Other Visits</span>\n													<span class=\"pull-right\">30%</span>\n												</div>\n												<div class=\"progress progress-sm no-margin\">\n													<div class=\"progress-bar progress-bar-warning\" role=\"progressbar\" aria-valuenow=\"30\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 30%\">\n														<span class=\"sr-only\">30% Complete (warning)</span>\n													</div>\n												</div>\n											</li>\n											<li class=\"half-width\">\n												<div class=\"details\">\n													<span>Today</span>\n													<span class=\"pull-right\">30%</span>\n												</div>\n												<div class=\"progress progress-sm no-margin\">\n													<div class=\"progress-bar progress-bar-danger\" role=\"progressbar\" aria-valuenow=\"30\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 30%\">\n														<span class=\"sr-only\">30% Complete (danger)</span>\n													</div>\n												</div>\n											</li>\n											<li class=\"half-width left-margin\">\n												<div class=\"details\">\n													<span>Yesterday</span>\n													<span class=\"pull-right\">70%</span>\n												</div>\n												<div class=\"progress progress-sm no-margin\">\n													<div class=\"progress-bar progress-bar-primary\" role=\"progressbar\" aria-valuenow=\"70\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 70%\">\n														<span class=\"sr-only\">70% Complete (danger)</span>\n													</div>\n												</div>\n											</li>\n										</ul>\n									</div>\n								</div>\n							</div>\n						</div>\n						<!-- Row Ends -->\n\n						<!-- Row start -->\n						<div class=\"row no-gutter\">\n							<div class=\"col-md-4 col-sm-6 col-sx-12\">\n								<div class=\"panel panel-default\">\n									<div class=\"panel-heading\">\n										<h4>ToDos</h4>\n										<ul class=\"links\">\n											<li>\n												<a href=\"#\">\n													<i class=\"fa fa-tasks\"></i>\n												</a>\n											</li>\n										</ul>\n									</div>\n									<div class=\"panel-body\">\n										<div class=\"tasks\">\n											<fieldset class=\"tasks-list\">\n												<label class=\"tasks-list-item\">\n													<input type=\"checkbox\" name=\"task_1\" value=\"1\" class=\"tasks-list-cb\" checked>\n													<span class=\"tasks-list-mark\"></span>\n													<span class=\"tasks-list-desc\">Attend Research Seminar</span>\n												</label>\n												<label class=\"tasks-list-item\">\n													<input type=\"checkbox\" name=\"task_2\" value=\"1\" class=\"tasks-list-cb\" checked>\n													<span class=\"tasks-list-mark\"></span>\n													<span class=\"tasks-list-desc\">Social Media Workshop</span>\n												</label>\n												<label class=\"tasks-list-item\">\n													<input type=\"checkbox\" name=\"task_3\" value=\"1\" class=\"tasks-list-cb\">\n													<span class=\"tasks-list-mark\"></span>\n													<span class=\"tasks-list-desc\">Pick up Kids @ 3pm</span>\n												</label>\n												<label class=\"tasks-list-item\">\n													<input type=\"checkbox\" name=\"task_4\" value=\"1\" class=\"tasks-list-cb\">\n													<span class=\"tasks-list-mark\"></span>\n													<span class=\"tasks-list-desc\">Skype Call 7pm</span>\n												</label>\n												<label class=\"tasks-list-item\">\n													<input type=\"checkbox\" name=\"task_5\" value=\"1\" class=\"tasks-list-cb\">\n													<span class=\"tasks-list-mark\"></span>\n													<span class=\"tasks-list-desc\">The power of Habit</span>\n												</label>\n												<label class=\"tasks-list-item\">\n													<input type=\"checkbox\" name=\"task_6\" value=\"1\" class=\"tasks-list-cb\">\n													<span class=\"tasks-list-mark\"></span>\n													<span class=\"tasks-list-desc\">Attend Birthday party</span>\n												</label>\n												<label class=\"tasks-list-item\">\n													<input type=\"checkbox\" name=\"task_7\" value=\"1\" class=\"tasks-list-cb\">\n													<span class=\"tasks-list-mark\"></span>\n													<span class=\"tasks-list-desc\">Meet Mr. John</span>\n												</label>\n											</fieldset>\n										</div>\n									</div>\n								</div>\n							</div>\n							<div class=\"col-md-4 col-sm-6 col-sx-12\">\n								<div class=\"panel panel-default\">\n									<div class=\"panel-heading\">\n										<h4>Chats</h4>\n										<ul class=\"links\">\n											<li>\n												<a href=\"#\">\n													<i class=\"fa fa-comment-o\"></i>\n												</a>\n											</li>\n										</ul>\n									</div>\n									<div class=\"panel-body\">\n										<ul class=\"chat\">\n											<li class=\"in\">\n												<img class=\"avatar\" alt=\"\" src=\"img/admin11.png\">\n												<div class=\"message\">\n													<span class=\"arrow\">\n													</span>\n													<a href=\"#\" class=\"name\">\n														Sandy\n													</a>\n													<span class=\"date-time\">\n														at Feb 10th, 2015 10:22\n													</span>\n													<span class=\"body body-grey\">\n														Raw denim you probably haven't heard.\n													</span>\n												</div>\n											</li>\n											<li class=\"out\">\n												<img class=\"avatar\" alt=\"\" src=\"img/admin8.png\">\n												<div class=\"message\">\n													<span class=\"arrow\">\n													</span>\n													<a href=\"#\" class=\"name\">\n														Hudson\n													</a>\n													<span class=\"date-time\">\n														at Feb 10th, 2015 03:34\n													</span>\n													<span class=\"body body-blue\">\n														Next level veard stumptown, cardigans.\n													</span>\n												</div>\n											</li>\n											<li class=\"in\">\n												<img class=\"avatar\" alt=\"\" src=\"img/admin5.png\">\n												<div class=\"message\">\n													<span class=\"arrow\">\n													</span>\n													<a href=\"#\" class=\"name\">\n														Kelly\n													</a>\n													<span class=\"date-time\">\n														at Feb 8th, 2015 02:29\n													</span>\n													<span class=\"body body-grey\">\n														Beard stumptown farm-to-table denim coffee viral.\n													</span>\n												</div>\n											</li>\n										</ul>\n									</div>\n								</div>\n							</div>\n							<div class=\"col-md-4 col-sm-12 col-sx-12\">\n								<div class=\"panel panel-default\">\n									<div class=\"panel-heading\">\n										<h4>Tweets</h4>\n										<ul class=\"links\">\n											<li>\n												<a href=\"#\">\n													<i class=\"fa fa-twitter\"></i>\n												</a>\n											</li>\n										</ul>\n									</div>\n									<div class=\"panel-body\">\n										<div class=\"tweets-container\">\n\n											<div class=\"tweet-box\">\n												<img class=\"avatar\" alt=\"\" src=\"img/admin2.png\">\n												<div class=\"tweet\">\n													<p>\n														<span>@sri</span> mentioned you\n													</p>\n													<p>\n														<span>@ha haa</span> Cultivate synergies?\n													</p>\n													<div class=\"icons-nav clearfix\">\n														<span class=\"time\">2mins ago</span>\n														<i class=\"icon-trash\"></i>\n													</div>\n												</div>\n											</div>\n											\n											<div class=\"tweet-box\">\n												<img class=\"avatar\" alt=\"\" src=\"img/admin1.png\">\n												<div class=\"tweet\">\n													<p>\n														<span>@sandy</span> mentioned you\n													</p>\n													<p>\n														<span>@ha haa</span> Latform cultivate?\n													</p>\n													<div class=\"icons-nav clearfix\">\n														<span class=\"time\">9 hours ago</span>\n														<i class=\"icon-trash\"></i>\n													</div>\n												</div>\n											</div>\n											\n											<div class=\"tweet-box no-margin\">\n												<img class=\"avatar\" alt=\"\" src=\"img/admin3.png\">\n												<div class=\"tweet\">\n													<p>\n														<span>@haasini</span> mentioned you\n													</p>\n													<p>\n														<span>@ha haa</span> Eyeballs atformsvate?\n													</p>\n													<div class=\"icons-nav clearfix\">\n														<span class=\"time\">3 days ago</span>\n														<i class=\"icon-trash\"></i>\n													</div>\n												</div>\n											</div>\n										</div>\n									</div>\n								</div>\n							</div>\n						</div>\n						<!-- Row end -->\n\n						<!-- Row start -->\n						<div class=\"row no-gutter\">\n							<div class=\"col-md-8 col-sm-12 col-sx-12\">\n								<div class=\"panel panel-default\">\n									<div class=\"panel-heading\">\n										<h4>Table</h4>\n										<ul class=\"links\">\n											<li>\n												<a href=\"#\">\n													<i class=\"fa fa-navicon\"></i>\n												</a>\n											</li>\n										</ul>\n									</div>\n									<div class=\"panel-body\">\n										<div class=\"table-responsive\">\n											<table class=\"table table -bordered no-margin\">\n												<thead>\n													<tr>\n														<th style=\"width:20%\">\n															Departure\n														</th>\n														<th style=\"width:15%\">\n															Duration\n														</th>\n														<th style=\"width:15%\">\n															Arrival\n														</th>\n														<th style=\"width:20%\">\n															Airlines\n														</th>\n														<th style=\"width:20%\">\n															Price\n														</th>\n														<th style=\"width:10%\">\n															&nbsp;\n														</th>\n													</tr>\n												</thead>\n												<tbody>\n													<tr>\n														<td>6:40 AM</td>\n														<td>1h 5m</td>\n														<td>7:45 AM</td>\n														<td>Indigo</td>\n														<td>$ 1220</td>\n														<td>\n															<a href=\"#\" class=\"label label-success\">View</a>\n														</td>\n													</tr>\n													<tr>\n														<td>10:40 PM</td>\n														<td>2h 12m</td>\n														<td>12:57 AM</td>\n														<td>Jet Airways</td>\n														<td>$ 1325</td>\n														<td>\n															<a href=\"#\" class=\"label label-success\">View</a>\n														</td>\n													</tr>\n													<tr>\n														<td>3:30 AM</td>\n														<td>1h 25m</td>\n														<td>4:55 AM</td>\n														<td>Air India</td>\n														<td>$ 2550</td>\n														<td>\n															<a href=\"#\" class=\"label label-success\">View</a>\n														</td>\n													</tr>\n													<tr>\n														<td>4:20 Am</td>\n														<td>1h 45m</td>\n														<td>9:25 AM</td>\n														<td>Jet Airways</td>\n														<td>$ 1725</td>\n														<td>\n															<a href=\"#\" class=\"label label-success\">View</a>\n														</td>\n													</tr>\n													<tr>\n														<td>6:55 AM</td>\n														<td>3h 45m</td>\n														<td>3:35 AM</td>\n														<td>Air India</td>\n														<td>$ 5540</td>\n														<td>\n															<a href=\"#\" class=\"label label-success\">View</a>\n														</td>\n													</tr>\n													<tr>\n														<td>8:15 AM</td>\n														<td>5h 35m</td>\n														<td>1:25 AM</td>\n														<td>Emirates</td>\n														<td>$ 3325</td>\n														<td>\n															<a href=\"#\" class=\"label label-success\">View</a>\n														</td>\n													</tr>\n												</tbody>\n											</table>\n										</div>\n									</div>\n								</div>\n							</div>\n							<div class=\"col-md-4 col-sm-12 col-sx-12\">\n								<div class=\"panel panel-default\">\n									<div class=\"panel-heading\">\n										<h4>Feeds</h4>\n										<ul class=\"links\">\n											<li>\n												<a href=\"#\">\n													<i class=\"fa fa-bullhorn\"></i>\n												</a>\n											</li>\n										</ul>\n									</div>\n									<div class=\"panel-body\">\n										<ul id=\"myTab\" class=\"nav nav-tabs\">\n											<li class=\"active\">\n												<a href=\"#activites\" data-toggle=\"tab\" data-original-title=\"\">Activites</a>\n											</li>\n											<li class=\"\">\n												<a href=\"#signups\" data-toggle=\"tab\" data-original-title=\"\">Signups</a>\n											</li>\n											<li class=\"\">\n												<a href=\"#online\" data-toggle=\"tab\" data-original-title=\"\">Online</a>\n											</li>\n										</ul>\n										<br>\n										<div id=\"myTabContent\" class=\"tab-content\">\n											<div class=\"tab-pane fade active in\" id=\"activites\">\n												<div id=\"scrollbar\">\n													<div class=\"scrollbar\">\n														<div class=\"track\">\n															<div class=\"thumb\">\n																<div class=\"end\">\n																</div>\n															</div>\n														</div>\n													</div>\n													<div class=\"viewport\">\n														<div class=\"overview\">\n															<div class=\"featured-articles\">\n																<div class=\"articles\">\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Raw denim you probably\n																		<span class=\"date\">12th Nov @1:45am/8 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Reprehenderit butcher\n																		<span class=\"date\">11th Nov @3:21pm/21 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Skateboard dolor brunch\n																		<span class=\"date\">11th Nov @11:19am/15 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		accusam/3 Commentsus terry richardson\n																		<span class=\"date\">10th Nov @8:12am/13 Comments</span>\n\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Mashups experiences\n																		<span class=\"date\">09th Nov @1:59pm/12 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Terry richardson ad squid\n																		<span class=\"date\">6th Nov @10:44am/16 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Reinvent cutting\n																		<span class=\"date\">2nd Nov @11:19am/1 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		partnerships 24/7\n																		<span class=\"date\">2nd Nov @11:19am/19 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Eyeballs frictionless\n																		<span class=\"date\">1st Nov @9:19am/21 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Deliver innovate\n																		<span class=\"date\">1st Nov @8:19pm/11 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Portals technologies\n																		<span class=\"date\">29th Oct @12:19am/7 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Collaborative innovate\n																		<span class=\"date\">29th Oct @3:31am/5 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Mashups experiences\n																		<span class=\"date\">27th Oct @12:19am/2 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Need some interesting\n																		<span class=\"date\">26th Oct @2:33am/9 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Portals technologies\n																		<span class=\"date\">25th Oct @9:37pm/3 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Collaborative innovate\n																		<span class=\"date\">25th Oct @12:19am/7 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Mashups experiences\n																		<span class=\"date\">23rd Oct @8:39am/43 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		B2B plug and play\n																		<span class=\"date\">22nd Oct @7:19pm/21 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Need interesting\n																		<span class=\"date\">20th Oct @1:19am/13 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Portals technologies\n																		<span class=\"date\">20th Oct @6:55am/22 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Collaborative innovate\n																		<span class=\"date\">19th Oct @9:47am/36 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Portals technologies\n																		<span class=\"date\">17th Oct @3:57pm/4 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Collaborative innovate\n																		<span class=\"date\">16th Oct @12:19am/8 Comments</span>\n																	</a>\n																	<a href=\"#\">\n																		<span class=\"label-bullet\">\n																			&nbsp;\n																		</span>\n																		Mashups experiences\n																		<span class=\"date\">12th Oct @8:22am/1 Comments</span>\n																	</a>\n																</div>\n															</div>\n														</div>\n													</div>\n												</div>\n											</div>\n											<div class=\"tab-pane fade\" id=\"signups\">\n												<ul class=\"signups\">\n													<li>\n														<div class=\"user pull-left\">\n															<img src=\"img/admin2.png\" alt=\"user\" >\n														</div>\n														<div class=\"info\">\n															<h6>Sandy</h6>\n															<p class=\"designation\">Graphic Designer</p>\n														</div>\n													</li>\n													<li>\n														<div class=\"user pull-left\">\n															<img src=\"img/admin1.png\" alt=\"user\" >\n														</div>\n														<div class=\"info\">\n															<h6>Srinu Basava</h6>\n															<p class=\"designation\">UI Designer</p>\n														</div>\n													</li>\n													<li>\n														<div class=\"user pull-left\">\n															<img src=\"img/admin8.png\" alt=\"user\" >\n														</div>\n														<div class=\"info\">\n															<h6>Honey</h6>\n															<p class=\"designation\">Haker</p>\n														</div>\n													</li>\n													<li>\n														<div class=\"user pull-left\">\n															<img src=\"img/admin9.png\" alt=\"user\" >\n														</div>\n														<div class=\"info\">\n															<h6>Rahul Dravid</h6>\n															<p class=\"designation\">Senior Developer</p>\n														</div>\n													</li>\n												</ul>\n											</div>\n											<div class=\"tab-pane fade\" id=\"online\">\n												<ul class=\"online-users\">\n													<li>\n														<a href=\"\" data-lastname=\"Sandy\" data-status=\"online\">\n															<span>Sandy</span>\n															<div class=\"user-status online\"></div>\n														</a>\n													</li>\n													<li>\n														<a href=\"\" data-lastname=\"Srinu Basava\" data-status=\"online\">\n															<span>Srinu</span>\n															<div class=\"user-status online\"></div>\n														</a>\n													</li>\n													<li>\n														<a href=\"\" data-lastname=\"John Doe\" data-status=\"online\">\n															<span>John Doe</span>\n															<div class=\"user-status busy\"></div>\n														</a>\n													</li>\n													<li>\n														<a href=\"\" data-lastname=\"Steve Waugh\" data-status=\"online\">\n															<span>Steve Waugh</span>\n															<div class=\"user-status away\"></div>\n														</a>\n													</li>\n													<li>\n														<a href=\"\" data-lastname=\"Robin Fleming\" data-status=\"online\">\n															<span>Robin Fleming</span>\n															<div class=\"user-status away\"></div>\n														</a>\n													</li>\n												</ul>\n											</div>\n										</div>\n									</div>\n								</div>\n							</div>\n						</div>\n						<!-- Row end -->\n\n					</div>\n					<!-- Spacer ends -->\n\n				</div>\n				<!-- Container fluid ends -->\n\n			</div>\n			<!-- Main Container Start -->\n\n			<!-- Footer Start -->\n			<footer>\n				Copyright Cloud Admin <span>2015</span>. All Rights Reserved.\n			</footer>\n			<!-- Footer end -->\n			\n		</div>\n		<!-- Dashboard Wrapper End -->\n\n		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->\n		<script src=\"js/jquery.js\"></script>\n\n		<!-- Include all compiled plugins (below), or include individual files as needed -->\n		<script src=\"js/bootstrap.min.js\"></script>\n\n		<!-- Flot Charts -->\n		<script src=\"js/flot/jquery.flot.js\"></script>\n		<script src=\"js/flot/jquery.flot.time.js\"></script>\n		<script src=\"js/flot/jquery.flot.selection.js\"></script>\n		<script src=\"js/flot/jquery.flot.resize.js\"></script>\n		<script src=\"js/flot/jquery.flot.tooltip.js\"></script>\n		<script src=\"js/flot/flot.excanvas.min.js\"></script>\n\n		<!-- Custom flot JS -->\n		<script src=\"js/flot/custom/combine-chart.js\"></script>\n\n		<!-- Animated Right Sidebar -->\n		<script src=\"js/slidebars.js\"></script>\n\n		<!-- Tyny Scrollbar -->\n		<script src=\"js/tiny-scrollbar.js\"></script>\n\n		<!-- Date Range -->\n		<script src=\"js/daterange/moment.js\"></script>\n		<script src=\"js/daterange/daterangepicker.js\"></script>\n\n		<!-- Custom JS -->\n		<script src=\"js/custom.js\"></script>\n		<script src=\"js/custom-index.js\"></script>\n	</body>\n</html>",
+			"file": "/D/xampp/htdocs/v2/index.html",
+			"file_size": 45229,
+			"file_write_time": 130692098100000000,
+			"settings":
+			{
+				"buffer_size": 45230,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/xampp/htdocs/v2/js/slidebars.js",
+			"settings":
+			{
+				"buffer_size": 11124,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -327,6 +349,9 @@
 	},
 	"file_history":
 	[
+		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
+		"/D/xampp/htdocs/hermes/app/models/Ficha.php",
+		"/D/xampp/htdocs/pHermes/home.php",
 		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
 		"/D/Dropbox/Cargas Hermes/Junio.sql",
 		"/D/Dropbox/Cargas Hermes/Abril.sql",
@@ -340,7 +365,6 @@
 		"/C/Users/JoGe/Downloads/ssiptvPlaylist20141222.m3u",
 		"/D/xampp/htdocs/hermes/app/views/nombreCliente.blade.php",
 		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
-		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
 		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
 		"/D/Pentaho/biserver-ce/pentaho-cdf/readme.txt",
 		"/D/xampp/htdocs/ajax.php",
@@ -371,7 +395,6 @@
 		"/D/xampp/htdocs/ayekantun/admin/index.php",
 		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
 		"/D/xampp/htdocs/ayekantun/admin/loginController.php",
-		"/D/xampp/htdocs/hermes/app/models/Ficha.php",
 		"/D/xampp/htdocs/hermes/public/assets/js/jquery.dataTables.js",
 		"/D/xampp/htdocs/hermes/app/models/User.php",
 		"/D/xampp/htdocs/hermes/app/controllers/fichaController.php",
@@ -386,7 +409,6 @@
 		"/D/descargas/hxh/Chat de WhatsApp con Gibson.txt",
 		"/D/creando datos3.sql",
 		"/D/xampp/htdocs/pHermes/index.php",
-		"/D/xampp/htdocs/pHermes/home.php",
 		"/D/creando datos.sql",
 		"/D/xampp/htdocs/pHermes/administracion.php",
 		"/D/xampp/htdocs/pHermes/video.php",
@@ -472,6 +494,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"js",
+			"mob-nav",
+			"col-lg",
 			"idCliente",
 			"getCliente",
 			"java",
@@ -596,10 +621,7 @@
 			"ver_",
 			"ima",
 			"arti",
-			"row",
-			"lg-",
-			"feat",
-			"featu"
+			"row"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -619,7 +641,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -704,60 +726,6 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/controllers/FichaController.php",
-					"settings":
-					{
-						"buffer_size": 1874,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								483,
-								483
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 228.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/models/Ficha.php",
-					"settings":
-					{
-						"buffer_size": 375,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								353,
-								353
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "app/views/listaAtenciones.blade.php",
 					"settings":
 					{
@@ -768,8 +736,8 @@
 						"selection":
 						[
 							[
-								1860,
-								1860
+								1163,
+								1163
 							]
 						],
 						"settings":
@@ -778,7 +746,115 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 627.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/layout.blade.php",
+					"settings":
+					{
+						"buffer_size": 2528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								670,
+								670
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 252.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/D/xampp/htdocs/startbootstrap-simple-sidebar-1.0.4/index.html",
+					"settings":
+					{
+						"buffer_size": 3167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								902,
+								902
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 456.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/D/xampp/htdocs/v2/index.html",
+					"settings":
+					{
+						"buffer_size": 45230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44877,
+								44879
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 26914.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/D/xampp/htdocs/v2/js/slidebars.js",
+					"settings":
+					{
+						"buffer_size": 11124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								107,
+								72
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
