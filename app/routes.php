@@ -18,7 +18,12 @@ Route::GET('/', function()
 
 Route::GET('/ficha', array(
 	'as' => 'ficha',
-	'uses' => 'FichaController@index'
+	'uses' => 'FichaController@listar'
+));
+
+Route::GET('/mantenciones', array(
+	'as' => 'mantenciones',
+	'uses' => 'MantencionController@index'
 ));
 
 Route::GET('/ficha/listar/',array(

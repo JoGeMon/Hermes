@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"set",
+				"setlocale"
+			],
+			[
 				"cl",
 				"cliente"
 			],
@@ -257,41 +261,6 @@
 				"buffer_size": 3216,
 				"line_ending": "Windows"
 			}
-		},
-		{
-			"file": "/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
-			"settings":
-			{
-				"buffer_size": 769,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/listaAtenciones.blade.php",
-			"settings":
-			{
-				"buffer_size": 1952,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/layout.blade.php",
-			"settings":
-			{
-				"buffer_size": 2727,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<!doctype html>\n<html>\n	<head>\n		<title>Slidebars API Usage</title>\n		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">\n		\n		<!-- Slidebars CSS -->\n		<link rel=\"stylesheet\" href=\"slidebars/slidebars.css\">\n		\n		<!-- Example Styles -->\n		<link rel=\"stylesheet\" href=\"example-styles.css\">\n	</head>\n	\n	<body>	\n		<div id=\"sb-site\">\n			<h1>Slidebars API Usage</h1>\n			<p>The list items below do not use the standard control classes and are instead mapped to the Slidebars API. You can open a Slidebar, check if the plugin  has been initiated, check if a Slidebars is active, and remove them from the DOM entirely.</p>\n			<p>As of version 0.10, all API methods have been prefixed with '.slidebars'. myVariable.open('left') should now be myVariable.slidebars.open('left').</p>\n			<ul>\n				<li class=\"toggle-left\">Toggle left Slidebar</li>\n				<li class=\"toggle-right\">Toggle right Slidebar</li>\n				<li class=\"open-left\">Open left Slidebar</li>\n				<li class=\"open-right\">Open right Slidebar</li>\n				<li class=\"close\">Close either Slidebar</li>\n				<li class=\"test-slidebars-init\">Test Slidebars Initialisation</li>\n				<li class=\"test-left-slidebar\">Test left Slidebar</li>\n				<li class=\"test-right-slidebar\">Test right Slidebar</li>\n				<li class=\"destroy-left-slidebar\">Destroy left Slidebar</li>\n				<li class=\"destroy-right-slidebar\">Destroy right Slidebar</li>\n			</ul>\n			\n			<h2>More Examples</h2>\n			<ul>\n				<li><a href=\"control-classes.html\">Control Classes</a></li>\n				<li><a href=\"api-usage.html\">API Usage</a></li>\n				<li><a href=\"mobile-only.html\">Mobile Only</a></li>\n				<li><a href=\"animation-styles.html\">Animation Styles</a></li>\n				<li><a href=\"optional-widths.html\">Optional Widths</a></li>\n				<li><a href=\"custom-widths.html\">Custom Widths</a></li>\n				<li><a href=\"scroll-lock.html\">Scroll Lock</a></li>\n				<li><a href=\"slidebar-links.html\">Slidebar Links</a></li>\n				<li><a href=\"static-slidebars.html\">Static Slidebars</a></li>\n				<li><a href=\"momentum-scrolling.html\">Momentum Scrolling</a></li>\n				<li><a href=\"left-slidebar-only.html\">Left Slidebar Only</a></li>\n				<li><a href=\"right-slidebar-only.html\">Right Slidebar Only</a></li>\n			</ul>\n		</div>\n		\n		<div class=\"sb-slidebar sb-left\">\n			<!-- Your left Slidebar content. -->\n		</div>\n		\n		<div class=\"sb-slidebar sb-right\">\n			<!-- Your right Slidebar content. -->\n		</div>\n				\n		<!-- jQuery -->\n		<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script>\n		\n		<!-- Slidebars -->\n		<script src=\"slidebars/slidebars.js\"></script>\n		<script>\n			(function($) {\n				$(document).ready(function() {\n					var mySlidebars = new $.slidebars(); // Create new instance of Slidebars\n					\n					// Event handler\n					function eventHandler(e) {\n						e.stopPropagation();\n						e.preventDefault();\n					}\n					\n					// Toggle methods\n					$('.toggle-left').on('click', function(e) {\n						eventHandler(e);\n						mySlidebars.slidebars.toggle('left');\n					});\n					\n					$('.toggle-right').on('click', function(e) {\n						eventHandler(e);\n						mySlidebars.slidebars.toggle('right');\n					});\n					 	\n					// Open methods\n					$('.open-left').on('click', function(e) {\n						eventHandler(e);\n						mySlidebars.slidebars.open('left');\n					});\n					\n					$('.open-right').on('click', function(e) {\n						eventHandler(e);\n						mySlidebars.slidebars.open('right');\n					});\n					\n					// Close\n					$('.close').on('click', function(e) {\n						eventHandler(e);\n						mySlidebars.slidebars.close();\n					});\n					\n					// Test initialisation\n					$('.test-slidebars-init').on('click', function(e) {\n						eventHandler(e);\n						if (mySlidebars.slidebars.init) { // Check if Slidebars has been initiated.\n							alert('Slidebars has been initialised.');\n						} else {\n							alert('Slidebars has not been initialised.');\n						}\n					});\n					\n					// Test Slidebar active states\n					$('.test-left-slidebar').on('click', function(e) {\n						eventHandler(e);\n						if (mySlidebars.slidebars.active('left')) { // Check if left Slidebar is active.\n							alert('Left Slidebar is open.');\n						} else {\n							alert('Left Slidebar is closed.');\n						}\n					});\n					\n					$('.test-right-slidebar').on('click', function(e) {\n						eventHandler(e);\n						if (mySlidebars.slidebars.active('right')) { // Check if right Slidebar is active.\n							alert('Right Slidebar is open.');\n						} else {\n							alert('Right Slidebar is closed.');\n						}\n					});\n					\n					// Destroy Slidebars\n					$('.destroy-left-slidebar').on('click', function() {\n						mySlidebars.slidebars.destroy('left');\n						alert('Boom!');\n					});\n					\n					$('.destroy-right-slidebar').on('click', function() {\n						mySlidebars.slidebars.destroy('right');\n						alert('Boom!');\n					});\n				});\n			}) (jQuery);\n		</script>\n	</body>\n</html>",
-			"file": "/D/xampp/htdocs/slidebar/examples/api-usage.html",
-			"file_size": 4887,
-			"file_write_time": 130754499560000000,
-			"settings":
-			{
-				"buffer_size": 4889,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
@@ -330,13 +299,30 @@
 	},
 	"file_history":
 	[
-		"/D/xampp/htdocs/startbootstrap-simple-sidebar-1.0.4/index.html",
-		"/D/xampp/htdocs/v2/index.html",
-		"/D/xampp/htdocs/v2/js/slidebars.js",
-		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
-		"/D/xampp/htdocs/hermes/app/models/Ficha.php",
-		"/D/xampp/htdocs/pHermes/home.php",
+		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
+		"/D/xampp/htdocs/hermes/app/views/mantenciones.blade.php",
+		"/D/xampp/htdocs/hermes/app/controllers/MantencionController.php",
+		"/D/xampp/htdocs/hermes/app/views/listaAtenciones.blade.php",
 		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
+		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
+		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
+		"/D/xampp/htdocs/hermes/app/models/Empleado.php",
+		"/D/xampp/htdocs/hermes/app/models/Ficha.php",
+		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
+		"/D/xampp/htdocs/hermes/app/routes.php",
+		"/D/xampp/htdocs/hermes/app/start/global.php",
+		"/D/xampp/htdocs/hermes/app/config/app.php",
+		"/D/xampp/htdocs/hermes/app/models/Area.php",
+		"/D/xampp/htdocs/hermes/app/models/Mantencion.php",
+		"/D/xampp/htdocs/hermes/app/views/manteciones.blade.php",
+		"/D/xampp/htdocs/hermes/.gitattributes",
+		"/D/xampp/htdocs/hermes/app/views/emails/manteciones.blade.php",
+		"/D/xampp/htdocs/v2/index.html",
+		"/D/xampp/htdocs/v2/invoice.html",
+		"/D/xampp/htdocs/slidebar/examples/api-usage.html",
+		"/D/xampp/htdocs/v2/js/slidebars.js",
+		"/D/xampp/htdocs/startbootstrap-simple-sidebar-1.0.4/index.html",
+		"/D/xampp/htdocs/pHermes/home.php",
 		"/D/Dropbox/Cargas Hermes/Junio.sql",
 		"/D/Dropbox/Cargas Hermes/Abril.sql",
 		"/D/Dropbox/Cargas Hermes/Clientes.sql",
@@ -348,12 +334,9 @@
 		"/D/Dropbox/canales.m3u",
 		"/C/Users/JoGe/Downloads/ssiptvPlaylist20141222.m3u",
 		"/D/xampp/htdocs/hermes/app/views/nombreCliente.blade.php",
-		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
-		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
 		"/D/Pentaho/biserver-ce/pentaho-cdf/readme.txt",
 		"/D/xampp/htdocs/ajax.php",
 		"/D/Program Files (x86)/ESET/MiNODLogin/servidores.xml",
-		"/D/xampp/htdocs/hermes/app/routes.php",
 		"/C/Users/JoGe/Downloads/start.xml",
 		"/D/Pentaho/biserver-ce/tomcat/logs/catalina.out",
 		"/C/Users/JoGe/Downloads/Multi lista.m3u",
@@ -374,15 +357,12 @@
 		"/D/xampp/htdocs/Eurogen/menu.php",
 		"/D/xampp/htdocs/Eurogen/cabecera.php",
 		"/D/xampp/htdocs/Eurogen/index.php",
-		"/D/xampp/htdocs/hermes/app/views/listaAtenciones.blade.php",
 		"/C/Users/JoGe/Downloads/playlist.m3u",
 		"/D/xampp/htdocs/ayekantun/admin/index.php",
-		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
 		"/D/xampp/htdocs/ayekantun/admin/loginController.php",
 		"/D/xampp/htdocs/hermes/public/assets/js/jquery.dataTables.js",
 		"/D/xampp/htdocs/hermes/app/models/User.php",
 		"/D/xampp/htdocs/hermes/app/controllers/fichaController.php",
-		"/D/xampp/htdocs/hermes/app/config/app.php",
 		"/C/Users/JoGe/Downloads/jquery-ui-1.11.2/jquery-ui-1.11.2/jquery-ui.js",
 		"/C/Users/JoGe/Downloads/jquery-ui-1.11.2/jquery-ui-1.11.2/jquery-ui.min.js",
 		"/D/xampp/htdocs/pHermes/capacitacion.php",
@@ -446,18 +426,7 @@
 		"/D/xampp/htdocs/Aye/deWeb/css/contenido.css",
 		"/D/xampp/htdocs/Aye/deWeb/css/jquery.fancybox.css",
 		"/D/xampp/htdocs/Aye/deWeb/css/featured-list.css",
-		"/D/xampp/htdocs/Aye/index.php",
-		"/D/xampp/htdocs/Aye/deWeb/index2.php",
-		"/D/xampp/htdocs/Aye/deWeb/engine2/stylenew.css",
-		"/D/xampp/htdocs/wow/engine1/style.css",
-		"/D/xampp/htdocs/Aye/deWeb/header.php",
-		"/D/xampp/htdocs/Aye/deWeb/css/header.css",
-		"/D/xampp/htdocs/Aye/deWeb/footer.php",
-		"/D/xampp/htdocs/Aye/deWeb/data2/images/dsc01544.jpg",
-		"/D/xampp/htdocs/Aye/deWeb/test.php",
-		"/D/xampp/htdocs/Aye/deWeb/js/jquery-1.10.2.js",
-		"/D/xampp/htdocs/Aye/deWeb/js/jquery.js",
-		"/D/xampp/htdocs/Aye/deWeb/_header.php"
+		"/D/xampp/htdocs/Aye/index.php"
 	],
 	"find":
 	{
@@ -475,6 +444,24 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"es",
+			"app:",
+			"loca",
+			"\n",
+			"apellidoPaternoEmplea",
+			"		$",
+			"Dashboar",
+			"container",
+			"sb-",
+			"overlay",
+			"sb-si",
+			"sb",
+			"mob",
+			"slide",
+			"sb-sl",
+			"mob-n",
+			"sb-s",
+			".js",
 			"js",
 			"mob-nav",
 			"col-lg",
@@ -584,25 +571,7 @@
 			"wowslider-container1",
 			"data",
 			"11",
-			"data1",
-			"contai",
-			"current",
-			"tabs",
-			"/i",
-			"tabs li a",
-			"#tabs li a",
-			"img",
-			"imgMa",
-			"ul",
-			"#wow-sli",
-			"col",
-			"article",
-			"col-lg",
-			"article",
-			"ver_",
-			"ima",
-			"arti",
-			"row"
+			"data1"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -622,7 +591,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -673,115 +642,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 1430.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
-					"settings":
-					{
-						"buffer_size": 769,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/listaAtenciones.blade.php",
-					"settings":
-					{
-						"buffer_size": 1952,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1163,
-								1163
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/layout.blade.php",
-					"settings":
-					{
-						"buffer_size": 2727,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1965,
-								1965
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/D/xampp/htdocs/slidebar/examples/api-usage.html",
-					"settings":
-					{
-						"buffer_size": 4889,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2299,
-								2266
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 841.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

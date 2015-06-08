@@ -1,5 +1,5 @@
 @extends('layout')
-	@section('contenido')
+@section('contenido')
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#lista').load('ficha/listar');

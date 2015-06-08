@@ -1,6 +1,6 @@
 <?php
 
-class fichaController extends \BaseController {
+class FichaController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
