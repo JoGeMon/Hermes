@@ -6,7 +6,7 @@ class Cliente extends Eloquent{
 	
 	static function getCliente($idCliente)
 	{
-		$cliente = DB::TABLE('tblCliente')
+		$cliente = DB::table('tblCliente')
 			->where('idCliente',$idCliente)
 			->first();
 		return $cliente;

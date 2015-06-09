@@ -1,13 +1,31 @@
 @extends('layout')
 @section('contenido')
+	<style type="text/css">
+		#titulo{
+			background-color: #398ab9;
+			color: #FFF;
+			margin-bottom: 10px;
+		}
+	</style>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#atenciones').dataTable();
 			$('[data-toggle="tooltip"]').tooltip()
 		});
 	</script>
-
-	<div class="container">
+	<div class="container-fluid" id="titulo">
+		<div class="row">
+			<div class="col-md-11">
+				<div class="col-md-4">
+					<h3>Mantenciones</h3>
+				</div>
+				<div class="col-md-8 text-right">
+					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalProducto"><span class="glyphicon glyphicon-plus-sign"></span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--<div class="container">
 		<div class="row">
 			<div class="col-lg-11">
 				<div class="alert alert-info alert-dismissible" role="alert" id="info">
@@ -16,7 +34,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 	<div class="container">
 		<div class="row">
@@ -49,7 +67,7 @@
 										@else
 											<td>No realizada</td>
 										@endif
-										<td>Acciones</td>
+										<td></td>
 									</tr>
 								@endforeach
 							</tbody>
@@ -59,4 +77,38 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="modal fade" id="modalProducto">
+  		<div class="modal-dialog">
+    		<div class="modal-content">
+      			<div class="modal-header" style="background-color: #3784b1; color: #fff">
+        			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+        			<h4 class="modal-title">Añadir mantención</h4>
+      			</div>
+      			<div class="modal-body">
+      				{{ Form::open(array('route' => 'ficha/guardar'))}}
+      				{{ Form::label('cliente', 'Cliente')}}
+      				{{ Form::select('cliente',$clientes,'',array('class' => 'form-control'))}}
+      				{{ Form::label('fechaPactada','Fecha pactada')}}
+      				{{ Form::text('fechaPactada','',array('class' => 'form-control'))}}
+      				{{ Form::label('empleado', 'Empleado')}}
+      				{{ Form::select('empleado',$empleados,'',array('class' => 'form-control'))}}
+      				{{ Form::label('area','Área de servicio')}}
+      				{{ Form::select('area',$areas,'',array('class' => 'form-control'))}}
+					{{ Form::label('detalleAtencion','Detalle atención')}}
+					{{ Form::textarea('detalleAtencion','',array('class' => 'form-control'))}}
+					{{ Form::label('precio','Valorización')}}
+					<div class="input-group">
+						<span class="input-group-addon">$</span>
+						{{ Form::text('precio','',array('class' => 'form-control'))}}
+					</div>
+      				{{ Form::close()}}
+      			</div>
+      			<div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			        <button type="button" class="btn btn-primary">Añadir</button>
+		      </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 @stop

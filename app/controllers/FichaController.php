@@ -26,9 +26,16 @@ class FichaController extends \BaseController {
 	public function listar()
 	{
 		$fichas = Ficha::getFichas();
+		$clientes = Cliente::lists('nombreCliente','idCliente');
+		//$empleados = Empleado::lists("CONCAT(nombreEmpleado,apellidoPaternoEmpleado)", "idEmpleado");
+		$empleados = Empleado::getEmpleadoCombo();
+		$areas = Ara::lists('nombreArea','idArea');
 		//dd($fichas);
 		return(View::make('listaAtenciones',array(
-			'fichas' => $fichas
+			'fichas' => $fichas,
+			'clientes' => $clientes,
+			'empleados' => $empleados,
+			'areas'	=>  $areas		
 			)
 		));
 	}
