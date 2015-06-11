@@ -1,6 +1,6 @@
 <?php
 
-class MantencionController extends \BaseController {
+class ContratoController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,9 +9,9 @@ class MantencionController extends \BaseController {
 	 */
 	public function index()
 	{
-		$areas = Ara::all();
-		$servicios = Servicio::all();
-		return View::make('mantenciones',array('areas' => $areas, 'servicios' => $servicios));
+		$clientes = Cliente::lists('nombreCliente','idCliente');
+		$areas = Ara::lists('nombreArea','idArea');
+		return View:: make('contratos',array('clientes' => $clientes, 'areas' => $areas));
 	}
 
 

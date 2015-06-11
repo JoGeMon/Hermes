@@ -83,7 +83,7 @@
 	    			<br/>
 		            @yield('contenido', 'Default Content')
 		            <hr/>
-			        <footer align="center">
+			        <footer class="text-center fixed-bottom">
 						<h4>Hermes - Ematel S.A</h4>
 			        </footer>
 				</div><!-- <div class="col-md-10">-->

@@ -26,6 +26,11 @@ Route::GET('/mantenciones', array(
 	'uses' => 'MantencionController@index'
 ));
 
+Route::GET('/contratos', array(
+	'as' => 'contratos',
+	'uses' => 'ContratoController@index'
+));
+
 Route::GET('/ficha/listar/',array(
 	'as' => 'lista',
 	'uses' => 'FichaController@listar'
