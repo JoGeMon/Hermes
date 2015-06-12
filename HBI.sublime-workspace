@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"s",
+				"span	Tag"
+			],
+			[
 				"margin",
 				"margin-bottom"
 			],
@@ -144,10 +148,6 @@
 				"font-size"
 			],
 			[
-				"s",
-				"style	Tag"
-			],
-			[
 				"font",
 				"font-size"
 			],
@@ -267,19 +267,27 @@
 			}
 		},
 		{
-			"file": "app/views/listaAtenciones.blade.php",
+			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 4252,
+				"buffer_size": 1144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/mantenciones.blade.php",
+			"settings":
+			{
+				"buffer_size": 1192,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/layout.blade.php",
+			"file": "app/controllers/MantencionController.php",
 			"settings":
 			{
-				"buffer_size": 5132,
-				"line_ending": "Windows"
+				"buffer_size": 1128,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -288,22 +296,6 @@
 			{
 				"buffer_size": 2205,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/Empleado.php",
-			"settings":
-			{
-				"buffer_size": 445,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/Cliente.php",
-			"settings":
-			{
-				"buffer_size": 267,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -343,17 +335,21 @@
 	},
 	"file_history":
 	[
+		"/D/xampp/htdocs/hermes/app/models/Ara.php",
+		"/D/xampp/htdocs/hermes/app/models/Servicio.php",
+		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
 		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
+		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
+		"/D/xampp/htdocs/hermes/app/views/listaAtenciones.blade.php",
+		"/D/xampp/htdocs/hermes/app/views/contratos.blade.php",
+		"/D/xampp/htdocs/hermes/app/controllers/ContratoController.php",
+		"/D/xampp/htdocs/hermes/app/models/Empleado.php",
+		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
 		"/D/xampp/htdocs/hermes/app/models/Area.php",
 		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
 		"/D/xampp/htdocs/hermes/app/views/mantenciones.blade.php",
 		"/D/xampp/htdocs/hermes/app/controllers/MantencionController.php",
-		"/D/xampp/htdocs/hermes/app/views/listaAtenciones.blade.php",
-		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
-		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
-		"/D/xampp/htdocs/hermes/app/models/Empleado.php",
 		"/D/xampp/htdocs/hermes/app/models/Ficha.php",
-		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
 		"/D/xampp/htdocs/hermes/app/routes.php",
 		"/D/xampp/htdocs/hermes/app/start/global.php",
 		"/D/xampp/htdocs/hermes/app/config/app.php",
@@ -466,11 +462,7 @@
 		"/D/xampp/htdocs/Aye/deWeb/js/jquery.featureList-1.0.js",
 		"/D/xampp/htdocs/Aye/deWeb/css/mineduc.css",
 		"/D/xampp/htdocs/Aye/deWeb/engine2/style.css",
-		"/D/xampp/htdocs/Aye/deWeb/engine2/jquery.js",
-		"/D/xampp/htdocs/Aye/deWeb/css/contenido.css",
-		"/D/xampp/htdocs/Aye/deWeb/css/jquery.fancybox.css",
-		"/D/xampp/htdocs/Aye/deWeb/css/featured-list.css",
-		"/D/xampp/htdocs/Aye/index.php"
+		"/D/xampp/htdocs/Aye/deWeb/engine2/jquery.js"
 	],
 	"find":
 	{
@@ -488,6 +480,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"trash",
 			"fluid",
 			"es",
 			"app:",
@@ -614,8 +607,7 @@
 			"11",
 			"prev",
 			"wowslider-container1",
-			"data",
-			"11"
+			"data"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -635,7 +627,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -692,46 +684,45 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/listaAtenciones.blade.php",
+					"file": "app/routes.php",
 					"settings":
 					{
-						"buffer_size": 4252,
+						"buffer_size": 1144,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3541,
-								3541
+								722,
+								722
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": false
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1522.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "app/views/layout.blade.php",
+					"file": "app/views/mantenciones.blade.php",
 					"settings":
 					{
-						"buffer_size": 5132,
+						"buffer_size": 1192,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5132,
-								5132
+								463,
+								463
 							]
 						],
 						"settings":
@@ -740,13 +731,40 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1867.0,
+						"translation.y": 57.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
+					"file": "app/controllers/MantencionController.php",
+					"settings":
+					{
+						"buffer_size": 1128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "app/controllers/FichaController.php",
 					"settings":
 					{
@@ -757,8 +775,8 @@
 						"selection":
 						[
 							[
-								900,
-								900
+								919,
+								919
 							]
 						],
 						"settings":
@@ -767,60 +785,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 228.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/models/Empleado.php",
-					"settings":
-					{
-						"buffer_size": 445,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								445
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/models/Cliente.php",
-					"settings":
-					{
-						"buffer_size": 267,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								179,
-								179
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 456.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
