@@ -16,14 +16,29 @@ Route::GET('/', function()
 	return View::make('home');
 });
 
-Route::GET('/ficha', array(
-	'as' => 'ficha',
+Route::GET('/mantenciones', array(
+	'as' => 'mantenciones',
 	'uses' => 'FichaController@listar'
 ));
 
-Route::GET('/mantenciones', array(
+/*Route::GET('/mantenciones', array(
 	'as' => 'mantenciones',
 	'uses' => 'MantencionController@index'
+));*/
+
+Route::GET('/servicios', array(
+	'as' => 'servicios',
+	'uses' => 'ServicioController@index'
+));
+
+Route::POST('/servicio/guarda', array(
+	'as' => 'servicio/guarda',
+	'uses' => 'ServicioController@create'
+));
+
+Route::GET('/servicio/elimina/{id}', array(
+	'as' => 'servicio/elimina/id',
+	'uses' => 'ServicioController@remove'
 ));
 
 Route::GET('/contratos', array(
