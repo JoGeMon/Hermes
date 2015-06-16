@@ -87,9 +87,16 @@ class ServicioController extends \BaseController {
 	 * @param  int  $idServicio = Identificador del servicio
 	 * @return int $num = Cantidad de filas afectadas
 	 */
-	public function destroy($id)
+	public function destroy($idServicio)
 	{
-		//
+		$servicio = Servicio::find($idServicio);
+		if($servicio->delete()>0){
+			return Redirect::route('servicios');
+		}else{
+
+		}
+
+		
 	}
 
 

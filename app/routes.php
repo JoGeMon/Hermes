@@ -38,7 +38,7 @@ Route::POST('/servicio/guarda', array(
 
 Route::GET('/servicio/elimina/{id}', array(
 	'as' => 'servicio/elimina/id',
-	'uses' => 'ServicioController@remove'
+	'uses' => 'ServicioController@destroy'
 ));
 
 Route::GET('/contratos', array(

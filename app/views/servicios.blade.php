@@ -42,7 +42,7 @@
 								<tr>
 									<td>{{$servicio->idServicio}}</td>
 									<td>{{$servicio->detalleServicio}}</td>
-									<td><span class="glyphicon glyphicon-trash"></span></td>
+									<td><a href="{{URL::route('servicio/elimina/id',$servicio->idServicio)}}"<span class="glyphicon glyphicon-trash"></span></td>
 								</tr>
 							@endif
 						@endforeach
