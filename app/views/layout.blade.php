@@ -68,11 +68,13 @@
 					<ul id="menu" style="list-style-type:none; padding-left: 0px;">
 						<li style="padding: 10px"><a href="{{URL::route('mantenciones')}}"><i class="glyphicon glyphicon-bullhorn"></i> Mantenciones</a></li>
 						<li style="padding: 10px"><a href="{{URL::route('contratos')}}"><i class="glyphicon glyphicon-barcode"></i> Contratos</a></li>
-						<li style="padding: 10px"><a href="{{URL::route('servicios')}}"><i class="glyphicon glyphicon-barcode"></i> Servicios</a></li>
 						<!--<li style="padding: 10px"><a href="capacitacion.php"><i class="glyphicon glyphicon-book"></i> Capacitación <span class="label label-warning">1</span></a></li>
 						<li style="padding: 10px"><a href="#"><i class="glyphicon glyphicon-dashboard"></i> Dashboard <span class="label label-danger"><i class="glyphicon glyphicon-exclamation-sign"></i></span></a></li>-->
 						<hr>
-						<li><a href="administracion.php"><i class="glyphicon glyphicon-cog"></i> Administrar</a></li>
+						<li style="padding: 10px"><a href="administracion.php"><i class="glyphicon glyphicon-cog"></i> Administrar</a></li>
+						<li style="padding: 10px"><a href="{{URL::route('servicios')}}"><i class="glyphicon glyphicon-barcode"></i> Equipos</a></li>
+						<li style="padding: 10px"><a href="{{URL::route('servicios')}}"><i class="glyphicon glyphicon-barcode"></i> Clientes</a></li>
+						<li style="padding: 10px"><a href="{{URL::route('servicios')}}"><i class="glyphicon glyphicon-barcode"></i> Trabajadores</a></li>
 					</ul>
 				</div>
 	    		<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">

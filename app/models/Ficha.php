@@ -2,12 +2,12 @@
 
 Class Ficha 
 extends Eloquent{
-	protected $table = 'tblAtencion';
+	protected $table = 'tblatencion';
 	protected $primaryKey = 'idAtencion';
 	
 	static function getFichas(){
-		$fichas = DB::table('tblAtencion')
-			->join('tblCliente', 'tblAtencion.idCliente', '=', 'tblCliente.idCliente')
+		$fichas = DB::table('tblatencion')
+			->join('tblcliente', 'tblatencion.idCliente', '=', 'tblcliente.idCliente')
 			->whereRaw("MONTH(fechaPactada) = 6")
 			->get();
 		//dd(DB::getQueryLog());

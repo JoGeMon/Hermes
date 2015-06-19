@@ -1,12 +1,12 @@
 <?php 
 
 class Cliente extends Eloquent{
-	protected $table = 'tblCliente';
+	protected $table = 'tblcliente';
 	protected $primaryKey = 'idCliente';
 	
 	static function getCliente($idCliente)
 	{
-		$cliente = DB::table('tblCliente')
+		$cliente = DB::table('tblcliente')
 			->where('idCliente',$idCliente)
 			->first();
 		return $cliente;

@@ -1,6 +1,6 @@
 <?php 
 
 Class Servicio extends Eloquent{
-	protected $table = 'tblServicio';
+	protected $table = 'tblservicio';
 	protected $primaryKey = 'idServicio';
 }

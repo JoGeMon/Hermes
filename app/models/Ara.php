@@ -1,6 +1,6 @@
 <?php 
 
 Class Ara extends Eloquent{
-	protected $table = 'tblArea';
+	protected $table = 'tblarea';
 	protected $primaryKey = 'idArea';
 }
