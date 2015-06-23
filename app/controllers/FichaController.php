@@ -28,8 +28,8 @@ class FichaController extends \BaseController {
 		$fichas = Ficha::getFichas();
 		$clientes = Cliente::lists('nombreCliente','idCliente');
 		//$empleados = Empleado::lists("CONCAT(nombreEmpleado,apellidoPaternoEmpleado)", "idEmpleado");
-		//$empleados = Empleado::getEmpleadoCombo();
-		$empleados = Empleado::lists("CONCAT(nombreEmpleado,apellidoPaternoEmpleado)", "idEmpleado");
+		$empleados = Empleado::getEmpleadoCombo();
+		//$empleados = Empleado::lists(DB::raw("CONCAT(nombreEmpleado,' ',apellidoPaternoEmpleado)"), "idEmpleado");
 		$areas = Ara::lists('nombreArea','idArea');
 		//dd($fichas);
 		return(View::make('mantenciones',array(
