@@ -3,7 +3,7 @@
 class ContratoController extends \BaseController {
 
 	/**
-	 * Display a listing of the resource.
+	 * Lista todos los contratos existentes.
 	 *
 	 * @return Response
 	 */
@@ -16,18 +16,20 @@ class ContratoController extends \BaseController {
 
 
 	/**
-	 * Show the form for creating a new resource.
+	 * Despliega el formulario de creación de contratos
 	 *
 	 * @return Response
 	 */
 	public function create()
 	{
-		//
+		$clientes = Cliente::lists('nombreCliente','idCliente');
+		$areas = Ara::lists('nombreArea','idArea');
+		return View::make('contratos/nuevo',array('clientes' => $clientes, 'areas' => $areas));
 	}
 
 
 	/**
-	 * Store a newly created resource in storage.
+	 * Guarda un nuevo contrato.
 	 *
 	 * @return Response
 	 */

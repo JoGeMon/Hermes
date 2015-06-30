@@ -7,9 +7,7 @@
 					<h3 class="panel-title text-center">Contratos</h3>
 			</div>
 			<div class="panel-body">
-				<button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#creaContrato">
-					<span class="glyphicon glyphicon-plus-sign"></span>
-				</button><br/>
+				<a href="{{URL::route('contratos/nuevo')}}" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus-sign"></span></a><br/><br/>
 				<table class="table table-bordered table-hover table-striped">
 					<thead>
 						<tr class="active">
@@ -62,30 +60,6 @@
 		</div>
 	</div>
 </div>
-
-<div class="modal fade" id="creaContrato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        		<h4 class="modal-title">Crear contrato</h4>
-			</div>
-			<div class="modal-body">
-				{{Form::open(array())}}
-					{{ Form::label('cliente', 'Cliente')}}
-					{{ Form::select('cliente',$clientes,'',array('class' => 'form-control'))}}
-					{{ Form::label('area','Área de servicio')}}
-			      	{{ Form::select('area',$areas,'',array('class' => 'form-control'))}}
-				{{Form::close()}}
-			</div>
-			<div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Guardar</button>
-      		</div>
-		</div>
-	</div>
-</div>
-
 
 <div class="modal fade" id="infoContrato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">

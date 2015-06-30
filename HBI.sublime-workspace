@@ -275,27 +275,14 @@
 			}
 		},
 		{
-			"file": "app/views/servicios.blade.php",
+			"contents": "@extends('layout')\n@section('contenido')\n<div class=\"row\">\n	<div class=\"col-md-11\">\n		<div class=\"panel panel-default\">\n			<div class=\"panel-heading\">\n					<h3 class=\"panel-title text-center\">Contratos</h3>\n			</div>\n			<div class=\"panel-body\">\n				<button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#creaContrato\">\n					<span class=\"glyphicon glyphicon-plus-sign\"></span>\n				</button><br/><br/>\n				<table class=\"table table-bordered table-hover table-striped\">\n					<thead>\n						<tr class=\"active\">\n							<th>Emperesa</th>\n							<th>Área</th>\n							<th>Meses</th>\n							<th>Acciones</th>\n						</tr>\n					</thead>\n					<tbody>\n						<tr>\n							<td>Empresa 1</td>\n							<td>Area 1</td>\n							<td>Agosto a Junio</td>\n							<td>\n								<span class=\"glyphicon glyphicon-info-sign\" data-toggle=\"modal\" data-target=\"#infoContrato\"></span>\n								<span class=\"glyphicon glyphicon-trash\"></span>\n							</td>\n						</tr>\n						<tr>\n							<td>Empresa 2</td>\n							<td>Area 2</td>\n							<td>Agosto a Junio</td>\n							<td>\n								<span class=\"glyphicon glyphicon-info-sign\" data-toggle=\"modal\" data-target=\"#infoContrato\"></span>\n								<span class=\"glyphicon glyphicon-trash\"></span>\n							</td>\n						</tr>\n						<tr>\n							<td>Empresa 3</td>\n							<td>Area 3</td>\n							<td>Agosto a Junio</td>\n							<td>\n								<span class=\"glyphicon glyphicon-info-sign\" data-toggle=\"modal\" data-target=\"#infoContrato\"></span>\n								<span class=\"glyphicon glyphicon-trash\"></span>							\n							</td>\n						</tr>\n						<tr>\n							<td>Empresa 4</td>\n							<td>Area 4</td>\n							<td>Agosto a Junio</td>\n							<td>\n								<span class=\"glyphicon glyphicon-info-sign\" data-toggle=\"modal\" data-target=\"#infoContrato\"></span>\n								<span class=\"glyphicon glyphicon-trash\"></span>\n							</td>\n						</tr>\n					</tbody>\n				</table>\n			</div>\n		</div>\n	</div>\n</div>\n\n<div class=\"modal fade\" id=\"creaContrato\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n	<div class=\"modal-dialog\">\n		<div class=\"modal-content\">\n			<div class=\"modal-header\">\n				<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        		<h4 class=\"modal-title\">Crear contrato</h4>\n			</div>\n			<div class=\"modal-body\">\n				{{Form::open(array())}}\n					{{ Form::label('cliente', 'Cliente')}}\n					{{ Form::select('cliente',$clientes,'',array('class' => 'form-control'))}}\n					{{ Form::label('area','Área de servicio')}}\n			      	{{ Form::select('area',$areas,'',array('class' => 'form-control'))}}\n				{{Form::close()}}\n			</div>\n			<div class=\"modal-footer\">\n		        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n		        <button type=\"button\" class=\"btn btn-primary\">Guardar</button>\n      		</div>\n		</div>\n	</div>\n</div>\n\n\n<div class=\"modal fade\" id=\"infoContrato\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n	<div class=\"modal-dialog\">\n		<div class=\"modal-content\">\n			<div class=\"modal-header\" style=\"background-color: #398ab9; color:#FFF\">\n				<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n        		<h4 class=\"modal-title text-center\">Contrato de atención</h4>\n			</div>\n			<div class=\"modal-body\">\n				<table class=\"table table-bordered\">\n					<tr>\n						<th>Nombre Cliente</th>\n						<td>Cliente ?</td>\n					</tr>\n					<tr>\n						<th>Fecha de Diagnóstico</th>\n						<td>{{date('d-F-Y');}}</td>\n					</tr>\n					<tr>\n						<th>Aárea de Servicio</th>\n						<td>Area X</td>\n					</tr>\n				</table>\n				<hr>\n				<div class=\"alert alert-info\">Cuadro de frecuencia</div>\n				<p>Acciones</p>\n				<table class=\"table table-bordered\">\n					<thead>\n						<tr class=\"active text-center\">\n							<th>Mes</th>\n							<th>Área</th>\n						</tr>\n					</thead>\n					<tbody>\n						<tr>\n							<td>Junio</td>\n							<td>Bombas</td>\n						</tr>\n						<tr>\n							<td>Junio</td>\n							<td>Portones</td>\n						</tr>\n						<tr>\n							<td>Junio</td>\n							<td>Tableros</td>\n						</tr>\n					</tbody>\n				</table>\n				<textarea class=\"form-control\" placeholder=\"Cometarios\"></textarea><br/>\n				<textarea class=\"form-control\" placeholder=\"Presupuesto\"></textarea>\n			</div>\n			<div class=\"modal-footer\">\n		        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n		        <button type=\"button\" class=\"btn btn-primary\">Guardar</button>\n      		</div>\n		</div>\n	</div>\n</div>\n\n<div id=\"\"\n@stop",
+			"file": "app/views/contratos.blade.php",
+			"file_size": 4728,
+			"file_write_time": 130797519587115240,
 			"settings":
 			{
-				"buffer_size": 2688,
+				"buffer_size": 4588,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/ServicioController.php",
-			"settings":
-			{
-				"buffer_size": 1548,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/FichaController.php",
-			"settings":
-			{
-				"buffer_size": 2205,
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -304,22 +291,6 @@
 			{
 				"buffer_size": 1491,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/ficha.blade.php",
-			"settings":
-			{
-				"buffer_size": 3897,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/Servicio.php",
-			"settings":
-			{
-				"buffer_size": 116,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -359,16 +330,21 @@
 	},
 	"file_history":
 	[
+		"/D/xampp/htdocs/hermes/.gitignore",
+		"/D/xampp/htdocs/hermes/app/views/servicios.blade.php",
+		"/D/xampp/htdocs/hermes/app/controllers/ServicioController.php",
+		"/D/xampp/htdocs/hermes/app/models/Servicio.php",
+		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
+		"/D/xampp/htdocs/hermes/app/models/Empleado.php",
+		"/D/xampp/htdocs/hermes/app/config/database.php",
+		"/D/xampp/htdocs/hermes/app/routes.php",
+		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
+		"/D/xampp/htdocs/hermes/app/config/app.php",
 		"/D/xampp/htdocs/hermes/app/views/contratos.blade.php",
 		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
-		"/D/xampp/htdocs/hermes/app/routes.php",
 		"/D/xampp/htdocs/hermes/app/models/Ara.php",
-		"/D/xampp/htdocs/hermes/app/models/Servicio.php",
-		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
-		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
 		"/D/xampp/htdocs/hermes/app/views/listaAtenciones.blade.php",
 		"/D/xampp/htdocs/hermes/app/controllers/ContratoController.php",
-		"/D/xampp/htdocs/hermes/app/models/Empleado.php",
 		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
 		"/D/xampp/htdocs/hermes/app/models/Area.php",
 		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
@@ -376,7 +352,6 @@
 		"/D/xampp/htdocs/hermes/app/controllers/MantencionController.php",
 		"/D/xampp/htdocs/hermes/app/models/Ficha.php",
 		"/D/xampp/htdocs/hermes/app/start/global.php",
-		"/D/xampp/htdocs/hermes/app/config/app.php",
 		"/D/xampp/htdocs/hermes/app/models/Mantencion.php",
 		"/D/xampp/htdocs/hermes/app/views/manteciones.blade.php",
 		"/D/xampp/htdocs/hermes/.gitattributes",
@@ -393,7 +368,6 @@
 		"/D/Dropbox/Cargas Hermes/Marzo.sql",
 		"/D/Dropbox/Cargas Hermes/Enero.sql",
 		"/C/Users/JoGe/Downloads/playlist (1).m3u8",
-		"/D/xampp/htdocs/hermes/app/config/database.php",
 		"/C/Users/JoGe/Downloads/ss_playlist_20150407.m3u",
 		"/D/Dropbox/canales.m3u",
 		"/C/Users/JoGe/Downloads/ssiptvPlaylist20141222.m3u",
@@ -483,10 +457,7 @@
 		"/D/xampp/htdocs/Aye/deWeb/engine2/wowslider.mod.js",
 		"/D/xampp/htdocs/Aye/deWeb/engine2/play.png",
 		"/D/xampp/htdocs/Aye/deWeb/engine2/style.mod.css",
-		"/D/xampp/htdocs/Aye/deWeb/js/jquery.featureList-1.0.js",
-		"/D/xampp/htdocs/Aye/deWeb/css/mineduc.css",
-		"/D/xampp/htdocs/Aye/deWeb/engine2/style.css",
-		"/D/xampp/htdocs/Aye/deWeb/engine2/jquery.js"
+		"/D/xampp/htdocs/Aye/deWeb/js/jquery.featureList-1.0.js"
 	],
 	"find":
 	{
@@ -651,7 +622,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -708,18 +679,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/servicios.blade.php",
+					"file": "app/views/contratos.blade.php",
 					"settings":
 					{
-						"buffer_size": 2688,
+						"buffer_size": 4588,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1521,
-								1521
+								4581,
+								4581
 							]
 						],
 						"settings":
@@ -728,98 +699,17 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 456.0,
+						"translation.y": 2342.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "app/controllers/ServicioController.php",
-					"settings":
-					{
-						"buffer_size": 1548,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1453,
-								1453
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1235.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/controllers/FichaController.php",
-					"settings":
-					{
-						"buffer_size": 2205,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								919,
-								919
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "app/routes.php",
 					"settings":
 					{
 						"buffer_size": 1491,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								993,
-								993
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 513.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/views/ficha.blade.php",
-					"settings":
-					{
-						"buffer_size": 3897,
 						"regions":
 						{
 						},
@@ -832,34 +722,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 171.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/models/Servicio.php",
-					"settings":
-					{
-						"buffer_size": 116,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								114,
-								114
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

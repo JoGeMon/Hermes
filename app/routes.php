@@ -46,6 +46,12 @@ Route::GET('/contratos', array(
 	'uses' => 'ContratoController@index'
 ));
 
+
+Route::GET('/contratos/nuevo', array(
+	'as' => 'contratos/nuevo',
+	'uses' => 'ContratoController@create'
+));
+
 Route::GET('/ficha/listar/',array(
 	'as' => 'lista',
 	'uses' => 'FichaController@listar'
