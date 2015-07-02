@@ -99,5 +99,11 @@ class ServicioController extends \BaseController {
 		
 	}
 
+	public function cargaServicios($idArea){
+		$objServicio = new Servicio();
+		$servicios = $objServicio->getServicios($idArea);
+		return View::make('servicios/cargaServicios',array('servicios' => $servicios));
+	}
+
 
 }

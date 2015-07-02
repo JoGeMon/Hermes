@@ -41,6 +41,11 @@ Route::GET('/servicio/elimina/{id}', array(
 	'uses' => 'ServicioController@destroy'
 ));
 
+Route::GET('/servicio/cargaServicio/{idArea}', array(
+	'as' => 'cargaServicios',
+	'uses' => 'ServicioController@cargaServicios'
+));
+
 Route::GET('/contratos', array(
 	'as' => 'contratos',
 	'uses' => 'ContratoController@index'
@@ -50,6 +55,16 @@ Route::GET('/contratos', array(
 Route::GET('/contratos/nuevo', array(
 	'as' => 'contratos/nuevo',
 	'uses' => 'ContratoController@create'
+));
+
+Route::GET('/contratos/borrador/{idContrato}', array(
+	'as' => 'contratos/borrador',
+	'uses' => 'ContratoController@show'
+));
+
+Route::POST('/contratos/servicio/agregar', array(
+	'as' => 'contratos/servicio/agregar',
+	'uses' => 'ContratoController@store'
 ));
 
 Route::GET('/ficha/listar/',array(

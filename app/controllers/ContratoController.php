@@ -24,6 +24,7 @@ class ContratoController extends \BaseController {
 	{
 		$clientes = Cliente::lists('nombreCliente','idCliente');
 		$areas = Ara::lists('nombreArea','idArea');
+		array_unshift($areas, 'Seleccione un área');
 		$facturacion = Facturacion::lists('detalleFacturacion', 'idFacturacion');
 		return View::make('contratos/nuevo',array('clientes' => $clientes, 'areas' => $areas, 'facturacion' => $facturacion
 			));
@@ -37,7 +38,15 @@ class ContratoController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$idContrato = Input::get('idContrato');
+		$idServicio = Input::get('servicio');
+		$valor = Input::get('valor');
+		$objContrato = new Contrato();
+		if($objContrato->agregaServicio($idContrato,$idServicio, $valor)){
+			return View::make('contratos/mostrar',array('idContrato' => $idContrato));
+		}else{
+			return View::make('contratos/mostrar',array('idContrato' => $idContrato));
+		}
 	}
 
 
@@ -47,9 +56,12 @@ class ContratoController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($idContrato)
 	{
-		//
+		$areas = Ara::lists('nombreArea','idArea');
+		array_unshift($areas, 'Seleccione un área');
+		$contrato = Contrato::find('idContrato'); //Cambiar por método con join que llene la vista de edición de contratos
+		return View::make('contratos/mostrar',array('contrato' => $contrato, 'areas' => $areas));
 	}
 
 
