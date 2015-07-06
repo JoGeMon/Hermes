@@ -15,4 +15,13 @@ class Contrato extends Eloquent{
 			));
 		return $affected;
 	}
+
+	public function getCabecera($idContrato){
+		$cabecera = DB::table('tblcontrato')
+			->join('tblcliente', 'tblcontrato.idCliente', '=', 'tblcliente.idCliente')
+			->join('tblfacturacion', 'tblcontrato.idFacturacion', '=', 'tblfacturacion.idFacturacion')
+			->join('tblfrecuenciamantencion', 'tblcontrato.idFrecuenciaMantencion', '=', 'tblfrecuenciamantencion.idFrecuenciaMantencion')
+			->get();			
+		return $cabecera;
+	}
 }

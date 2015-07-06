@@ -21,7 +21,7 @@
 						<p>Cliente</p>
 					</div>
 					<div class="col-md-10">
-						<p>{{'$contrato->nombreCliente'}}</p>
+						<p>{{$contrato->nombreCliente}}</p>
 					</div>
 				</div>
 				<div class="row">

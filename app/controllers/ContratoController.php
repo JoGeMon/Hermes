@@ -60,7 +60,8 @@ class ContratoController extends \BaseController {
 	{
 		$areas = Ara::lists('nombreArea','idArea');
 		array_unshift($areas, 'Seleccione un área');
-		$contrato = Contrato::find('idContrato'); //Cambiar por método con join que llene la vista de edición de contratos
+		$contrato = Contrato::find($idContrato); //Cambiar por método con join que llene la vista de edición de contratos
+		$contrato = Contrato::getCabecera($idContrato);
 		return View::make('contratos/mostrar',array('contrato' => $contrato, 'areas' => $areas));
 	}
 
