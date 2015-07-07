@@ -43,9 +43,9 @@ class ContratoController extends \BaseController {
 		$valor = Input::get('valor');
 		$objContrato = new Contrato();
 		if($objContrato->agregaServicio($idContrato,$idServicio, $valor)){
-			return View::make('contratos/mostrar',array('idContrato' => $idContrato));
+			return Redirect::route('contratos/borrador',array('idContrato' => $idContrato));
 		}else{
-			return View::make('contratos/mostrar',array('idContrato' => $idContrato));
+			return Redirect::route('contratos/borrador',array('idContrato' => $idContrato));
 		}
 	}
 
@@ -59,10 +59,11 @@ class ContratoController extends \BaseController {
 	public function show($idContrato)
 	{
 		$areas = Ara::lists('nombreArea','idArea');
-		array_unshift($areas, 'Seleccione un área');
+			array_unshift($areas, 'Seleccione un área');
 		$contrato = Contrato::find($idContrato); //Cambiar por método con join que llene la vista de edición de contratos
 		$contrato = Contrato::getCabecera($idContrato);
-		return View::make('contratos/mostrar',array('contrato' => $contrato, 'areas' => $areas));
+		$detalleContrato = Contrato::getDetalleContrato($idContrato);
+		return View::make('contratos/mostrar',array('contrato' => $contrato, 'areas' => $areas, 'servicios' => $detalleContrato ));
 	}
 
 

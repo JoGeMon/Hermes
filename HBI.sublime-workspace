@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"contro",
+				"contrato"
+			],
+			[
+				"tblc",
+				"tblcliente"
+			],
+			[
 				"op",
 				"option	Tag"
 			],
@@ -98,10 +106,6 @@
 			[
 				"tbl",
 				"tblRegion"
-			],
-			[
-				"tblc",
-				"tblCliente"
 			],
 			[
 				"cas",
@@ -283,6 +287,48 @@
 			"settings":
 			{
 				"buffer_size": 3216,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/contratos/nuevo.blade.php",
+			"settings":
+			{
+				"buffer_size": 5087,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\nclass ContratoController extends \\BaseController {\n\n	/**\n	 * Lista todos los contratos existentes.\n	 *\n	 * @return Response\n	 */\n	public function index()\n	{\n		$clientes = Cliente::lists('nombreCliente','idCliente');\n		$areas = Ara::lists('nombreArea','idArea');\n		return View:: make('contratos',array('clientes' => $clientes, 'areas' => $areas));\n	}\n\n\n	/**\n	 * Despliega el formulario de creación de contratos\n	 *\n	 * @return Response\n	 */\n	public function create()\n	{\n		$clientes = Cliente::lists('nombreCliente','idCliente');\n		$areas = Ara::lists('nombreArea','idArea');\n		array_unshift($areas, 'Seleccione un área');\n		$facturacion = Facturacion::lists('detalleFacturacion', 'idFacturacion');\n		return View::make('contratos/nuevo',array('clientes' => $clientes, 'areas' => $areas, 'facturacion' => $facturacion\n			));\n	}\n\n\n	/**\n	 * Guarda un nuevo contrato.\n	 *\n	 * @return Response\n	 */\n	public function store()\n	{\n		$idContrato = Input::get('idContrato');\n		$idServicio = Input::get('servicio');\n		$valor = Input::get('valor');\n		$objContrato = new Contrato();\n		if($objContrato->agregaServicio($idContrato,$idServicio, $valor)){\n			return View::make('contratos/mostrar',array('idContrato' => $idContrato));\n		}else{\n			return View::make('contratos/mostrar',array('idContrato' => $idContrato));\n		}\n	}\n\n\n	/**\n	 * Display the specified resource.\n	 *\n	 * @param  int  $id\n	 * @return Response\n	 */\n	public function show($idContrato)\n	{\n		$areas = Ara::lists('nombreArea','idArea');\n			array_unshift($areas, 'Seleccione un área');\n		$contrato = Contrato::find($idContrato); //Cambiar por método con join que llene la vista de edición de contratos\n		$contrato = Contrato::getCabecera($idContrato);\n		return View::make('contratos/mostrar',array('contrato' => $contrato, 'areas' => $areas));\n	}\n\n\n	/**\n	 * Show the form for editing the specified resource.\n	 *\n	 * @param  int  $id\n	 * @return Response\n	 */\n	public function edit($id)\n	{\n		//\n	}\n\n\n	/**\n	 * Update the specified resource in storage.\n	 *\n	 * @param  int  $id\n	 * @return Response\n	 */\n	public function update($id)\n	{\n		//\n	}\n\n\n	/**\n	 * Remove the specified resource from storage.\n	 *\n	 * @param  int  $id\n	 * @return Response\n	 */\n	public function destroy($id)\n	{\n		//\n	}\n\n\n}\n",
+			"file": "app/controllers/ContratoController.php",
+			"file_size": 2251,
+			"file_write_time": 130805954139802246,
+			"settings":
+			{
+				"buffer_size": 2247,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/contratos/mostrar.blade.php",
+			"settings":
+			{
+				"buffer_size": 4018,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/models/Contrato.php",
+			"settings":
+			{
+				"buffer_size": 791,
 				"line_ending": "Windows"
 			}
 		}
@@ -615,7 +661,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -630,8 +676,8 @@
 						"selection":
 						[
 							[
-								10283,
-								9494
+								0,
+								0
 							]
 						],
 						"settings":
@@ -639,7 +685,7 @@
 							"syntax": "Packages/SQL/SQL.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 513.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -666,6 +712,139 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 1430.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/contratos/nuevo.blade.php",
+					"settings":
+					{
+						"buffer_size": 5087,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								368,
+								368
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/ContratoController.php",
+					"settings":
+					{
+						"buffer_size": 2247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/contratos/mostrar.blade.php",
+					"settings":
+					{
+						"buffer_size": 4018,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								639,
+								639
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 114.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/Contrato.php",
+					"settings":
+					{
+						"buffer_size": 791,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								396,
+								385
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -729,6 +908,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 185.0,
+	"side_bar_width": 182.0,
 	"status_bar_visible": true
 }

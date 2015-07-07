@@ -7,7 +7,7 @@ class Contrato extends Eloquent{
 
 	public function agregaServicio($idContrato,$idServicio, $valor)
 	{
-		$affected = DB::table('detalleContrato')->insert(
+		$affected = DB::table('tbldetallecontrato')->insert(
 			array(
 				'idContrato' => $idContrato,
 				'idServicio' => $idServicio,
@@ -16,12 +16,19 @@ class Contrato extends Eloquent{
 		return $affected;
 	}
 
-	public function getCabecera($idContrato){
+	public static function getCabecera($idContrato){
 		$cabecera = DB::table('tblcontrato')
 			->join('tblcliente', 'tblcontrato.idCliente', '=', 'tblcliente.idCliente')
 			->join('tblfacturacion', 'tblcontrato.idFacturacion', '=', 'tblfacturacion.idFacturacion')
 			->join('tblfrecuenciamantencion', 'tblcontrato.idFrecuenciaMantencion', '=', 'tblfrecuenciamantencion.idFrecuenciaMantencion')
-			->get();			
+			->first();			
 		return $cabecera;
+	}
+
+	public static function getDetalleContrato($idContrato){
+		$detalle = DB::table('tbldetallecontrato')
+			->join('tblservicio', 'tbldetallecontrato.idServicio', '=', 'tblservicio.idServicio')
+			->get();			
+		return $detalle;
 	}
 }

@@ -29,7 +29,15 @@
 						<p>Cod. Contrato</p>
 					</div>
 					<div class="col-md-10">
-						<p>{{'$contrato->nombreCliente'}}</p>
+						<p>{{$contrato->codigoContrato}}</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2">
+						<p>Fecha Firma</p>
+					</div>
+					<div class="col-md-10">
+			      		<p>{{date("d-m-Y", strtotime($contrato->fechaFirma))}}</p>
 					</div>
 				</div>
 				<div class="row">
@@ -37,7 +45,7 @@
 						<p>Fecha Inicio</p>
 					</div>
 					<div class="col-md-10">
-			      		<p>{{'$contrato->fechaInicio'}}</p>
+						<p>{{date("d-m-Y", strtotime($contrato->inicioContrato))}}</p>
 					</div>
 				</div>
 				<div class="row">
@@ -45,7 +53,7 @@
 						<p>Fecha Fin</p>
 					</div>
 					<div class="col-md-10">
-			      		<p>{{'$contrato->fechaFin'}}</p>
+						<p>{{date("d-m-Y", strtotime($contrato->finContrato))}}</p>
 					</div>
 				</div>
 				<div class="row">
@@ -53,7 +61,15 @@
 						<p>Facturación</p>
 					</div>
 					<div class="col-md-10">
-			      		<p>{{'$contrato->detalleFacturacion'}}</p>
+			      		<p>{{$contrato->detalleFacturacion}}</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2">
+						<p>Frecuencia de visitas</p>
+					</div>
+					<div class="col-md-10">
+			      		<p>{{$contrato->detalleFrecuenciaMantencion}}</p>
 					</div>
 				</div>
 				<div class="row">
@@ -61,7 +77,7 @@
 						<p>Contraparte</p>
 					</div>
 					<div class="col-md-10">
-						<p>{{'$contrato->contraparte'}}</p>
+						<p>{{$contrato->nombreFirmante}}</p>
 					</div>
 				</div>
 				<br/><br/>
@@ -77,9 +93,12 @@
 								</tr>
 							</thead>
 							<tbody>
+								@foreach($servicios as $servicio)
 								<tr>
-									<td colspan="2" class="text-center">No tiene equipos agregados aún</td>
+									<td>{{$servicio->detalleServicio}}</td>
+									<td>{{$servicio->valor}}</td>
 								</tr>
+								@endforeach
 							</tbody>
 						</table>
 					</div>
@@ -103,6 +122,7 @@
 						{{ Form::label('area','Área de servicio', array('class' => 'col-md-2 control-label'))}}
 						<div class="col-md-10">
 			    			{{ Form::select('area',$areas,'',array('class' => 'form-control', 'id' => 'area'))}}
+			    			{{ Form::hidden('idContrato',$contrato->idContrato)}}
 						</div>
 					</div>
 
