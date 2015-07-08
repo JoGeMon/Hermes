@@ -3,8 +3,16 @@
 class Contrato extends Eloquent{
 	protected $table = 'tblcontrato';
 	protected $primaryKey = 'idcontrato';
-	
 
+	public static function getContratos(){
+		$cabecera = DB::table('tblcontrato')
+			->join('tblcliente', 'tblcontrato.idCliente', '=', 'tblcliente.idCliente')
+			->join('tblfacturacion', 'tblcontrato.idFacturacion', '=', 'tblfacturacion.idFacturacion')
+			->join('tblfrecuenciamantencion', 'tblcontrato.idFrecuenciaMantencion', '=', 'tblfrecuenciamantencion.idFrecuenciaMantencion')
+			->get();			
+		return $cabecera;
+	}
+	
 	public function agregaServicio($idContrato,$idServicio, $valor)
 	{
 		$affected = DB::table('tbldetallecontrato')->insert(
@@ -21,6 +29,7 @@ class Contrato extends Eloquent{
 			->join('tblcliente', 'tblcontrato.idCliente', '=', 'tblcliente.idCliente')
 			->join('tblfacturacion', 'tblcontrato.idFacturacion', '=', 'tblfacturacion.idFacturacion')
 			->join('tblfrecuenciamantencion', 'tblcontrato.idFrecuenciaMantencion', '=', 'tblfrecuenciamantencion.idFrecuenciaMantencion')
+			->where('idContrato',$idContrato)
 			->first();			
 		return $cabecera;
 	}

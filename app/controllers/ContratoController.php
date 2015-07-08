@@ -11,7 +11,8 @@ class ContratoController extends \BaseController {
 	{
 		$clientes = Cliente::lists('nombreCliente','idCliente');
 		$areas = Ara::lists('nombreArea','idArea');
-		return View:: make('contratos',array('clientes' => $clientes, 'areas' => $areas));
+		$contratos = Contrato::getContratos();
+		return View:: make('contratos/listar',array('clientes' => $clientes, 'areas' => $areas, 'contratos' => $contratos));
 	}
 
 

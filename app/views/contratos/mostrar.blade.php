@@ -9,147 +9,166 @@
 		});
 	});
 </script>
-<div class="row">
-	<div class="col-md-11">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-					<h3 class="panel-title text-center">Crear Contrato</h3>
-			</div>
-			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-2">
-						<p>Cliente</p>
-					</div>
-					<div class="col-md-10">
-						<p>{{$contrato->nombreCliente}}</p>
-					</div>
+
+@if(!isset($contrato->nombreCliente))
+	<div class="row">
+		<div class="col-md-11">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+						<h3 class="panel-title text-center">Crear Contrato</h3>
 				</div>
-				<div class="row">
-					<div class="col-md-2">
-						<p>Cod. Contrato</p>
-					</div>
-					<div class="col-md-10">
-						<p>{{$contrato->codigoContrato}}</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2">
-						<p>Fecha Firma</p>
-					</div>
-					<div class="col-md-10">
-			      		<p>{{date("d-m-Y", strtotime($contrato->fechaFirma))}}</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2">
-						<p>Fecha Inicio</p>
-					</div>
-					<div class="col-md-10">
-						<p>{{date("d-m-Y", strtotime($contrato->inicioContrato))}}</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2">
-						<p>Fecha Fin</p>
-					</div>
-					<div class="col-md-10">
-						<p>{{date("d-m-Y", strtotime($contrato->finContrato))}}</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2">
-						<p>Facturación</p>
-					</div>
-					<div class="col-md-10">
-			      		<p>{{$contrato->detalleFacturacion}}</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2">
-						<p>Frecuencia de visitas</p>
-					</div>
-					<div class="col-md-10">
-			      		<p>{{$contrato->detalleFrecuenciaMantencion}}</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2">
-						<p>Contraparte</p>
-					</div>
-					<div class="col-md-10">
-						<p>{{$contrato->nombreFirmante}}</p>
-					</div>
-				</div>
-				<br/><br/>
-				<div class="row" id="tblEquipos">
+				<div class="panel-body">
 					<div class="col-md-12">
-						<button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#addEquippos"><span class="glyphicon glyphicon-plus-sign"></span> Servicios</button>
-						<br/><br/>
-						<table class="table table-hover">
-							<thead>
-								<tr class="active">
-									<th>Equipo</th>
-									<th>Valor</th>
-								</tr>
-							</thead>
-							<tbody>
-								@foreach($servicios as $servicio)
-								<tr>
-									<td>{{$servicio->detalleServicio}}</td>
-									<td>{{$servicio->valor}}</td>
-								</tr>
-								@endforeach
-							</tbody>
-						</table>
+						<div class="alert alert-block alert-danger no-margin">
+							<p>No existe el contrato buscado</p>
+						</div>
 					</div>
-				</div><!-- #Equipos -->
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
-
-<div class="modal fade" id="addEquippos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header" style="background-color: #398ab9; color:#FFF">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        		<h4 class="modal-title text-center">Agregar servicios</h4>
-			</div>
-			<div class="modal-body">
-				{{Form::open(array('route' => 'contratos/servicio/agregar', 'class' => 'form-horizontal'))}}
-					<div class="form-group">
-						{{ Form::label('area','Área de servicio', array('class' => 'col-md-2 control-label'))}}
+@else
+	<div class="row">
+		<div class="col-md-11">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title text-center">Crear Contrato</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-2">
+							<p>Cliente</p>
+						</div>
 						<div class="col-md-10">
-			    			{{ Form::select('area',$areas,'',array('class' => 'form-control', 'id' => 'area'))}}
-			    			{{ Form::hidden('idContrato',$contrato->idContrato)}}
+							<p>{{$contrato->nombreCliente}}</p>
 						</div>
 					</div>
-
-					<div class="form-group">
-						{{Form::label('servicio','Equipos',array('class' => 'col-md-2 control-label'))}}
+					<div class="row">
+						<div class="col-md-2">
+							<p>Cod. Contrato</p>
+						</div>
 						<div class="col-md-10">
-							{{ Form::select('servicio',array(),'',array('class' => 'form-control', 'id' => 'equipos'))}}
+							<p>{{$contrato->codigoContrato}}</p>
 						</div>
 					</div>
-
-					<div class="form-group">
-						{{Form::label('valor','Valor',array('class' => 'col-md-2 control-label'))}}
+					<div class="row">
+						<div class="col-md-2">
+							<p>Fecha Firma</p>
+						</div>
 						<div class="col-md-10">
-							<div class="input-group">
-								<div class="input-group-addon">$</div>
-								{{ Form::text('valor','0',array('class' => 'form-control'))}}
-						    </div>
+					      	<p>{{date("d-m-Y", strtotime($contrato->fechaFirma))}}</p>
 						</div>
 					</div>
-				
-			</div>
-			<div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        {{Form::submit('Agregar',array('class' => 'btn btn-primary'))}}
-      		</div>
-      		{{Form::close()}}
+					<div class="row">
+						<div class="col-md-2">
+							<p>Fecha Inicio</p>
+						</div>
+						<div class="col-md-10">
+							<p>{{date("d-m-Y", strtotime($contrato->inicioContrato))}}</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+							<p>Fecha Fin</p>
+						</div>
+						<div class="col-md-10">
+							<p>{{date("d-m-Y", strtotime($contrato->finContrato))}}</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+							<p>Facturación</p>
+						</div>
+						<div class="col-md-10">
+				      		<p>{{$contrato->detalleFacturacion}}</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+							<p>Frecuencia de visitas</p>
+						</div>
+						<div class="col-md-10">
+				      		<p>{{$contrato->detalleFrecuenciaMantencion}}</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+							<p>Contraparte</p>
+						</div>
+						<div class="col-md-10">
+							<p>{{$contrato->nombreFirmante}}</p>
+						</div>
+					</div>
+					<br/><br/>
+					<div class="row" id="tblEquipos">
+						<div class="col-md-12">
+							<button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#addEquippos"><span class="glyphicon glyphicon-plus-sign"></span> Servicios</button>
+							<br/><br/>
+							<table class="table table-hover">
+								<thead>
+									<tr class="active">
+										<th>Equipo</th>
+										<th>Valor</th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach($servicios as $servicio)
+									<tr>
+										<td>{{$servicio->detalleServicio}}</td>
+										<td>{{$servicio->valor}}</td>
+									</tr>
+									@endforeach
+								</tbody>
+							</table>
+						</div>
+					</div><!-- #Equipos -->
+				</div><!-- panel body -->
+			</div><!-- panel default -->
 		</div>
 	</div>
-</div>
+
+	<div class="modal fade" id="addEquippos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: #398ab9; color:#FFF">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title text-center">Agregar servicios</h4>
+				</div>
+				<div class="modal-body">
+					{{Form::open(array('route' => 'contratos/servicio/agregar', 'class' => 'form-horizontal'))}}
+						<div class="form-group">
+							{{ Form::label('area','Área de servicio', array('class' => 'col-md-2 control-label'))}}
+							<div class="col-md-10">
+				    			{{ Form::select('area',$areas,'',array('class' => 'form-control', 'id' => 'area'))}}
+				    			{{ Form::hidden('idContrato',$contrato->idContrato)}}
+							</div>
+						</div>
+
+						<div class="form-group">
+							{{Form::label('servicio','Equipos',array('class' => 'col-md-2 control-label'))}}
+							<div class="col-md-10">
+								{{ Form::select('servicio',array(),'',array('class' => 'form-control', 'id' => 'equipos'))}}
+							</div>
+						</div>
+
+						<div class="form-group">
+							{{Form::label('valor','Valor',array('class' => 'col-md-2 control-label'))}}
+							<div class="col-md-10">
+								<div class="input-group">
+									<div class="input-group-addon">$</div>
+									{{ Form::text('valor','0',array('class' => 'form-control'))}}
+							    </div>
+							</div>
+						</div>
+					
+				</div>
+				<div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        {{Form::submit('Agregar',array('class' => 'btn btn-primary'))}}
+	      		</div>
+	      		{{Form::close()}}
+			</div>
+		</div>
+	</div>
+@endif
 @stop
