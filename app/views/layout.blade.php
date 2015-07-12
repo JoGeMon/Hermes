@@ -14,8 +14,9 @@
 		{{ HTML::style('assets/css/bootstrap.min.css'); }}
 		{{ HTML::style('assets/css/slidebars.min.css'); }}
 		{{-- HTML::style('assets/css/dataTables.css'); --}}
-		{{ HTML::style('assets/css/dataTables.bootstrap.css'); }}
-		{{ HTML::style('assets/css/jquery-ui.css'); }}
+		{{ HTML::style('assets/css/dataTables.bootstrap.css') }}
+		{{ HTML::style('assets/css/jquery-ui.css') }}
+		{{ App::setLocale('es') }}
 		<style type="text/css">
 			#sidebar{
 				background-color: #398ab9;

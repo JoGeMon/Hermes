@@ -9,10 +9,8 @@ class ContratoController extends \BaseController {
 	 */
 	public function index()
 	{
-		$clientes = Cliente::lists('nombreCliente','idCliente');
-		$areas = Ara::lists('nombreArea','idArea');
 		$contratos = Contrato::getContratos();
-		return View:: make('contratos/listar',array('clientes' => $clientes, 'areas' => $areas, 'contratos' => $contratos));
+		return View:: make('contratos/listar',array('contratos' => $contratos));
 	}
 
 
@@ -24,47 +22,87 @@ class ContratoController extends \BaseController {
 	public function create()
 	{
 		$clientes = Cliente::lists('nombreCliente','idCliente');
-		$areas = Ara::lists('nombreArea','idArea');
-		array_unshift($areas, 'Seleccione un área');
 		$facturacion = Facturacion::lists('detalleFacturacion', 'idFacturacion');
-		return View::make('contratos/nuevo',array('clientes' => $clientes, 'areas' => $areas, 'facturacion' => $facturacion
+		array_unshift($facturacion, 'Seleccione una opción');
+		$frecuencia = Frecuencia::lists('detalleFrecuenciaMantencion', 'idFrecuenciaMantencion');
+		array_unshift($frecuencia, 'Seleccione una opción');
+		return View::make('contratos/nuevo',array(
+			'clientes' => $clientes, 
+			'facturacion' => $facturacion,
+			'frecuencia' => $frecuencia
 			));
+	}
+
+	/**
+	 * Método que guarda el nuevo borrador de un contrato
+	 *
+	 * @return Redirecciona
+	 */
+	public function store()
+	{
+		$campos = Input::all();
+		$contrato = new Contrato;
+		$contrato->idCliente = $campos['cliente'];
+		$contrato->idFacturacion = $campos['facturacion'];
+		$contrato->idFrecuenciaMantencion = $campos['facturacion'];
+		$contrato->codigoContrato = $campos['numContrato'];
+		$contrato->nombreFirmante = $campos['contraparte'];
+		$contrato->fechaFirma = $campos['fFirma'];
+		$contrato->inicioContrato = $campos['fInicio'];
+		$contrato->finContrato = $campos['fFin'];
+		if($contrato->save()){
+			return Redirect::route('contratos')->with('success','Se ha agregado un nuevo contrato');
+		}else{
+			return Redirect::route('contratos/nuevo')->with('error','Ocurrió un error al agregar un nuevo contrato');
+		}
 	}
 
 
 	/**
-	 * Guarda un nuevo contrato.
+	 * Método que guarda un servicio en un borrador de contrato
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function storeServicio()
 	{
 		$idContrato = Input::get('idContrato');
 		$idServicio = Input::get('servicio');
 		$valor = Input::get('valor');
 		$objContrato = new Contrato();
 		if($objContrato->agregaServicio($idContrato,$idServicio, $valor)){
-			return Redirect::route('contratos/borrador',array('idContrato' => $idContrato));
+			return Redirect::route('contratos/muestra',array('idContrato' => $idContrato));
 		}else{
-			return Redirect::route('contratos/borrador',array('idContrato' => $idContrato));
+			return Redirect::route('contratos/muestra',array('idContrato' => $idContrato));
 		}
 	}
 
 
 	/**
-	 * Display the specified resource.
+	 * Método que despliega la cabecera de un contrato con la posibilidad de agregar servicios
 	 *
-	 * @param  int  $id
-	 * @return Response
+	 * @param  int  $idContrato = Identificador del contrato buscado
+	 * @author Jorge Velarde
 	 */
 	public function show($idContrato)
 	{
 		$areas = Ara::lists('nombreArea','idArea');
-			array_unshift($areas, 'Seleccione un área');
-		$contrato = Contrato::find($idContrato); //Cambiar por método con join que llene la vista de edición de contratos
+		array_unshift($areas, 'Seleccione un área');
 		$contrato = Contrato::getCabecera($idContrato);
 		$detalleContrato = Contrato::getDetalleContrato($idContrato);
 		return View::make('contratos/mostrar',array('contrato' => $contrato, 'areas' => $areas, 'servicios' => $detalleContrato ));
+	}
+
+	/**
+	 * Método que despliega el detalle de un contrato para ser desplegado en una modal.
+	 *
+	 * @param  int  $idContrato = Identificador del contrato buscado
+	 * @author Jorge Velarde
+	 */
+	public function showDetalles($idContrato)
+	{
+		$contrato = Contrato::getCabecera($idContrato);
+		$detalleContrato = Contrato::getDetalleContrato($idContrato);
+		return View::make('contratos/detalles',array('contrato' => $contrato, 'servicios' => $detalleContrato ));
 	}
 
 

@@ -57,15 +57,26 @@ Route::GET('/contratos/nuevo', array(
 	'uses' => 'ContratoController@create'
 ));
 
-Route::GET('/contratos/borrador/{idContrato}', array(
-	'as' => 'contratos/borrador',
+Route::POST('/contratos/guardar', array(
+	'as' => 'contratos/guardar',
+	'uses' => 'ContratoController@store'
+));
+
+Route::GET('/contratos/muestra/{idContrato}', array(
+	'as' => 'contratos/muestra',
 	'uses' => 'ContratoController@show'
+));
+
+Route::GET('/contratos/detalles/{idContrato}', array(
+	'as' => 'contratos/detalles',
+	'uses' => 'ContratoController@showDetalles'
 ));
 
 Route::POST('/contratos/servicio/agregar', array(
 	'as' => 'contratos/servicio/agregar',
-	'uses' => 'ContratoController@store'
+	'uses' => 'ContratoController@storeServicio'
 ));
+
 
 Route::GET('/ficha/listar/',array(
 	'as' => 'lista',

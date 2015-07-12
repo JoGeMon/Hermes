@@ -37,6 +37,8 @@ class Contrato extends Eloquent{
 	public static function getDetalleContrato($idContrato){
 		$detalle = DB::table('tbldetallecontrato')
 			->join('tblservicio', 'tbldetallecontrato.idServicio', '=', 'tblservicio.idServicio')
+			->join('tblarea', 'tblservicio.idArea', '=', 'tblarea.idArea')
+			->where('idContrato',$idContrato)
 			->get();			
 		return $detalle;
 	}

@@ -7,6 +7,8 @@
 		$('#area').change(function(){
 			$('#equipos').load('../../servicio/cargaServicio/'+$(this).val());
 		});
+
+		$('#tblEquipos').dataTable();
 	});
 </script>
 
@@ -32,12 +34,12 @@
 		<div class="col-md-11">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title text-center">Crear Contrato</h3>
+					<h3 class="panel-title text-center">Contrato creado</h3>
 				</div>
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-md-2">
-							<p>Cliente</p>
+							<p><strong>Cliente: </strong></p>
 						</div>
 						<div class="col-md-10">
 							<p>{{$contrato->nombreCliente}}</p>
@@ -45,7 +47,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-2">
-							<p>Cod. Contrato</p>
+							<p><strong>Número de Contrato</strong></p>
 						</div>
 						<div class="col-md-10">
 							<p>{{$contrato->codigoContrato}}</p>
@@ -53,69 +55,67 @@
 					</div>
 					<div class="row">
 						<div class="col-md-2">
-							<p>Fecha Firma</p>
+							<p><strong>Fecha Firma</strong></p>
 						</div>
-						<div class="col-md-10">
+						<div class="col-md-2">
 					      	<p>{{date("d-m-Y", strtotime($contrato->fechaFirma))}}</p>
 						</div>
-					</div>
-					<div class="row">
 						<div class="col-md-2">
-							<p>Fecha Inicio</p>
+							<p><strong>Fecha Inicio</strong></p>
 						</div>
-						<div class="col-md-10">
+						<div class="col-md-2">
 							<p>{{date("d-m-Y", strtotime($contrato->inicioContrato))}}</p>
 						</div>
-					</div>
-					<div class="row">
 						<div class="col-md-2">
-							<p>Fecha Fin</p>
+							<p><strong>Fecha Fin</strong></p>
 						</div>
-						<div class="col-md-10">
+						<div class="col-md-2">
 							<p>{{date("d-m-Y", strtotime($contrato->finContrato))}}</p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-2">
-							<p>Facturación</p>
+							<p><strong>Facturación</strong></p>
 						</div>
-						<div class="col-md-10">
+						<div class="col-md-2">
 				      		<p>{{$contrato->detalleFacturacion}}</p>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-2">
-							<p>Frecuencia de visitas</p>
+						<div class="col-md-3">
+							<p><strong>Frecuencia de visitas</strong></p>
 						</div>
-						<div class="col-md-10">
+						<div class="col-md-5">
 				      		<p>{{$contrato->detalleFrecuenciaMantencion}}</p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-2">
-							<p>Contraparte</p>
+							<p><strong>Contraparte</strong></p>
 						</div>
 						<div class="col-md-10">
 							<p>{{$contrato->nombreFirmante}}</p>
 						</div>
 					</div>
-					<br/><br/>
-					<div class="row" id="tblEquipos">
+					<br/><br/><hr/>
+					<div class="row">
 						<div class="col-md-12">
 							<button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#addEquippos"><span class="glyphicon glyphicon-plus-sign"></span> Servicios</button>
 							<br/><br/>
-							<table class="table table-hover">
+							<table class="table table-hover table-bordered table-striped" id="tblEquipos">
 								<thead>
 									<tr class="active">
-										<th>Equipo</th>
+										<th>Área</th>
+										<th>Servicio</th>
 										<th>Valor</th>
+										<th>Acciones</th>
 									</tr>
 								</thead>
 								<tbody>
 									@foreach($servicios as $servicio)
 									<tr>
+										<td>{{$servicio->nombreArea}}</td>
 										<td>{{$servicio->detalleServicio}}</td>
 										<td>{{$servicio->valor}}</td>
+										<td><a href="#"><span class="glyphicon glyphicon-edit"></span></a></td>
 									</tr>
 									@endforeach
 								</tbody>

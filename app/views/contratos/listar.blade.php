@@ -1,5 +1,14 @@
 @extends('layout')
 @section('contenido')
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#tblContrato').dataTable();
+
+		$(".info").click(function(){
+			$('#cargaModal').load('contratos/detalles/'+$(this).attr('href'));
+		});
+	});
+</script>
 <div class="row">
 	<div class="col-md-11">
 		<div class="panel panel-default">
@@ -7,13 +16,24 @@
 					<h3 class="panel-title text-center">Contratos</h3>
 			</div>
 			<div class="panel-body">
+				@if(Session::has('error'))
+					<div class="alert alert-danger text-center alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<p>{{Session::get('error')}}</p>
+					</div>
+				@elseif(Session::has('success'))
+					<div class="alert alert-success text-center alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<p>{{Session::get('success')}}</p>
+					</div>
+				@endif 
 				<a href="{{URL::route('contratos/nuevo')}}" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus-sign"></span></a><br/><br/>
-				<table class="table table-bordered table-hover table-striped">
+				<table class="table table-bordered table-hover table-striped" id="tblContrato">
 					<thead>
 						<tr class="active">
 							<th>Emperesa</th>
-							<th>Área</th>
-							<th>Meses</th>
+							<th>Código</th>
+							<th>Periodo</th>
 							<th>Acciones</th>
 						</tr>
 					</thead>
@@ -21,12 +41,13 @@
 						@foreach($contratos as $contrato)
 							<tr>
 								<td>{{$contrato->nombreCliente}}</td>
-								<td>{{'area'}}</td>
+								<td>{{$contrato->codigoContrato}}</td>
 								<td>{{date("F-Y", strtotime($contrato->inicioContrato))}} a {{date("F-Y", strtotime($contrato->finContrato))}}</td>
 								<td>
 
-									<span class="glyphicon glyphicon-info-sign" data-toggle="modal" data-target="#infoContrato"></span>
-									<span class="glyphicon glyphicon-trash"></span>
+									<a href="{{$contrato->idContrato}}" data-toggle="modal" data-target="#infoContrato" class="info"><span class="glyphicon glyphicon-info-sign"></span></a>
+									<a href="#" data-toggle="modal" data-target="#infoContrato"<span class="glyphicon glyphicon-trash"></span></a>
+									<a href="{{URL::route('contratos/muestra',array($contrato->idContrato))}}"><span class="glyphicon glyphicon-plus-sign"></span>
 								</td>
 							</tr>
 						@endforeach
@@ -37,61 +58,7 @@
 	</div>
 </div>
 
-<div class="modal fade" id="infoContrato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header" style="background-color: #398ab9; color:#FFF">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        		<h4 class="modal-title text-center">Contrato de atención</h4>
-			</div>
-			<div class="modal-body">
-				<table class="table table-bordered">
-					<tr>
-						<th>Nombre Cliente</th>
-						<td>Cliente ?</td>
-					</tr>
-					<tr>
-						<th>Fecha de Diagnóstico</th>
-						<td>{{date('d-F-Y');}}</td>
-					</tr>
-					<tr>
-						<th>Aárea de Servicio</th>
-						<td>Area X</td>
-					</tr>
-				</table>
-				<hr>
-				<div class="alert alert-info">Cuadro de frecuencia</div>
-				<p>Acciones</p>
-				<table class="table table-bordered">
-					<thead>
-						<tr class="active text-center">
-							<th>Mes</th>
-							<th>Área</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Junio</td>
-							<td>Bombas</td>
-						</tr>
-						<tr>
-							<td>Junio</td>
-							<td>Portones</td>
-						</tr>
-						<tr>
-							<td>Junio</td>
-							<td>Tableros</td>
-						</tr>
-					</tbody>
-				</table>
-				<textarea class="form-control" placeholder="Cometarios"></textarea><br/>
-				<textarea class="form-control" placeholder="Presupuesto"></textarea>
-			</div>
-			<div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Guardar</button>
-      		</div>
-		</div>
-	</div>
+<div class="modal fade" id="infoContrato">
+	<div id="cargaModal"></div>
 </div>
 @stop
