@@ -3,13 +3,23 @@
 class AtencionController extends \BaseController {
 
 	/**
-	 * Display a listing of the resource.
+	 * Despliega todas las atenciones de la tabla de hechos
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		//
+		$fichas = Atencion::getAtenciones();
+		$clientes = Cliente::lists('nombreCliente','idCliente');
+		$empleados = Empleado::lists('nombreEmpleado','idEmpleado');
+		$areas = Ara::lists('nombreArea','idArea');
+		return(View::make('atenciones/listar',array(
+			'fichas' => $fichas, 
+			'clientes' => $clientes,
+			'empleados' => $empleados,
+			'areas' => $areas
+			)
+		));
 	}
 
 
@@ -32,6 +42,31 @@ class AtencionController extends \BaseController {
 	public function store()
 	{
 		//
+	}
+
+	/**
+	 * Método que inserta las atenciones estipuladas en un contrato.
+	 *
+	 * @return Response
+	 */
+	public function storeByContrato($idContrato, $idServicio)
+	{
+		$contrato = Contrato::find($idContrato);
+		$dContrato = Contrato::getDetalleContrato($idContrato);
+		$frecuencia = Frecuencia::where('idFrecuenciaMantencion',$contrato->idFrecuenciaMantencion)->first();
+		$atencion = new Atencion();
+		$atencion->idTipoAtencion = 1;
+		$atencion->idContrato = $idContrato;
+		$atencion->idServicio = $idServicio;
+		for ($i=12; $i >=0; $i-$frecuencia->numFrecuencia) { 
+			$atencion->fechaPactada = $contrato->inicioContrato;
+			$contrato->inicioContrato = strtotime("+".$frecuencia->numFrecuencia." months",strtotime($contrato->inicioContrato));
+			dd($contrato->inicioContrato);
+			if(!$atencion->save()){
+				return false;
+			}
+		}
+		return true;
 	}
 
 

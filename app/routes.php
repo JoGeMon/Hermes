@@ -16,16 +16,12 @@ Route::GET('/', function()
 	return View::make('home');
 });
 
-Route::GET('/mantenciones', array(
-	'as' => 'mantenciones',
-	'uses' => 'FichaController@listar'
-));
-
 /*Route::GET('/mantenciones', array(
 	'as' => 'mantenciones',
 	'uses' => 'MantencionController@index'
 ));*/
 
+/* Rutas de servicio */
 Route::GET('/servicios', array(
 	'as' => 'servicios',
 	'uses' => 'ServicioController@index'
@@ -45,7 +41,9 @@ Route::GET('/servicio/cargaServicio/{idArea}', array(
 	'as' => 'cargaServicios',
 	'uses' => 'ServicioController@cargaServicios'
 ));
+/*  Fin rutas de servicio */
 
+/* Rutas de contratos */
 Route::GET('/contratos', array(
 	'as' => 'contratos',
 	'uses' => 'ContratoController@index'
@@ -76,8 +74,9 @@ Route::POST('/contratos/servicio/agregar', array(
 	'as' => 'contratos/servicio/agregar',
 	'uses' => 'ContratoController@storeServicio'
 ));
+/* Fin rutas de contrato */
 
-
+/* Rutas de ficha */
 Route::GET('/ficha/listar/',array(
 	'as' => 'lista',
 	'uses' => 'FichaController@listar'
@@ -98,3 +97,17 @@ Route::GET('/ficha/cliente/{id}',array(
 	'as' => 'cliente',
 	'uses' => 'FichaController@pinta'
 ));
+/* Fin rutas de ficha*/
+
+/* Rutas de atención */
+Route::GET('/mantenciones', array(
+	'as' => 'mantenciones',
+	'uses' => 'AtencionController@index'
+));
+
+Route::GET('/', array(
+	'as' => 'ficha/agregar',
+	'uses' => 'FichaController@store'
+));
+
+/* Fin rutas de atencion*/

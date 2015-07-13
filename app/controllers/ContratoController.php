@@ -70,9 +70,13 @@ class ContratoController extends \BaseController {
 		$valor = Input::get('valor');
 		$objContrato = new Contrato();
 		if($objContrato->agregaServicio($idContrato,$idServicio, $valor)){
-			return Redirect::route('contratos/muestra',array('idContrato' => $idContrato));
+			if(App::make('AtencionController')->storeByContrato($idContrato, $idServicio)){
+				return Redirect::route('contratos/muestra',array('idContrato' => $idContrato))->with('success', 'Se ha agregado una nueva mantención');
+			}else{
+				return Redirect::route('contratos/muestra',array('idContrato' => $idContrato))->with('success', 'Hubo un error replicando las mantenciones');
+			}
 		}else{
-			return Redirect::route('contratos/muestra',array('idContrato' => $idContrato));
+			return Redirect::route('contratos/muestra',array('idContrato' => $idContrato))->with('error', 'Se ha agregado una nueva mantención');;
 		}
 	}
 

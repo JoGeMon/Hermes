@@ -98,6 +98,15 @@
 					<br/><br/><hr/>
 					<div class="row">
 						<div class="col-md-12">
+							@if(Session::has('success'))
+								<div class="alert alert-block  alert-succes">
+									<p>{{Session::get('success')}}</p>
+								</div>
+							@elseif(Session::has('error'))
+								<div class="alert alert-block  alert-danger">
+									<p>{{Session::get('error')}}</p>
+								</div>
+							@endif
 							<button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#addEquippos"><span class="glyphicon glyphicon-plus-sign"></span> Servicios</button>
 							<br/><br/>
 							<table class="table table-hover table-bordered table-striped" id="tblEquipos">
