@@ -99,7 +99,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							@if(Session::has('success'))
-								<div class="alert alert-block  alert-succes">
+								<div class="alert alert-block alert-success">
 									<p>{{Session::get('success')}}</p>
 								</div>
 							@elseif(Session::has('error'))

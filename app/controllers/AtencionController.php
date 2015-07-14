@@ -58,13 +58,17 @@ class AtencionController extends \BaseController {
 		$atencion->idTipoAtencion = 1;
 		$atencion->idContrato = $idContrato;
 		$atencion->idServicio = $idServicio;
-		for ($i=12; $i >=0; $i-$frecuencia->numFrecuencia) { 
-			$atencion->fechaPactada = $contrato->inicioContrato;
-			$contrato->inicioContrato = strtotime("+".$frecuencia->numFrecuencia." months",strtotime($contrato->inicioContrato));
-			dd($contrato->inicioContrato);
+		$año = 12;
+		while($año > 0){
+			if($año == 12){
+				$atencion->fechaPactada = $contrato->inicioContrato;
+			}
 			if(!$atencion->save()){
+				dd($atencion->save());
 				return false;
 			}
+			$atencion->fechaPactada = date('Y-m-d',strtotime($contrato->inicioContrato.'+ '.$frecuencia->numFrecuencia.' months'));
+			$año = $año - $frecuencia->numFrecuencia;
 		}
 		return true;
 	}
