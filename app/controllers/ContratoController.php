@@ -47,9 +47,9 @@ class ContratoController extends \BaseController {
 		$contrato->idFrecuenciaMantencion = $campos['facturacion'];
 		$contrato->codigoContrato = $campos['numContrato'];
 		$contrato->nombreFirmante = $campos['contraparte'];
-		$contrato->fechaFirma = $campos['fFirma'];
-		$contrato->inicioContrato = $campos['fInicio'];
-		$contrato->finContrato = $campos['fFin'];
+		$contrato->fechaFirma = date('Y-m-d', strtotime($campos['fFirma']));
+		$contrato->inicioContrato = date('Y-m-d', strtotime($campos['fInicio']));
+		$contrato->finContrato = date('Y-m-d', strtotime($campos['fFin']));
 		if($contrato->save()){
 			return Redirect::route('contratos')->with('success','Se ha agregado un nuevo contrato');
 		}else{

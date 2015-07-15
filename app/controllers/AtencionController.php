@@ -54,20 +54,21 @@ class AtencionController extends \BaseController {
 		$contrato = Contrato::find($idContrato);
 		$dContrato = Contrato::getDetalleContrato($idContrato);
 		$frecuencia = Frecuencia::where('idFrecuenciaMantencion',$contrato->idFrecuenciaMantencion)->first();
-		$atencion = new Atencion();
-		$atencion->idTipoAtencion = 1;
-		$atencion->idContrato = $idContrato;
-		$atencion->idServicio = $idServicio;
 		$año = 12;
-		while($año > 0){
+		while($año >= 0){
+			$atencion = new Atencion();
+			$atencion->idTipoAtencion = 1;
+			$atencion->idContrato = $idContrato;
+			$atencion->idServicio = $idServicio;
 			if($año == 12){
 				$atencion->fechaPactada = $contrato->inicioContrato;
+			}else{
+				$atencion->fechaPactada = $nuevaFecha;
 			}
 			if(!$atencion->save()){
-				dd($atencion->save());
 				return false;
 			}
-			$atencion->fechaPactada = date('Y-m-d',strtotime($contrato->inicioContrato.'+ '.$frecuencia->numFrecuencia.' months'));
+			$nuevaFecha = date('Y-m-d',strtotime($atencion->fechaPactada.'+ '.$frecuencia->numFrecuencia.' months'));
 			$año = $año - $frecuencia->numFrecuencia;
 		}
 		return true;

@@ -7,8 +7,9 @@ extends Eloquent{
 	
 	public static function getAtenciones(){
 		$fichas = DB::table('tblatencion')
-			->join('tblcliente', 'tblatencion.idCliente', '=', 'tblcliente.idCliente')
-			->whereRaw("MONTH(fechaPactada) = 6")
+			->join('tblContrato', 'tblatencion.idContrato', '=', 'tblContrato.idContrato')
+			->join('tblcliente', 'tblContrato.idCliente', '=', 'tblcliente.idCliente')
+			->whereRaw("MONTH(fechaPactada) = MONTH(NOW())")
 			->get();
 		//dd(DB::getQueryLog());
 		return $fichas;
