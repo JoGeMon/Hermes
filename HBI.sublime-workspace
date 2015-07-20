@@ -338,6 +338,22 @@
 				"buffer_size": 198,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "app/config/database.php",
+			"settings":
+			{
+				"buffer_size": 3324,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "ALTER TABLE `tbldetallecontrato` \nADD  FOREIGN KEY (`idContrato`) \nREFERENCES `tblcontrato`(`idContrato`) \n",
+			"settings":
+			{
+				"buffer_size": 107,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -668,7 +684,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -764,8 +780,8 @@
 						"selection":
 						[
 							[
-								1479,
-								1479
+								1289,
+								1289
 							]
 						],
 						"settings":
@@ -873,6 +889,58 @@
 							[
 								198,
 								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/config/database.php",
+					"settings":
+					{
+						"buffer_size": 3324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1821,
+								1821
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1104.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"settings":
+					{
+						"buffer_size": 107,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								65,
+								65
 							]
 						],
 						"settings":
