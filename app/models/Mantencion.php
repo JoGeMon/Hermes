@@ -1,8 +1,9 @@
 <?php 
 
 Class Mantencion extends Eloquent{
-	protected $table = 'tblcliente';
-	protected $primaryKey = 'idCliente';
+	protected $table = 'tblantencion';
+	protected $primaryKey = 'idAtencion';
 
 
+	
 }

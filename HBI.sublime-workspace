@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"b",
+				"button	Tag"
+			],
+			[
+				"tble",
+				"tblequipoatencion"
+			],
+			[
+				"tbl",
+				"tblempleado"
+			],
+			[
 				"strto",
 				"strtotime"
 			],
@@ -106,10 +118,6 @@
 			[
 				"on",
 				"onDelete"
-			],
-			[
-				"tbl",
-				"tblRegion"
 			],
 			[
 				"cas",
@@ -276,18 +284,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/AtencionController.php",
+			"file": "app/views/ficha.blade.php",
 			"settings":
 			{
-				"buffer_size": 2276,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/Contrato.php",
-			"settings":
-			{
-				"buffer_size": 1591,
+				"buffer_size": 3897,
 				"line_ending": "Windows"
 			}
 		},
@@ -295,63 +295,55 @@
 			"file": "app/routes.php",
 			"settings":
 			{
-				"buffer_size": 2543,
+				"buffer_size": 2771,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/ContratoController.php",
+			"file": "app/views/atenciones/verEquipo.blade.php",
 			"settings":
 			{
-				"buffer_size": 4163,
+				"buffer_size": 3564,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "SELECT * \nFROM tblatencion \nLEFT JOIN tblequipoatencion \n	ON tblequipoatencion.idAtencion = tblAtencion.idAtencion\nLEFT JOIN tblempleado\n	ON tblempleado.idEmpleado = tblequipoatencion.idEmpleado\n	\n\nSELECT * \nFROM tblequipoatencion\nJOIN tblempleado\n	on tblempleado.idEquipoAtencion = tblequipoatencion.idEquipoAtencion\n",
+			"settings":
+			{
+				"buffer_size": 318,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "with member [Measures].[Name] as '[Tiempo.Tiempo_JER].CurrentMember.UniqueName' \nselect TopCount( filter({Descendants([Tiempo.Tiempo_JER].[Tiempo] ,[Tiempo.Tiempo_JER].[Mensual])}, not isempty(([Tiempo.Tiempo_JER].CurrentMember)) ) , 50) on ROWS, \n {[Measures].[Name]} on Columns \n from [Cubo Ematel]\n\nselect NON EMPTY {[Measures].[Total de atenciones]} ON COLUMNS,\n  NON EMPTY {[Empleado.empleado_JER].[All Empleado.empleado_JERs]} ON ROWS\nfrom [Cubo Ematel]\n]",
+			"settings":
+			{
+				"buffer_size": 461,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/AtencionController.php",
+			"settings":
+			{
+				"buffer_size": 3744,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/ServicioController.php",
+			"file": "app/models/Empleado.php",
 			"settings":
 			{
-				"buffer_size": 1761,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/contratos/mostrar.blade.php",
-			"settings":
-			{
-				"buffer_size": 5849,
+				"buffer_size": 908,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/models/Atencion.php",
+			"file": "app/models/Contrato.php",
 			"settings":
 			{
-				"buffer_size": 469,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "select * \nfrom `tblatencion` \ninner join `tblContrato` \n	on `tblatencion`.`idContrato` = `tblContrato`.`idContrato` \ninner join `tblcliente` \n	on `tblContrato`.`idCliente` = `tblcliente`.`idCliente`",
-			"settings":
-			{
-				"buffer_size": 198,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/config/database.php",
-			"settings":
-			{
-				"buffer_size": 3324,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "ALTER TABLE `tbldetallecontrato` \nADD  FOREIGN KEY (`idContrato`) \nREFERENCES `tblcontrato`(`idContrato`) \n",
-			"settings":
-			{
-				"buffer_size": 107,
+				"buffer_size": 1590,
 				"line_ending": "Windows"
 			}
 		}
@@ -359,9 +351,21 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 150.0,
 		"selected_items":
 		[
+			[
+				"fun",
+				"Snippet: Function"
+			],
+			[
+				"Func",
+				"Snippet: Function"
+			],
+			[
+				"Fun",
+				"Snippet: Function"
+			],
 			[
 				"pacl	",
 				"Package Control: Install Package"
@@ -369,10 +373,6 @@
 			[
 				"pack",
 				"Package Control: Install Package"
-			],
-			[
-				"Fun",
-				"Snippet: Function"
 			]
 		],
 		"width": 400.0
@@ -392,18 +392,35 @@
 	},
 	"file_history":
 	[
-		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
-		"/D/xampp/htdocs/hermes/app/controllers/ContratoController.php",
-		"/D/xampp/htdocs/hermes/app/views/atenciones/listar.blade.php",
-		"/D/xampp/htdocs/hermes/app/views/contratos/mostrar.blade.php",
-		"/D/xampp/htdocs/hermes/app/routes.php",
-		"/D/xampp/htdocs/hermes/app/controllers/AtencionController.php",
-		"/D/xampp/htdocs/hermes/app/models/Contrato.php",
-		"/D/xampp/htdocs/hermes/app/views/contratos/listar.blade.php",
-		"/D/xampp/htdocs/hermes/app/views/contratos/detalles.blade.php",
-		"/D/xampp/htdocs/hermes/app/views/contratos/nuevo.blade.php",
-		"/D/xampp/htdocs/hermes/app/controllers/ServicioController.php",
+		"/D/xampp/htdocs/hermes/app/models/Ara.php",
+		"/D/xampp/htdocs/hermes/app/models/Servicio.php",
 		"/D/xampp/htdocs/hermes/app/models/Atencion.php",
+		"/D/xampp/htdocs/hermes/app/models/Mantencion.php",
+		"/D/xampp/htdocs/hermes/app/views/contratos/mostrar.blade.php",
+		"/D/xampp/htdocs/hermes/app/controllers/ContratoController.php",
+		"/D/xampp/htdocs/hermes/app/models/Empleado.php",
+		"/D/xampp/htdocs/hermes/app/views/atenciones/listar.blade.php",
+		"/D/xampp/htdocs/hermes/app/views/contratos/listar.blade.php",
+		"/D/xampp/htdocs/hermes/app/controllers/AtencionController.php",
+		"/D/xampp/htdocs/hermes/app/controllers/BaseController.php",
+		"/D/xampp/htdocs/hermes/app/views/contratos/detalles.blade.php",
+		"/D/xampp/htdocs/hermes/app/views/mantenciones.blade.php",
+		"/D/xampp/htdocs/hermes/app/controllers/FichaController.php",
+		"/D/xampp/htdocs/hermes/app/controllers/MantencionController.php",
+		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
+		"/D/Pentaho/biserver-ce/tomcat/webapps/pentaho/META-INF/context.xml",
+		"/D/Pentaho/biserver-ce/tomcat/conf/context.xml",
+		"/D/Pentaho/biserver-ce/tomcat/webapps/pentaho/index.jsp",
+		"/D/Pentaho/biserver-ce/pentaho-solutions/plugin-samples/exportManifest.xml",
+		"/D/xampp/htdocs/hermes/app/views/home.blade.php",
+		"/D/xampp/htdocs/hermes/app/controllers/ServicioController.php",
+		"/D/xampp/htdocs/hermes/app/models/Contrato.php",
+		"/D/xampp/htdocs/hermes/app/routes.php",
+		"/D/Pentaho/biserver-ce/tomcat/logs/pentaho.log",
+		"/D/xampp/htdocs/hermes/app/config/database.php",
+		"/D/Pentaho/biserver-ce/tomcat/webapps/pentaho/WEB-INF/classes/log4j.xml",
+		"/D/Dropbox/Pentaho/Cubos/Cubo2 Ematel.xml",
+		"/D/xampp/htdocs/hermes/app/views/contratos/nuevo.blade.php",
 		"/D/xampp/htdocs/hermes/app/views/ficha.blade.php",
 		"/D/xampp/htdocs/hermes/app/models/Ficha.php",
 		"/D/xampp/htdocs/hermes/app/models/Frecuencia.php",
@@ -411,25 +428,16 @@
 		"/D/Dropbox/Cargas Hermes/Enero.sql",
 		"/D/Dropbox/Cargas Hermes/Julio.sql",
 		"/D/xampp/htdocs/hermes/app/config/app.php",
-		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
-		"/D/xampp/htdocs/hermes/app/views/mantenciones.blade.php",
-		"/D/xampp/htdocs/hermes/app/models/Mantencion.php",
 		"/D/xampp/htdocs/hermes/app/views/hello.php",
-		"/D/xampp/htdocs/hermes/app/views/home.blade.php",
 		"/D/xampp/htdocs/hermes/app/views/servicios.blade.php",
 		"/D/xampp/htdocs/hermes/app/views/mantenciones.old",
 		"/D/xampp/htdocs/hermes/app/views/contratos.blade.php",
 		"/D/xampp/htdocs/hermes/app/models/Cliente.php",
 		"/D/xampp/htdocs/hermes/app/views/servicios/cargaServicios.blade.php",
-		"/D/xampp/htdocs/hermes/app/models/Servicio.php",
 		"/D/xampp/htdocs/hermes/.gitignore",
-		"/D/xampp/htdocs/hermes/app/models/Empleado.php",
-		"/D/xampp/htdocs/hermes/app/config/database.php",
-		"/D/xampp/htdocs/hermes/app/models/Ara.php",
 		"/D/xampp/htdocs/hermes/app/views/listaAtenciones.blade.php",
 		"/D/xampp/htdocs/hermes/app/models/Area.php",
 		"/D/xampp/htdocs/ayekantun/admin/DB/DBConnect.php",
-		"/D/xampp/htdocs/hermes/app/controllers/MantencionController.php",
 		"/D/xampp/htdocs/hermes/app/start/global.php",
 		"/D/xampp/htdocs/hermes/app/views/manteciones.blade.php",
 		"/D/xampp/htdocs/hermes/.gitattributes",
@@ -511,15 +519,7 @@
 		"/D/xampp/htdocs/ayekantun/css/fancybox_overlay.png",
 		"/D/xampp/htdocs/ayekantun/footer2.php",
 		"/D/xampp/htdocs/ayekantun/contacto.php",
-		"/D/xampp/htdocs/ayekantun/contacto2.php",
-		"/D/xampp/htdocs/ayekantun/js/ckeditor.js",
-		"/D/xampp/htdocs/ayekantun/noticia1.php",
-		"/C/Users/JoGe/AppData/Local/Temp/Rar$DR01.109/ckeditor/README.md",
-		"/D/xampp/htdocs/Eurogen/inc/conecta.php",
-		"/D/xampp/htdocs/hermo/class/conectaDB.php",
-		"/D/xampp/htdocs/Eurogen/inc/BDConexion.php",
-		"/D/xampp/htdocs/Eurogen/admin/productosListar.php",
-		"/D/xampp/htdocs/ayekantun/engine2/wowslider.js"
+		"/D/xampp/htdocs/ayekantun/contacto2.php"
 	],
 	"find":
 	{
@@ -537,6 +537,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"int",
+			"ficha",
+			"data-ta",
+			"equipo",
+			"data-target",
+			"data-to",
+			"mantenc",
+			"home",
+			"store",
+			"dim",
+			"warn",
+			"WARN",
 			"agno",
 			"atencion",
 			"info",
@@ -652,19 +664,7 @@
 			"news",
 			"<?",
 			"$noticia['id']",
-			"id",
-			"                    ",
-			"z-inde",
-			"z-index",
-			"abso",
-			"z-inde",
-			"228",
-			"paddin",
-			"z-inde",
-			"Lucida",
-			"JPG",
-			"#wowslider-container1",
-			"container1"
+			"id"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -684,158 +684,23 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/AtencionController.php",
+					"file": "app/views/ficha.blade.php",
 					"settings":
 					{
-						"buffer_size": 2276,
+						"buffer_size": 3897,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1189,
-								1189
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 139.0,
-						"translation.y": 1069.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/models/Contrato.php",
-					"settings":
-					{
-						"buffer_size": 1591,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1258,
-								1258
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 101.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/routes.php",
-					"settings":
-					{
-						"buffer_size": 2543,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2441,
-								2441
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1845.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/controllers/ContratoController.php",
-					"settings":
-					{
-						"buffer_size": 4163,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1289,
-								1289
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 705.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/controllers/ServicioController.php",
-					"settings":
-					{
-						"buffer_size": 1761,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1035.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/contratos/mostrar.blade.php",
-					"settings":
-					{
-						"buffer_size": 5849,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2800,
-								2800
+								533,
+								533
 							]
 						],
 						"settings":
@@ -844,25 +709,157 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1907.0,
+						"translation.y": 483.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/routes.php",
+					"settings":
+					{
+						"buffer_size": 2771,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2544,
+								2527
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2169.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/atenciones/verEquipo.blade.php",
+					"settings":
+					{
+						"buffer_size": 3564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2753,
+								2841
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
+						},
+						"translation.x": 682.0,
+						"translation.y": 1698.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								318,
+								318
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"settings":
+					{
+						"buffer_size": 461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								459,
+								459
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/AtencionController.php",
+					"settings":
+					{
+						"buffer_size": 3744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3499,
+								3499
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3331.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "app/models/Atencion.php",
+					"file": "app/models/Empleado.php",
 					"settings":
 					{
-						"buffer_size": 469,
+						"buffer_size": 908,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								469,
-								469
+								866,
+								866
 							]
 						],
 						"settings":
@@ -871,50 +868,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 276.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
+					"file": "app/models/Contrato.php",
 					"settings":
 					{
-						"buffer_size": 198,
+						"buffer_size": 1590,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								198,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQL/SQL.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/config/database.php",
-					"settings":
-					{
-						"buffer_size": 3324,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1821,
-								1821
+								1551,
+								1551
 							]
 						],
 						"settings":
@@ -923,32 +895,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1104.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"settings":
-					{
-						"buffer_size": 107,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								65,
-								65
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQL/SQL.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 483.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

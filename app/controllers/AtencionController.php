@@ -123,4 +123,53 @@ class AtencionController extends \BaseController {
 	}
 
 
+	/**
+	 * Método que despliega el equipo que atendió una mantención
+	 *
+	 * @param $idMantencion = Identificador de mantención
+	 * @return stdArray $equipo = Arreglo de usuarios que representan un equipo
+	 * @author Jorge Velarde
+	 **/
+	public function getEquipo($idMantencion){
+		$atencion = Atencion::find($idMantencion);
+		$equipo = Atencion::getEquipo($atencion->idAtencion);
+		$contrato = Contrato::getCabecera($atencion->idContrato);
+		$detalleContrato = Contrato::getDetalleContrato($atencion->idContrato);
+		$empleados = Empleado::all();
+		return View::make('atenciones/verEquipo',array(
+			"equipo" => $equipo,
+			"contrato" => $contrato,
+			"detalleContrato" => $detalleContrato,
+			"trabajadores" => $empleados,
+			"atencion" => $atencion
+		));
+	}
+
+	public function addEmpleado($idAtencion, $idEmpleado)
+	{
+		$atencion = Atencion::find($idAtencion);
+		$equipo = Atencion::getEquipo($atencion->idAtencion);
+		$contrato = Contrato::getCabecera($atencion->idContrato);
+		$detalleContrato = Contrato::getDetalleContrato($atencion->idContrato);
+
+		$empleados = Empleado::all();
+		if(Empleado::addEmpleadoEquipo($idAtencion,$idEmpleado))
+		{
+			return Redirect::route('mantencion/equipo',array($idAtencion));
+		}else{
+			return Redirect::route('mantencion/equipo',array($idAtencion));
+		}
+	}
+
+	/**
+	 * Método que quita un empleado de un equipo de atención
+	 *
+	 * @return bool Resultado de la operación
+	 * @author 
+	 **/
+	public function removeEmpleado()
+	{
+	}
+
+
 }

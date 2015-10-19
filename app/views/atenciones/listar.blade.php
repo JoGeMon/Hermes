@@ -41,7 +41,7 @@
 		<div class="row">
 			<div class="col-lg-11">
 				<div class="panel panel-default">
-					<div class="panel-heading text-center"><span class="pull-left glyphicon glyphicon-chevron-left"></span>{{date('d-F-Y')}} <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Mantenciones del mes"></span><span class="pull-right glyphicon glyphicon-chevron-right"></span></div>
+					<div class="panel-heading text-center"><a href="#"><span class="pull-left glyphicon glyphicon-chevron-left"></span></a>{{date('d-F-Y')}} <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Mantenciones del mes"></span><a href="#"><span class="pull-right glyphicon glyphicon-chevron-right"></span></a></div>
 					<div class="panel-body">
 						<table id="atenciones" class="table table-striped table-hover table-bordered">
 							<thead>
@@ -63,12 +63,16 @@
 											<td>Emergencia</td>
 										@endif
 										<td>{{$ficha->fechaPactada}}</td>
-										@if($ficha->estado)
-											<td>Realizada</td>
-										@else
-											<td>No realizada</td>
-										@endif
-										<td></td>
+											@if($ficha->estado == 0)
+												<td>No realizada</td>
+											@elseif($ficha->estado == 1)
+												<td>Asignada</td>
+											@else
+												<td>Realizada</td>
+											@endif
+										<td> 
+											<a href="{{URL::route('mantencion/equipo',array($ficha->idAtencion))}}"><span class="fa fa-users"></span></a>	
+										</td>
 									</tr>
 								@endforeach
 							</tbody>

@@ -14,4 +14,20 @@ extends Eloquent{
 		//dd(DB::getQueryLog());
 		return $fichas;
 	}
+
+	/**
+	 * Método que trae un equipo de mantención desde 
+	 *
+	 * @param idAtencion = Identificador de atención
+	 * @return stdArray Arreglo de empleados que realizaron la atención
+	 * @author Jorge Velarde
+	 **/
+	public static function getEquipo($idAtencion){
+		$equipo = DB::table('tblatencion')
+			->join('tblequipoatencion', 'tblatencion.idAtencion', '=', 'tblequipoatencion.idAtencion')
+			->join('tblempleado', 'tblequipoatencion.idEmpleado', '=', 'tblempleado.idEmpleado')
+			->where('tblatencion.idAtencion', $idAtencion)
+			->get();
+		return $equipo;
+	}
 }

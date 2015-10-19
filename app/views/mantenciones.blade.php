@@ -63,10 +63,12 @@
 											<td>Emergencia</td>
 										@endif
 										<td>{{$ficha->fechaPactada}}</td>
-										@if($ficha->estado)
-											<td>Realizada</td>
+										@if($ficha->estado == 0)
+											<td>No asignada</td>
+										@if($ficha->estado == 1)
+											<td>Asginada</td>		
 										@else
-											<td>No realizada</td>
+											<td>Realizada</td>
 										@endif
 										<td></td>
 									</tr>

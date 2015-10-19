@@ -19,7 +19,7 @@ class Contrato extends Eloquent{
 			array(
 				'idContrato' => $idContrato,
 				'idServicio' => $idServicio,
-				'valor' => $valor,
+				'valor' => $valor
 			));
 		return $affected;
 	}

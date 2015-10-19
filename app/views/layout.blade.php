@@ -14,6 +14,7 @@
 		{{ HTML::style('assets/css/bootstrap.min.css'); }}
 		{{ HTML::style('assets/css/slidebars.min.css'); }}
 		{{-- HTML::style('assets/css/dataTables.css'); --}}
+		{{ HTML::style('assets/css/font-awesome.css') }}
 		{{ HTML::style('assets/css/dataTables.bootstrap.css') }}
 		{{ HTML::style('assets/css/jquery-ui.css') }}
 		{{ App::setLocale('es') }}

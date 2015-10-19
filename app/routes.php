@@ -13,10 +13,10 @@
 
 Route::GET('/', function()
 {
-	return View::make('home');
+	return Redirect::route('mantenciones');
 });
 
-/*Route::GET('/mantenciones', array(
+/*Route::GET('/mantenciones', $arrayName = array('' => , );(
 	'as' => 'mantenciones',
 	'uses' => 'MantencionController@index'
 ));*/
@@ -105,9 +105,15 @@ Route::GET('/mantenciones', array(
 	'uses' => 'AtencionController@index'
 ));
 
-Route::GET('/', array(
-	'as' => 'ficha/agregar',
-	'uses' => 'FichaController@store'
+Route::GET('/mantencion/equipo/{idAtencion}',array(
+	'as' => 'mantencion/equipo',
+	'uses' => 'AtencionController@getEquipo'
 ));
+
+Route::GET('/atencion/equipo/add/{idAtencion}/{idEmpleado}',array(
+	'as' => "mantencion/equipo/add",
+	'uses' => 'AtencionController@addEmpleado'
+));
+
 
 /* Fin rutas de atencion*/
