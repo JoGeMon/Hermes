@@ -27,8 +27,36 @@
 							<p>{{$contrato->codigoContrato}}</p>
 						</div>
 					</div>
-					
-					<br/><br/>
+					<br/>
+					<div class="col-md-6">
+						<table class="table table-bordered">
+							<thead>
+								<tr class="active"><th>Servicios</th></tr>
+							</thead>
+							<tbody>
+								@foreach($detalleContrato as $servicio)
+								<tr><td>{{$servicio->detalleServicio}}</td></tr>
+								@endforeach
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-6">
+						<table class="table table-bordered">
+							<thead>
+								<tr class="active"><th>Colaboradores</th></tr>
+							</thead>
+							<tbody>
+								@foreach($detalleContrato as $servicio)
+								<tr><td>{{$servicio->detalleServicio}}</td></tr>
+								@endforeach
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel panel-heading"><h3 class="panel-title">Equipo de atención</h3></div>
+				<div class="panel-body"->
 					<div class="row">
 						<div class="col-lg-12 text-right">
 							<button class="btn btn-success" data-toggle="modal" data-target="#modalEmpleado"><span class="fa fa-user-plus"></span> Agregar trabajador</button>
@@ -78,13 +106,11 @@
       							@foreach($trabajadores as $trabajador)
       								<tr>
       									<td>{{$trabajador->nombreEmpleado}} {{$trabajador->apellidoPaternoEmpleado}} {{$trabajador->apellidoMaternoEmpleado}}</td>
-      									@foreach($equipo as $miembro)
-	      									@if($trabajador->idEmpleado != $miembro->idEmpleado)
-												<td><a href="{{URL::route('mantencion/equipo/add',array($atencion->idAtencion,$trabajador->idEmpleado))}}" class="btn btn-success"><span class="glyphicon glyphicon-ok"> Asignar</span></a></td>
-											@else
-												<td><a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"> Quitar </span></a></td>
-	      									@endif
-	      								@endforeach
+      									@if(!in_array($trabajador->idEmpleado, $arrEquipo))
+											<td><a href="{{URL::route('mantencion/equipo/add',array($atencion->idAtencion,$trabajador->idEmpleado))}}" class="btn btn-success"><span class="glyphicon glyphicon-ok"> Asignar</span></a></td>
+										@else
+											<td><a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"> Quitar </span></a></td>
+	      								@endif
       								</tr>
       							@endforeach
       						</tbody>

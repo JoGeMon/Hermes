@@ -136,12 +136,14 @@ class AtencionController extends \BaseController {
 		$contrato = Contrato::getCabecera($atencion->idContrato);
 		$detalleContrato = Contrato::getDetalleContrato($atencion->idContrato);
 		$empleados = Empleado::all();
+		$arrEquipo = array_fetch($equipo,'idEmpleado');
 		return View::make('atenciones/verEquipo',array(
 			"equipo" => $equipo,
 			"contrato" => $contrato,
 			"detalleContrato" => $detalleContrato,
 			"trabajadores" => $empleados,
-			"atencion" => $atencion
+			"atencion" => $atencion,
+			"arrEquipo" => $arrEquipo
 		));
 	}
 

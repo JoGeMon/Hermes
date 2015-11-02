@@ -10,7 +10,7 @@ extends Eloquent{
 			->join('tblcliente', 'tblatencion.idCliente', '=', 'tblcliente.idCliente')
 			->whereRaw("MONTH(fechaPactada) = 6")
 			->get();
-		//dd(DB::getQueryLog());
+		dd(DB::getQueryLog());
 		return $fichas;
 	}
 }

@@ -5,18 +5,28 @@ extends Eloquent{
 	protected $table = 'tblatencion';
 	protected $primaryKey = 'idAtencion';
 	
+	
+	/**
+	 * Método que trae todas las atenciones del mes en curso.
+	 *
+	 * @return stdArray Arreglo de atencinoes mensuales
+	 * @author Jorge Velarde
+	 **/
 	public static function getAtenciones(){
 		$fichas = DB::table('tblatencion')
-			->join('tblContrato', 'tblatencion.idContrato', '=', 'tblContrato.idContrato')
+			->join('tblcontrato', 'tblatencion.idContrato', '=', 'tblcontrato.idContrato')
 			->join('tblcliente', 'tblContrato.idCliente', '=', 'tblcliente.idCliente')
 			->whereRaw("MONTH(fechaPactada) = MONTH(NOW())")
+			->where('tblcontrato.estado', 1)
+			->where('tblatencion.idTipoAtencion', 1)
+			->select('tblcliente.*', 'tblatencion.*')
+			->groupBy('tblcontrato.idContrato')
 			->get();
-		//dd(DB::getQueryLog());
 		return $fichas;
 	}
 
 	/**
-	 * Método que trae un equipo de mantención desde 
+	 * Método que lista al equipo de personas que realizó una atención.
 	 *
 	 * @param idAtencion = Identificador de atención
 	 * @return stdArray Arreglo de empleados que realizaron la atención

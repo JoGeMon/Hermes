@@ -9,6 +9,7 @@ class Contrato extends Eloquent{
 			->join('tblcliente', 'tblcontrato.idCliente', '=', 'tblcliente.idCliente')
 			->join('tblfacturacion', 'tblcontrato.idFacturacion', '=', 'tblfacturacion.idFacturacion')
 			->join('tblfrecuenciamantencion', 'tblcontrato.idFrecuenciaMantencion', '=', 'tblfrecuenciamantencion.idFrecuenciaMantencion')
+			->whereRaw('YEAR(tblcontrato.inicioContrato) = YEAR(NOW())')
 			->get();			
 		return $cabecera;
 	}
@@ -42,4 +43,22 @@ class Contrato extends Eloquent{
 			->get();			
 		return $detalle;
 	}
+
+	/**
+	 * Método que lista todos los contratos activos del año en curso
+	 *
+	 * @return stdArray = Arreglo de contratos vigentes
+	 * @author Jorge Velarde
+	 **/
+	public static function getContratosVigentes()
+	{
+		$contratos = DB::table('tblcontrato')
+			->join('tblcliente', 'tblcontrato.idCliente', '=', 'tblcliente.idCliente')
+			//->where('tblcontrato.estado',1)
+			->select('tblcontrato.idContrato', 'tblcliente.nombreCliente')
+			->lists('nombreCliente', 'idContrato');
+		return $contratos;
+	}
+
+
 }

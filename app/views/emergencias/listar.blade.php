@@ -11,14 +11,14 @@
 		$(document).ready(function(){
 			$('#atenciones').dataTable();
 			$('[data-toggle="tooltip"]').tooltip()
-			$('#fPactada').datepicker();
+			$('#fLlmada').datepicker();
 		});
 	</script>
 	<div class="container-fluid" id="titulo">
 		<div class="row">
 			<div class="col-md-11">
 				<div class="col-md-4">
-					<h3>Mantenciones</h3>
+					<h3>Emergencias</h3>
 				</div>
 				<div class="col-md-8 text-right">
 					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalProducto"><span class="glyphicon glyphicon-plus-sign"></span></button>
@@ -90,31 +90,33 @@
     		<div class="modal-content">
       			<div class="modal-header" style="background-color: #3784b1; color: #fff">
         			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-        			<h4 class="modal-title">Añadir mantención</h4>
+        			<h4 class="modal-title">Añadir Emergencia</h4>
       			</div>
       			<div class="modal-body">
-      				{{ Form::open(array('route' => 'ficha/guardar'))}}
+      				{{ Form::open(array('route' => 'emergencia/guardar'))}}
+      				<div class="row">
+						<div class="col-md-6 col-xs-6">
+							{{Form::label('fechaLlamda', "Fecha llamada")}}
+							{{Form::text('fechaLlamda', "",array('id' => 'fLlmada', 'class' => 'form-control'))}}
+						</div>
+						<div class="col-md-6 col-xs-6">
+							{{Form::label('horaLlamda', "Hora llamada")}}
+							{{Form::text('horaLlamda', "", array('placeHolder' => '13:30', 'class' => 'form-control'))}}
+						</div>
+      				</div>
       				{{ Form::label('cliente', 'Cliente')}}
-      				{{ Form::select('cliente',$clientes,'',array('class' => 'form-control'))}}
-      				{{ Form::label('fechaPactada','Fecha pactada')}}
-      				{{ Form::text('fechaPactada','',array('class' => 'form-control', 'id' => "fPactada"))}}
-      				{{ Form::label('empleado', 'Empleado')}}
-      				{{ Form::select('empleado',$empleados,'',array('class' => 'form-control'))}}
+      				{{ Form::select('cliente',$contratos,'',array('class' => 'form-control'))}}
       				{{ Form::label('area','Área de servicio')}}
       				{{ Form::select('area',$areas,'',array('class' => 'form-control'))}}
-					{{ Form::label('detalleAtencion','Detalle atención')}}
+					{{ Form::label('motivo','Motivo')}}
 					{{ Form::textarea('detalleAtencion','',array('class' => 'form-control'))}}
-					{{ Form::label('precio','Valorización')}}
-					<div class="input-group">
-						<span class="input-group-addon">$</span>
-						{{ Form::text('precio','',array('class' => 'form-control'))}}
-					</div>
-      				{{ Form::close()}}
+
       			</div>
       			<div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			        <button type="button" class="btn btn-primary">Añadir</button>
-		      </div>
+			        {{Form::submit('Añadir',array('class' => 'btn btn-primary'))}}
+				</div>
+				{{ Form::close()}}
     		</div><!-- /.modal-content -->
   		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
