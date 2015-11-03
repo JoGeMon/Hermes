@@ -16,7 +16,7 @@ extends Eloquent{
 		$fichas = DB::table('tblatencion')
 			->join('tblcontrato', 'tblatencion.idContrato', '=', 'tblcontrato.idContrato')
 			->join('tblcliente', 'tblContrato.idCliente', '=', 'tblcliente.idCliente')
-			->whereRaw("MONTH(fechaPactada) <= MONTH(NOW())")
+			//->whereRaw("MONTH(fechaPactada) <= MONTH(NOW())")
 			->where('tblcontrato.estado', 1)
 			->where('tblAtencion.idTipoAtencion', 2)
 			->select('tblcliente.*', 'tblatencion.*')

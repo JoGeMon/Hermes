@@ -48,8 +48,7 @@ class EmergenciaController extends \BaseController {
 		$emergencia->idContrato = Input::get('cliente');
 		$emergencia->idServicio = Input::get('area');
 		$emergencia->estado = 0;
-		$emergencia->fechaPactada = Input::get('fechaLlamda');
-		$emergencia->horaLlamada = Input::get('horaLlamda');
+		$emergencia->fechaPactada = date('Y-m-d', strtotime(Input::get('fechaLlamda')));		$emergencia->horaLlamada = Input::get('horaLlamda');
 		if($emergencia->save()){
 			return Redirect::route('emergencias');
 		}else{
