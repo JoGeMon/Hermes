@@ -132,3 +132,8 @@ Route::POST('/emergencia/guardar', array(
 	'as' => 'emergencia/guardar',
 	'uses' => 'EmergenciaController@store'
 ));
+
+Route::get('/dashboard',array(
+	'as' => 'dashboard',
+	'uses' => 'DashboardController@index'
+));
