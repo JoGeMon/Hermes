@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"mEAS",
+				"Measures"
+			],
+			[
+				"id",
+				"idServicioArea"
+			],
+			[
+				"DIM",
+				"dimServicioArea"
+			],
+			[
+				"in",
+				"INNER"
+			],
+			[
+				"idServ",
+				"idServicioArea"
+			],
+			[
+				"idA",
+				"idAtencion"
+			],
+			[
 				"i",
 				"iframe	Tag"
 			],
@@ -176,14 +200,6 @@
 				"mysql_fetch_assoc"
 			],
 			[
-				"id",
-				"idNoticia"
-			],
-			[
-				"in",
-				"input	Tag"
-			],
-			[
 				"mysql_e",
 				"mysql_error"
 			],
@@ -326,6 +342,46 @@
 				"line_ending": "Windows",
 				"name": "Metodología:"
 			}
+		},
+		{
+			"file": "app/views/dashboard.blade.php",
+			"settings":
+			{
+				"buffer_size": 306,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "WITH MEMBER [Measures].[caluclado] as '[Measures].[total] * 100 ',\nformat_string = '0.00%'\nselect \n  NON EMPTY {[Measures].[total], [Measures].[caluclado]} ON COLUMNS,\n  NON EMPTY {[tipoAtencion.tipoAtencion_JER].[All tipoAtencion.tipoAtencion_JERs], [tipoAtencion.tipoAtencion_JER].[Mantención]} ON ROWS\nfrom [Cubo Porcentual]\n\n\nwith member [Measures].[ShareToYear] as '[Measures].[Sales]/([Measures].[Sales], Ancestor([Time].CurrentMember, [Time].[Years]))', \nformat_string='0.00%' \nselect\n	{[Measures].[Sales],[Measures].[ShareToYear]} ON COLUMNS,\n	Time.Members ON ROWS \nfrom [SteelWheelsSales]\n\n\nwith member [Measures].[calculado] as '([Measures].[total] / [Measures].[total])', format_string = \"0.0%\"\nselect \n	NON EMPTY {[Measures].[total], [Measures].[calculado]} ON COLUMNS,\n	NON EMPTY Crossjoin({[tipoAtencion.tipoAtencion_JER].[Mantención]}, {[Servicio.Servicio_JER].[Bombas de agua], [Servicio.Servicio_JER].[Calderas], [Servicio.Servicio_JER].[Portones], [Servicio.Servicio_JER].[Proyectos]}) ON ROWS\nfrom [Cubo Porcentual]\n\n\n\n\n\n\nSELECT s.nombreArea, COUNT(f.idAtencion) * 100 / general.total, general.total\nFROM factAtencion f\nINNER JOIN dimTiempo t\n	ON f.idTiempo = t.idTiempo\nINNER JOIN dimServicioArea s\n	ON s.idServicioArea = f.idServicioArea\nINNER JOIN (\n	SELECT count(factAtencion.idAtencion) as total, factAtencion.idServicioArea\n	FROM factAtencion\n	INNER JOIN dimTiempo\n		ON factAtencion.idTiempo = dimTiempo.idTiempo\n	INNER JOIN dimServicioArea\n		ON dimServicioArea.idServicioArea = factAtencion.idServicioArea\n	WHERE dimTiempo.nomMes = 'ENERO'\n	AND dimTiempo.numAno = 2013\n	) as general\n	ON f.idServicioArea = general.idServicioArea\nWHERE t.nomMes = 'ENERO'\nAND t.numAno = 2013\ngroup by s.idAreaOrigen",
+			"settings":
+			{
+				"buffer_size": 1723,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/EmergenciaController.php",
+			"settings":
+			{
+				"buffer_size": 1896,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/Emergencia.php",
+			"settings":
+			{
+				"buffer_size": 778,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Algunos problemas comunes de las calderas de agua, es que hacen ruido, producen bolsas de aire, y algunas calderas producen poco calor o pueden presentar fugas de agua. Se pueden tomar algunas medidas con el fin de identificar los problemas potenciales. Esta revisión implica elevar el termostato, y la comprobación del estado de diversas partes del sistema (es decir: interruptores, fusibles, interruptores automáticos, nivel de agua, y los controles de seguridad del quemador).",
+			"settings":
+			{
+				"buffer_size": 479,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -372,11 +428,13 @@
 	},
 	"file_history":
 	[
+		"/D/xampp/htdocs/hermes/app/models/Ara.php",
+		"/C/Users/JoGe/Downloads/CustomParameterExampleInPentahoCDE(2)/exportManifest.xml",
+		"/D/Pentaho/biserver-ce/pentaho-solutions/system/security.properties",
 		"/D/xampp/htdocs/hermes/app/controllers/EmergenciaController.php",
 		"/D/xampp/htdocs/hermes/app/controllers/ContratoController.php",
 		"/D/xampp/htdocs/hermes/app/models/Contrato.php",
 		"/D/xampp/htdocs/hermes/app/models/Emergencia.php",
-		"/D/xampp/htdocs/hermes/app/models/Ara.php",
 		"/D/xampp/htdocs/hermes/app/views/emergencias/listar.blade.php",
 		"/D/xampp/htdocs/hermes/app/views/dashboard.blade.php",
 		"/D/xampp/htdocs/hermes/app/routes.php",
@@ -497,9 +555,7 @@
 		"/D/xampp/htdocs/ayekantun/propuesta.php",
 		"/D/xampp/htdocs/ayekantun/admin/setNoticia.php",
 		"/D/xampp/htdocs/ayekantun/admin/noticiasController.php",
-		"/D/xampp/htdocs/ayekantun/css/mineduc.css",
-		"/D/xampp/htdocs/ayekantun/compromiso.php",
-		"/D/xampp/htdocs/ayekantun/admin/imgNoticia.php"
+		"/D/xampp/htdocs/ayekantun/css/mineduc.css"
 	],
 	"find":
 	{
@@ -664,7 +720,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -741,6 +797,138 @@
 						{
 							"auto_name": "Metodología:",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/dashboard.blade.php",
+					"settings":
+					{
+						"buffer_size": 306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								306,
+								306
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"settings":
+					{
+						"buffer_size": 1723,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1039,
+								1039
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 345.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/EmergenciaController.php",
+					"settings":
+					{
+						"buffer_size": 1896,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								192,
+								206
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/Emergencia.php",
+					"settings":
+					{
+						"buffer_size": 778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								733,
+								733
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 138.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"settings":
+					{
+						"buffer_size": 479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								479,
+								479
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage",
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
