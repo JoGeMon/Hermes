@@ -1,0 +1,64 @@
+<?php $__env->startSection('contenido'); ?>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#tblContrato').dataTable();
+
+		$(".info").click(function(){
+			$('#cargaModal').load('contratos/detalles/'+$(this).attr('href'));
+		});
+	});
+</script>
+<div class="row">
+	<div class="col-md-11">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+					<h3 class="panel-title text-center">Contratos</h3>
+			</div>
+			<div class="panel-body">
+				<?php if(Session::has('error')): ?>
+					<div class="alert alert-danger text-center alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<p><?php echo Session::get('error'); ?></p>
+					</div>
+				<?php elseif(Session::has('success')): ?>
+					<div class="alert alert-success text-center alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<p><?php echo Session::get('success'); ?></p>
+					</div>
+				<?php endif; ?> 
+				<a href="<?php echo URL::route('contratos/nuevo'); ?>" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus-sign"></span></a><br/><br/>
+				<table class="table table-bordered table-hover table-striped" id="tblContrato">
+					<thead>
+						<tr class="active">
+							<th>Emperesa</th>
+							<th>Código</th>
+							<th>Periodo</th>
+							<th>Acciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach($contratos as $contrato): ?>
+							<tr>
+								<td><?php echo $contrato->nombreCliente; ?></td>
+								<td><?php echo $contrato->codigoContrato; ?></td>
+								<td><?php echo date("F-Y", strtotime($contrato->inicioContrato)); ?> a <?php echo date("F-Y", strtotime($contrato->finContrato)); ?></td>
+								<td>
+
+									<a href="<?php echo $contrato->idContrato; ?>" data-toggle="modal" data-target="#infoContrato" class="info"><span class="glyphicon glyphicon-info-sign"></span></a>
+									<a href="#" data-toggle="modal" data-target="#infoContrato"<span class="glyphicon glyphicon-trash"></span></a>
+									<a href="<?php echo URL::route('contratos/muestra',array($contrato->idContrato)); ?>"><span class="glyphicon glyphicon-plus-sign"></span>
+								</td>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="infoContrato">
+	<div id="cargaModal"></div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,7 @@
+<?php if(count($servicios)>0): ?>
+	<?php foreach($servicios as $servicio): ?>
+		<option value="<?php echo $servicio->idServicio; ?>"><?php echo $servicio->detalleServicio; ?></option>
+	<?php endforeach; ?>
+<?php else: ?>
+	<option value="">No existe servicios para esta área</option>
+<?php endif; ?>

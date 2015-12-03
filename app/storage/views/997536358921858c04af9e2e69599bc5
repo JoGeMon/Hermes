@@ -1,0 +1,53 @@
+<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color: #398ab9; color:#FFF">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h4 class="modal-title text-center">Detalle de contrato</h4>
+			</div>
+			<div class="modal-body">
+				<table class="table table-bordered">
+					<tr>
+						<th>Nombre Cliente</th>
+						<td><?php echo $contrato->nombreCliente; ?></td>
+					</tr>
+					<tr>
+						<th>Fecha de Firma</th>
+						<td><?php echo date('d-F-Y',strtotime($contrato->fechaFirma));; ?></td>
+					</tr>
+					<tr>
+						<th>Facturación</th>
+						<td><?php echo $contrato->detalleFacturacion; ?></td>
+					</tr>
+					<tr>
+						<th>Contraparte</th>
+						<td><?php echo $contrato->nombreFirmante; ?></td>
+					</tr>
+				</table>
+				<hr>
+				<?php if(count($servicios)>0): ?>
+					<h4>Servicios</h4>
+					<table class="table table-bordered">
+						<thead>
+							<tr class="active text-center">
+								<th>Equipo</th>
+								<th>Valor</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php foreach($servicios as $servicio): ?>
+							<tr>
+								<td><?php echo $servicio->detalleServicio; ?></td>
+								<td><?php echo $servicio->valor; ?></td>
+							</tr>
+							<?php endforeach; ?>
+						</tbody>
+					</table>
+				<?php else: ?>
+					<h5 class="alert alert-block alert-warning text-center">Este contrato no tiene servicios</h5>
+				<?php endif; ?>
+			</div>
+			<div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      		</div>
+		</div>
+	</div>
