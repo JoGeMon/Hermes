@@ -24,7 +24,7 @@ Route::GET('/', function()
 /* Rutas de login */
 Route::POST('/login', array(
 	'as' => 'login',
-	'uses' => 'ServicioController@index'
+	'uses' => 'LoginController@index'
 ));
 
 /* Rutas de servicio */
@@ -111,6 +111,11 @@ Route::GET('/mantenciones', array(
 	'uses' => 'AtencionController@index'
 ));
 
+Route::GET('/mantenciones/propias', array(
+	'as' => 'mantenciones/usuario/id',
+	'uses' => 'AtencionController@misAtenciones'
+));
+
 Route::GET('/mantencion/equipo/{idAtencion}',array(
 	'as' => 'mantencion/equipo',
 	'uses' => 'AtencionController@getEquipo'
@@ -120,9 +125,14 @@ Route::GET('/atencion/equipo/add/{idAtencion}/{idEmpleado}',array(
 	'as' => "mantencion/equipo/add",
 	'uses' => 'AtencionController@addEmpleado'
 ));
+
+Route::GET('/atencion/equipo/remove/{idAtencion}/{idEmpleado}',array(
+	'as' => "mantencion/equipo/remove",
+	'uses' => 'AtencionController@removeEmpleado'
+));
 /* Fin rutas de atencion*/
 
-/* Rutas de atención */
+/* Rutas de emergencias */
 Route::GET('/emergencia', array(
 	'as' => 'emergencias',
 	'uses' => 'EmergenciaController@index'
@@ -132,8 +142,11 @@ Route::POST('/emergencia/guardar', array(
 	'as' => 'emergencia/guardar',
 	'uses' => 'EmergenciaController@store'
 ));
+/* Fin rutas de atencion*/
 
+/* Rutas de panel */
 Route::get('/dashboard',array(
 	'as' => 'dashboard',
 	'uses' => 'DashboardController@index'
 ));
+/* Fin rutas de panel*/

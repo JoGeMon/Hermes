@@ -1,28 +1,17 @@
 @extends('layout')
 @section('contenido')
-	<style type="text/css">
-		#titulo{
-			background-color: #398ab9;
-			color: #FFF;
-			margin-bottom: 10px;
-		}
-	</style>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#atenciones').dataTable();
+			$('#emergencias').dataTable();
 			$('[data-toggle="tooltip"]').tooltip()
 			$('#fPactada').datepicker();
 		});
 	</script>
-	<div class="container-fluid" id="titulo">
+	<div class="container" id="titulo">
 		<div class="row">
 			<div class="col-md-11">
-				<div class="col-md-4">
-					<h3>Mantenciones</h3>
-				</div>
-				<div class="col-md-8 text-right">
-					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalProducto"><span class="glyphicon glyphicon-plus-sign"></span></button>
-				</div>
+				<h4>Mis Mantenciones</h4>
 			</div>
 		</div>
 	</div>
@@ -39,15 +28,52 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-11">
-				<div class="panel panel-default">
-					<div class="panel-heading text-center"><a href="#"><span class="pull-left glyphicon glyphicon-chevron-left">{{date('d-m-Y',strtotime('-1 month'))}}</span></a>{{date('d-F-Y')}} <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Mantenciones del mes"></span><a href="#"><span class="pull-right glyphicon glyphicon-chevron-right"></span></a></div>
+			<div class="col-md-11">
+				<div class="panel panel-danger">
+					<div class="panel-heading text-center"><h3 class="panel-title">Mis emergencias</h3></div>
+					<div class="panel-body">
+						<table id="emergencias" class="table table-striped table-hover table-bordered">
+							<thead>
+								<tr class="active">
+									<th>Cliente</th>
+									<th>Fecha pactada</th>
+									<th>Estado</th>
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach($emergencias as $emergencia)
+									<tr>
+										<td>{{$emergencia->nombreCliente}}</td>
+										<td>{{$emergencia->fechaPactada}}</td>
+											@if($emergencia->estado == 0)
+												<td>No realizada</td>
+											@elseif($emergencia->estado == 1)
+												<td>Asignada</td>
+											@else
+												<td>Realizada</td>
+											@endif
+										<td>
+											<a href="{{URL::route('mantencion/equipo',array($emergencia->idAtencion))}}" class="btn btn-info"><span class="fa fa-info-circle"></span></a> 
+											<a href="{{URL::route('mantencion/equipo',array($emergencia->idAtencion))}}" class="btn btn-success"><span class="fa fa-check-circle"></span></a>
+										</td>
+									</tr>
+								@endforeach
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-11">
+				<div class="panel panel-primary">
+					<div class="panel-heading text-center"><h3 class="panel-title">Mis mantenciones</h3></div>
 					<div class="panel-body">
 						<table id="atenciones" class="table table-striped table-hover table-bordered">
 							<thead>
 								<tr class="active">
 									<th>Cliente</th>
-									<th>Tipo</th>
 									<th>Fecha pactada</th>
 									<th>Estado</th>
 									<th>Acciones</th>
@@ -57,11 +83,6 @@
 								@foreach($fichas as $ficha)
 									<tr>
 										<td>{{$ficha->nombreCliente}}</td>
-										@if($ficha->idTipoAtencion == 1)
-											<td>Matención</td>
-										@elseif($ficha->idTipoAtencion == 2)
-											<td>Emergencia</td>
-										@endif
 										<td>{{$ficha->fechaPactada}}</td>
 											@if($ficha->estado == 0)
 												<td>No realizada</td>
@@ -71,9 +92,8 @@
 												<td>Realizada</td>
 											@endif
 										<td>
-											<a href="{{URL::route('mantencion/equipo',array($ficha->idAtencion))}}"><span class="fa fa-info-circle"></span></a> 
-											<a href="{{URL::route('mantencion/equipo',array($ficha->idAtencion))}}"><span class="fa fa-users"></span></a>
-											<a href="{{URL::route('mantencion/equipo',array($ficha->idAtencion))}}"><span class="fa fa-edit"></span></a>
+											<a href="{{URL::route('mantencion/equipo',array($ficha->idAtencion))}}" class="btn btn-info"><span class="fa fa-info-circle"></span></a>
+											<a href="{{URL::route('mantencion/equipo',array($ficha->idAtencion))}}" class="btn btn-success"><span class="fa fa-check-circle"></span></a>
 										</td>
 									</tr>
 								@endforeach

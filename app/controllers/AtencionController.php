@@ -78,12 +78,24 @@ class AtencionController extends \BaseController {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function misAtenciones()
 	{
-		//
+		$idUsuario = Session::get('usuario')->idEmpleado;
+		$fichas = Atencion::getMisAtenciones($idUsuario);
+		$emergencias = Emergencia::getMisEmergencias($idUsuario);
+		$clientes = Cliente::lists('nombreCliente','idCliente');
+		$empleados = Empleado::lists('nombreEmpleado','idEmpleado');
+		$areas = Ara::lists('nombreArea','idArea');
+		return(View::make('atenciones/miLista',array(
+			'fichas' => $fichas, 
+			'clientes' => $clientes,
+			'empleados' => $empleados,
+			'emergencias' => $emergencias,
+			'areas' => $areas
+			)
+		));
 	}
 
 
@@ -155,8 +167,7 @@ class AtencionController extends \BaseController {
 		$detalleContrato = Contrato::getDetalleContrato($atencion->idContrato);
 
 		$empleados = Empleado::all();
-		if(Empleado::addEmpleadoEquipo($idAtencion,$idEmpleado))
-		{
+		if(Empleado::addEmpleadoEquipo($idAtencion,$idEmpleado)){
 			return Redirect::route('mantencion/equipo',array($idAtencion));
 		}else{
 			return Redirect::route('mantencion/equipo',array($idAtencion));
@@ -169,8 +180,13 @@ class AtencionController extends \BaseController {
 	 * @return bool Resultado de la operación
 	 * @author 
 	 **/
-	public function removeEmpleado()
+	public function removeEmpleado($idAtencion, $idEmpleado)
 	{
+		if(Empleado::remmoveEmpleadoEquipo($idAtencion,$idEmpleado)){
+			return Redirect::route('mantencion/equipo',array($idAtencion));
+		}else{
+			return Redirect::route('mantencion/equipo',array($idAtencion));
+		}
 	}
 
 

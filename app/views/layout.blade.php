@@ -21,37 +21,66 @@
 		<style type="text/css">
 			#sidebar{
 				background-color: #398ab9;
-				min-height: 1451px;
 				margin-top: 50px;
 			}
 
 			#sidebarLG{
-				background-color: #398ab9;
-				min-height: 1451px;
+				background-color: #2A205B;
+				min-height: 750px;
 			}
 
 			#header{
-				background-color: #398ab9;
+				background-color: #2A205B;
+				height: 100px;
 			}
 
-			#menu > li > a{
+			#menu  a{
+				background-color: #2A205B;
 				color: #FFF;
+				border: 0px solid #2A205B;
+			}
+
+			#menu  a:hover{
+				background-color: #FFF;
+				color: #000;
+				border: 0px solid #2A205B;
 			}
 
 			.logo{
-				margin: 25px;
-				display: block;
-				text-align: center;
+				margin-right: 25px; 
+				text-align: -moz-center;
+				margin-top: 15px;
 			}
-		</style>
+
+			.logoHermes{
+				height: 140px;
+				margin-left: 50px;
+				margin-top: -80px;
+			}
+
+			.panel-heading h4 {
+				color: #FFF;
+				font-size: 15px;
+				font-weight: 600;
+				margin: 0;
+			}
+
+			#titulo{
+				background-color: #2A205B;
+				color: #FFF;
+				margin-bottom: 10px;
+			}
+	</style>
 	</head>
 	<body>
 		<div class="fluid-container" id="header">
 			<div class="row">
-				<div class="col-md-2 text-center"  >
-					<img class="img-rounded" src="{{asset('assets/images/emalogo.png')}}">
+				<div class="col-md-2 text-center">
+					<a href="#"></a>
 				</div>
 				<div class="col-md-10">
+					<h3 style="color:#FFF; margin-top: 50px" class="pull-left">{{Session::get('usuario')->nombreEmpleado." ".Session::get('usuario')->apellidoPaternoEmpleado}}</h3>
+					<img class="logo pull-right" src="{{asset('assets/images/emalogo.png')}}"/>
 					<button class="btn btn-primry sb-toggle-left pull-right visible-xs" id="btnShow">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -63,22 +92,22 @@
 		<div class="fluid-container sb-site">
 			<div class="row">
 				<div class="col-lg-2 col-md-2 hidden-sm hidden-xs" id="sidebarLG">
-					<a href="#" class="logo text-center" >
-						<img src="{{asset('assets/images/user_vacio.jpg')}}" class="img-responsive img-circle" width="100px" height="100" alt="logo"/>
-						<p style="color:#FFF">Usuario</p>
-					</a>
-					<ul id="menu" style="list-style-type:none; padding-left: 0px;">
-						<li style="padding: 10px"><a href="{{URL::route('mantenciones')}}"><i class="glyphicon glyphicon-th-list"></i> Mantenciones</a></li>
-						<li style="padding: 10px"><a href="{{URL::route('contratos')}}"><i class="glyphicon glyphicon-list-alt"></i> Contratos</a></li>
-						<li style="padding: 10px"><a href="{{URL::route('emergencias')}}"><i class="glyphicon glyphicon-exclamation-sign"></i> Emergencias</a></li>
-						<!--<li style="padding: 10px"><a href="capacitacion.php"><i class="glyphicon glyphicon-book"></i> Capacitación <span class="label label-warning">1</span></a></li>
-						<li style="padding: 10px"><a href="#"><i class="glyphicon glyphicon-dashboard"></i> Dashboard <span class="label label-danger"><i class="glyphicon glyphicon-exclamation-sign"></i></span></a></li>-->
+					<div class="text-center">
+						<img class="logoHermes visible-lg text-center" src="{{asset('assets/images/hermesLogo.png')}}">
+					</div>
+					<hr>
+					<div id="menu" class="list-group">
+						<a href="{{URL::route('mantenciones')}}" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> Mantenciones</a>
+						<a href="{{URL::route('contratos')}}" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i> Contratos</a>
+						<a href="{{URL::route('emergencias')}}" class="list-group-item"><i class="glyphicon glyphicon-exclamation-sign"></i> Emergencias</a>
+						<a href="{{URL::route('mantenciones/usuario/id')}}" class="list-group-item"><i class="glyphicon glyphicon-wrench"></i> Mis mantenciones</a>
+						<a href="{{URL::route('dashboard')}}" class="list-group-item"><i class="fa fa-pie-chart"></i> Panel de seguimiento </a>
 						<hr>
-						<li style="padding: 10px"><a href="administracion.php"><i class="glyphicon glyphicon-cog"></i> Administrar</a></li>
-						<li style="padding: 10px"><a href="{{URL::route('servicios')}}"><i class="glyphicon glyphicon-wrench"></i> Equipos</a></li>
-						<li style="padding: 10px"><a href="{{URL::route('servicios')}}"><i class="fa fa-users"></i> Clientes</a></li>
-						<li style="padding: 10px"><a href="{{URL::route('servicios')}}"><i class="fa fa-user"></i> Trabajadores</a></li>
-					</ul>
+						<a href="administracion.php" class="list-group-item"><i class="glyphicon glyphicon-cog"></i> Administrar</a>
+						<a href="{{URL::route('servicios')}}" class="list-group-item"><i class="glyphicon glyphicon-wrench"></i> Equipos</a>
+						<a href="{{URL::route('servicios')}}" class="list-group-item"><i class="fa fa-users"></i> Clientes</a>
+						<a href="{{URL::route('servicios')}}" class="list-group-item"><i class="fa fa-user"></i> Trabajadores</a>
+					</div>
 				</div>
 	    		<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
 	    			<br/>
@@ -104,7 +133,7 @@
 				</ul>
 				<li style="padding: 10px"><a href="#"><i class="glyphicon glyphicon-barcode"></i> SIG</a></li>
 				<li style="padding: 10px"><a href="capacitacion.php"><i class="glyphicon glyphicon-book"></i> Capacitación <span class="label label-warning">1</span></a></li>
-				<li style="padding: 10px"><a href="#"><i class="glyphicon glyphicon-dashboard"></i> Panel de seguimiento <span class="label label-danger"><i class="glyphicon glyphicon-exclamation-sign"></i></span></a></li>
+				<li style="padding: 10px"><a href="#"><i class="fa fa-pie-chart"></i> Panel de seguimiento <span class="label label-danger"><i class="glyphicon glyphicon-exclamation-sign"></i></span></a></li>
 				<hr>
 				<li><a href="administracion.php"><i class="glyphicon glyphicon-cog"></i> Administrar</a></li>
 			</ul>

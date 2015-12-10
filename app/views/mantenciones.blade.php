@@ -40,7 +40,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-11">
-				<div class="panel panel-default">
+				<div class="panel panel-primary">
 					<div class="panel-heading text-center"><span class="pull-left glyphicon glyphicon-chevron-left"></span>{{date('d-F-Y')}} <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Mantenciones del mes"></span><span class="pull-right glyphicon glyphicon-chevron-right"></span></div>
 					<div class="panel-body">
 						<table id="atenciones" class="table table-striped table-hover table-bordered">

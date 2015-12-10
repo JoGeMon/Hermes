@@ -25,6 +25,29 @@ extends Eloquent{
 		return $fichas;
 	}
 
+
+	/**
+	 * Método que trae todas las atenciones del mes en curso del usurio logueado
+	 *
+	 * @param idEmpleado = Identificador del usuario logueado
+	 * @return stdArray Arreglo de atencinoes mensuales
+	 * @author Jorge Velarde
+	 **/
+	public static function getMisAtenciones($idEmpleado){
+		$fichas = DB::table('tblatencion')
+			->join('tblcontrato', 'tblatencion.idContrato', '=', 'tblcontrato.idContrato')
+			->join('tblcliente', 'tblcontrato.idCliente', '=', 'tblcliente.idCliente')
+			->join('tblequipoatencion', 'tblatencion.idEquipoAtencion', '=', 'tblequipoatencion.idEquipoAtencion')
+			->whereRaw("MONTH(fechaPactada) = MONTH(NOW())")
+			->where('tblcontrato.estado', 1)
+			->where('tblatencion.idTipoAtencion', 1)
+			->where('tblequipoatencion.idEmpleado', $idEmpleado)
+			->select('tblcliente.*', 'tblatencion.*')
+			->groupBy('tblcontrato.idContrato')
+			->get();
+		return $fichas;
+	}
+
 	/**
 	 * Método que lista al equipo de personas que realizó una atención.
 	 *

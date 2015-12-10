@@ -9,7 +9,19 @@ class LoginController extends \BaseController {
 	 */
 	public function index()
 	{
-		return Redirect::to('mantenciones')
+		$usuario = Empleado::find(1);
+		Session::put('usuario', $usuario);
+		$fichas = Atencion::getAtenciones();
+		$clientes = Cliente::lists('nombreCliente','idCliente');
+		$empleados = Empleado::lists('nombreEmpleado','idEmpleado');
+		$areas = Ara::lists('nombreArea','idArea');
+		return(View::make('atenciones/listar',array(
+			'fichas' => $fichas, 
+			'clientes' => $clientes,
+			'empleados' => $empleados,
+			'areas' => $areas
+			)
+		));
 	}
 
 

@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"al",
+				"alumnos"
+			],
+			[
+				"th",
+				"th	Tag"
+			],
+			[
+				"Ser",
+				"Servicio"
+			],
+			[
 				"mEAS",
 				"Measures"
 			],
@@ -50,10 +62,6 @@
 			[
 				"t",
 				"th	Tag"
-			],
-			[
-				"th",
-				"thead	Tag"
 			],
 			[
 				"b",
@@ -316,71 +324,54 @@
 	"buffers":
 	[
 		{
-			"file": "/D/Dropbox/consultaProgreso.sql",
+			"file": "/D/xampp/htdocs/panelsgd/app/views/home.blade.php",
 			"settings":
 			{
-				"buffer_size": 529,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/Atencion.php",
-			"settings":
-			{
-				"buffer_size": 1341,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Metodología:\n\nIteración como fomra de trabajo\nLenguaje de programación\n\nSolución propuesta:\n\nWeb + BI\nSistema transaccional\n-----------------------\nmodelo conceptual BI \n-----------------------\nCascada + Kimbal metodología \n\nSacar FODAS \nAnalizar las viabilidades (el orden es correcto).\n\n",
-			"file": "/D/Dropbox/feedback BI",
-			"file_size": 311,
-			"file_write_time": 130918516557317203,
-			"settings":
-			{
-				"buffer_size": 289,
-				"line_ending": "Windows",
-				"name": "Metodología:"
-			}
-		},
-		{
-			"file": "app/views/dashboard.blade.php",
-			"settings":
-			{
-				"buffer_size": 306,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "WITH MEMBER [Measures].[caluclado] as '[Measures].[total] * 100 ',\nformat_string = '0.00%'\nselect \n  NON EMPTY {[Measures].[total], [Measures].[caluclado]} ON COLUMNS,\n  NON EMPTY {[tipoAtencion.tipoAtencion_JER].[All tipoAtencion.tipoAtencion_JERs], [tipoAtencion.tipoAtencion_JER].[Mantención]} ON ROWS\nfrom [Cubo Porcentual]\n\n\nwith member [Measures].[ShareToYear] as '[Measures].[Sales]/([Measures].[Sales], Ancestor([Time].CurrentMember, [Time].[Years]))', \nformat_string='0.00%' \nselect\n	{[Measures].[Sales],[Measures].[ShareToYear]} ON COLUMNS,\n	Time.Members ON ROWS \nfrom [SteelWheelsSales]\n\n\nwith member [Measures].[calculado] as '([Measures].[total] / [Measures].[total])', format_string = \"0.0%\"\nselect \n	NON EMPTY {[Measures].[total], [Measures].[calculado]} ON COLUMNS,\n	NON EMPTY Crossjoin({[tipoAtencion.tipoAtencion_JER].[Mantención]}, {[Servicio.Servicio_JER].[Bombas de agua], [Servicio.Servicio_JER].[Calderas], [Servicio.Servicio_JER].[Portones], [Servicio.Servicio_JER].[Proyectos]}) ON ROWS\nfrom [Cubo Porcentual]\n\n\n\n\n\n\nSELECT s.nombreArea, COUNT(f.idAtencion) * 100 / general.total, general.total\nFROM factAtencion f\nINNER JOIN dimTiempo t\n	ON f.idTiempo = t.idTiempo\nINNER JOIN dimServicioArea s\n	ON s.idServicioArea = f.idServicioArea\nINNER JOIN (\n	SELECT count(factAtencion.idAtencion) as total, factAtencion.idServicioArea\n	FROM factAtencion\n	INNER JOIN dimTiempo\n		ON factAtencion.idTiempo = dimTiempo.idTiempo\n	INNER JOIN dimServicioArea\n		ON dimServicioArea.idServicioArea = factAtencion.idServicioArea\n	WHERE dimTiempo.nomMes = 'ENERO'\n	AND dimTiempo.numAno = 2013\n	) as general\n	ON f.idServicioArea = general.idServicioArea\nWHERE t.nomMes = 'ENERO'\nAND t.numAno = 2013\ngroup by s.idAreaOrigen",
-			"settings":
-			{
-				"buffer_size": 1723,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/EmergenciaController.php",
-			"settings":
-			{
-				"buffer_size": 1896,
+				"buffer_size": 23734,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/Emergencia.php",
+			"file": "/D/xampp/htdocs/panelsgd/app/controllers/HomeController.php",
 			"settings":
 			{
-				"buffer_size": 778,
-				"line_ending": "Windows"
+				"buffer_size": 797,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Algunos problemas comunes de las calderas de agua, es que hacen ruido, producen bolsas de aire, y algunas calderas producen poco calor o pueden presentar fugas de agua. Se pueden tomar algunas medidas con el fin de identificar los problemas potenciales. Esta revisión implica elevar el termostato, y la comprobación del estado de diversas partes del sistema (es decir: interruptores, fusibles, interruptores automáticos, nivel de agua, y los controles de seguridad del quemador).",
+			"file": "/D/xampp/htdocs/panelsgd/app/routes.php",
 			"settings":
 			{
-				"buffer_size": 479,
-				"line_ending": "Windows"
+				"buffer_size": 1157,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/xampp/htdocs/panelsgd/app/models/Notificacion.php",
+			"settings":
+			{
+				"buffer_size": 128,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/xampp/htdocs/panelsgd/app/models/Usuario.php",
+			"settings":
+			{
+				"buffer_size": 319,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<div class=\"col-lg-8 col-md-8 col-sd-12 col-xs-12\">\n	<br/>\n	<table id=\"tabla\" class=\"table table-bordered\">\n		<thead>\n			<tr>\n				<th>Evaluador</th>\n				<th>Evaluado</th>\n				<th>Relacion</th>\n				<th>Evaluaci&oacute;n</th>\n				<th>Feedback</th>\n				<th>Opciones</th>\n			</tr>\n		</thead>\n		<tbody>\n			@foreach($evaluaciones as $evaluacion)\n				<tr>\n					<td>{{$evaluacion->dEvaluador}}</td>\n					<td>{{$evaluacion->dEvaluado}}</td>\n					<td>{{$evaluacion->relacion}}</td>\n					<td class=\"text-center\">{{$evaluacion->estado > 0 ? \"<a href='#'><span class='fa fa-check-circle fa-2x text-success'></span></a>\" : \"\"}}</td>\n					<td>{{{$evaluacion->estadoFeedback > 0 ? \"<a href='#'><span class='fa fa-check-circle text-success'></span></a>\" : \"\"}}}</td>\n					<td>\n						<a href=\"#\" class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#showEval\">\n							<span class=\"fa fa-eye\"></span>\n						</a>\n						<a href=\"#\" class=\"btn btn-info\">\n							<span class=\"fa fa-envelope\"></span>\n						</a>\n						<a href=\"#\" class=\"btn btn-info\">\n							<span class=\"fa fa-eraser\"></span>\n						</a>\n					</td>\n				</tr>\n			@endforeach\n		</tbody>\n	</table>\n</div>\n<div class=\"col-lg-4 col-md-4 col-sd-12 col-xs-12\">\n	<br/>\n	<div class=\"col-lg-12\">\n		<div class=\"panel\">\n			<div class=\"panel-heading\">\n				<h4>Estado de Evaluaciones</h4>\n				<ul class=\"links\">\n					<li>\n						<a href=\"#\">\n							<i class=\"fa fa-line-chart\"></i>\n						</a>\n					</li>\n				</ul>\n			</div>\n			<div class=\"panel-body\">\n				<div id=\"uno\" class=\"chart-height\"></div>\n			</div>\n		</div>\n	</div>\n	<div class=\"col-lg-12\">\n		<div class=\"panel\">\n			<div class=\"panel-heading\">\n				<h4>Estado de Feedbacks</h4>\n				<ul class=\"links\">\n					<li>\n						<a href=\"#\">\n							<i class=\"fa fa-line-chart\"></i>\n						</a>\n					</li>\n				</ul>\n			</div>\n			<div class=\"panel-body\">\n				<div id=\"dos\" class=\"chart-height\"></div>\n			</div>\n		</div>\n	</div>\n</div>\n<div class=\"modal fade\" id=\"showEval\" role=\"dialog\" aria-labelledby=\"myModalLabel\">\n	<div class=\"modal-dialog\" role=\"document\">\n		<div class=\"modal-content\">\n			<div class=\"modal-header\">\n				<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n				<h4 class=\"modal-title\" id=\"myModalLabel\">Modal title</h4>\n			</div>\n			<div class=\"modal-body\"> texto</div>\n			<div class=\"modal-footer\">\n				<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n				<button type=\"button\" class=\"btn btn-primary\">Save changes</button>\n			</div>\n		</div>\n	</div>\n</div>\n\n<script type=\"text/javascript\">\n	var $border_color = \"#f9f9f9\";\n	var $grid_color = \"#eeeeee\";\n	var $default_black = \"#c3ddec\";\n	var $default_white = \"#ffffff\";\n	var $sky_blue = \"#edf5fa\";\n	var $green = \"#8ecf67\";\n	var $blue = \"#12A4F4\";\n	var $red = \"#CB4B4B\";\n\n	$(document).ready(function () {\n		$('#tabla').DataTable();\n		var data = {{ json_encode($datos)}};\n		$.plot($(\"#uno\"), data,{\n			series: {\n					pie: {\n					radius: 1, \n					show: true,\n					label: {\n		            	show: true,\n						radius: 2/3,\n						formatter: function(label, series) {\n							return '<div style=\"font-size:11px ;text-align:center; padding:2px; color:white;\">'+label+'<br/>'+Math.round(series.percent)+'%</div>';\n						},\n						threshold: 0.1,\n					}\n				},\n			},\n			legend:{  \n				show: false,\n			},\n			colors: [$red, $green, $default_black],\n		});\n		\n		var data = {{ json_encode($feedbacks)}};\n		$.plot($(\"#dos\"), data,{\n			series: {\n				pie: {\n					radius: 1, \n					show: true,\n					label: {\n		            	show: true,\n						radius: 2/3,\n						formatter: function(label, series) {\n							return '<div style=\"font-size:11px ;text-align:center; padding:2px; color:white;\">'+label+'<br/>'+Math.round(series.percent)+'%</div>';\n						},\n						threshold: 0.1,\n					}\n				},\n			},\n			legend:{  \n				show: false,\n			},\n			colors: [$red, $green, $default_black],\n		});\n	});\n</script>",
+			"file": "/D/xampp/htdocs/panelsgd/app/views/listEvaluacion.blade.php",
+			"file_size": 3917,
+			"file_write_time": 130875112540000000,
+			"settings":
+			{
+				"buffer_size": 3917,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -428,24 +419,31 @@
 	},
 	"file_history":
 	[
+		"/D/xampp/htdocs/panelsgd/app/controllers/NotificacionController.php",
+		"/D/xampp/htdocs/panelsgd/app/views/notificaciones.blade.php",
+		"/D/xampp/htdocs/panelsgd/app/views/menu.blade.php",
+		"/D/xampp/htdocs/panelsgd/app/config/database.php",
+		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
+		"/D/xampp/htdocs/hermes/app/views/dashboard.blade.php",
+		"/D/xampp/htdocs/hermes/app/config/database.php",
+		"/D/Dropbox/feedback BI",
+		"/D/xampp/htdocs/hermes/app/controllers/EmergenciaController.php",
+		"/D/xampp/htdocs/hermes/app/models/Emergencia.php",
+		"/D/xampp/htdocs/hermes/app/models/Atencion.php",
+		"/D/Dropbox/consultaProgreso.sql",
 		"/D/xampp/htdocs/hermes/app/models/Ara.php",
 		"/C/Users/JoGe/Downloads/CustomParameterExampleInPentahoCDE(2)/exportManifest.xml",
 		"/D/Pentaho/biserver-ce/pentaho-solutions/system/security.properties",
-		"/D/xampp/htdocs/hermes/app/controllers/EmergenciaController.php",
 		"/D/xampp/htdocs/hermes/app/controllers/ContratoController.php",
 		"/D/xampp/htdocs/hermes/app/models/Contrato.php",
-		"/D/xampp/htdocs/hermes/app/models/Emergencia.php",
 		"/D/xampp/htdocs/hermes/app/views/emergencias/listar.blade.php",
-		"/D/xampp/htdocs/hermes/app/views/dashboard.blade.php",
 		"/D/xampp/htdocs/hermes/app/routes.php",
 		"/D/xampp/htdocs/hermes/app/controllers/DashboardController.php",
 		"/D/xampp/htdocs/hermes/app/controllers/AtencionController.php",
-		"/D/xampp/htdocs/hermes/app/models/Atencion.php",
 		"/D/xampp/htdocs/hermes/app/views/atenciones/verEquipo.blade.php",
 		"/D/xampp/htdocs/hermes/app/views/index.blade.php",
 		"/D/xampp/htdocs/hermes/app/controllers/MantencionController.php",
 		"/D/xampp/htdocs/hermes/app/controllers/LoginController.php",
-		"/D/xampp/htdocs/hermes/app/views/layout.blade.php",
 		"/D/xampp/htdocs/hermes/composer.json",
 		"/D/xampp/htdocs/hermes/app/views/contratos/nuevo.blade.php",
 		"/D/Pentaho/biserver-ce/pentaho-solutions/system/sessionStartupActions.xml",
@@ -468,7 +466,6 @@
 		"/D/xampp/htdocs/hermes/app/views/home.blade.php",
 		"/D/xampp/htdocs/hermes/app/controllers/ServicioController.php",
 		"/D/Pentaho/biserver-ce/tomcat/logs/pentaho.log",
-		"/D/xampp/htdocs/hermes/app/config/database.php",
 		"/D/Pentaho/biserver-ce/tomcat/webapps/pentaho/WEB-INF/classes/log4j.xml",
 		"/D/Dropbox/Pentaho/Cubos/Cubo2 Ematel.xml",
 		"/D/xampp/htdocs/hermes/app/models/Frecuencia.php",
@@ -549,13 +546,7 @@
 		"/D/xampp/htdocs/pHermes/sig.php",
 		"/D/xampp/htdocs/pHermes/sk",
 		"/D/xampp/htdocs/ayekantun/ayekantun.php",
-		"/D/xampp/htdocs/ayekantun/cabecera.php",
-		"/D/xampp/htdocs/ayekantun/index.php",
-		"/D/xampp/htdocs/ayekantun/actividades.php",
-		"/D/xampp/htdocs/ayekantun/propuesta.php",
-		"/D/xampp/htdocs/ayekantun/admin/setNoticia.php",
-		"/D/xampp/htdocs/ayekantun/admin/noticiasController.php",
-		"/D/xampp/htdocs/ayekantun/css/mineduc.css"
+		"/D/xampp/htdocs/ayekantun/cabecera.php"
 	],
 	"find":
 	{
@@ -573,6 +564,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			",",
+			"],",
+			"], ",
+			"],",
+			",",
+			"],",
+			"cros",
 			"		\n",
 			"input",
 			"js",
@@ -693,14 +691,7 @@
 			"footer",
 			"editor",
 			"titular",
-			"detalle",
-			"Titular",
-			"bajada",
-			"titular",
-			"makeNoticia",
-			"load",
-			"editNoticia",
-			"ckedit"
+			"detalle"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -720,50 +711,51 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/D/Dropbox/consultaProgreso.sql",
+					"file": "/D/xampp/htdocs/panelsgd/app/views/home.blade.php",
 					"settings":
 					{
-						"buffer_size": 529,
+						"buffer_size": 23734,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								529,
-								529
+								600,
+								3781
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SQL/SQL.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2691.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/models/Atencion.php",
+					"file": "/D/xampp/htdocs/panelsgd/app/controllers/HomeController.php",
 					"settings":
 					{
-						"buffer_size": 1341,
+						"buffer_size": 797,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1341,
-								1341
+								717,
+								717
 							]
 						],
 						"settings":
@@ -772,57 +764,59 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 621.0,
+						"translation.y": 302.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/D/Dropbox/feedback BI",
+					"file": "/D/xampp/htdocs/panelsgd/app/routes.php",
 					"settings":
 					{
-						"buffer_size": 289,
+						"buffer_size": 1157,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								123,
-								0
+								933,
+								933
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Metodología:",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 486.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "app/views/dashboard.blade.php",
+					"file": "/D/xampp/htdocs/panelsgd/app/models/Notificacion.php",
 					"settings":
 					{
-						"buffer_size": 306,
+						"buffer_size": 128,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								306,
-								306
+								128,
+								128
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -832,106 +826,53 @@
 				},
 				{
 					"buffer": 4,
+					"file": "/D/xampp/htdocs/panelsgd/app/models/Usuario.php",
 					"settings":
 					{
-						"buffer_size": 1723,
+						"buffer_size": 319,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1039,
-								1039
+								137,
+								148
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/SQL/SQL.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 345.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "app/controllers/EmergenciaController.php",
+					"file": "/D/xampp/htdocs/panelsgd/app/views/listEvaluacion.blade.php",
 					"settings":
 					{
-						"buffer_size": 1896,
+						"buffer_size": 3917,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								192,
-								206
+								2868,
+								2877
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/models/Emergencia.php",
-					"settings":
-					{
-						"buffer_size": 778,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								733,
-								733
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 138.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"settings":
-					{
-						"buffer_size": 479,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								479,
-								479
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQL/SQL.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2520.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

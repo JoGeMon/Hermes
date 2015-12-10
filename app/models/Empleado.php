@@ -32,4 +32,21 @@ Class Empleado extends Eloquent{
 		return $fila;
 	}
 
+
+	/**
+	 * Método que agrega un empleado a un equipo de atención
+	 *
+	 * @param $idAtencion = Identificador de atención
+	 * @param $idEmpleado = Identificado de empleado
+	 * @return $fila = Cantidad de filas afectadas
+	 * @author Jorge Velarde
+	 **/
+	static function remmoveEmpleadoEquipo($idAtencion, $idEmpleado){
+		$fila = DB::table('tblequipoatencion')
+			->where('idAtencion', $idAtencion)
+			->where('idEmpleado', $idEmpleado)
+			->delete();
+		return $fila;
+	}
+
 }

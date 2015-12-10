@@ -25,4 +25,25 @@ extends Eloquent{
 		//dd(DB::getQueryLog());
 		return $fichas;
 	}
+
+	/**
+	 * Método que trae todas las atenciones del mes en curso del usurio logueado
+	 *
+	 * @param idEmpleado = Identificador del usuario logueado
+	 * @return stdArray Arreglo de atencinoes mensuales
+	 * @author Jorge Velarde
+	 **/
+	public static function getMisEmergencias($idEmpleado){
+		$fichas = DB::table('tblatencion')
+			->join('tblcontrato', 'tblatencion.idContrato', '=', 'tblcontrato.idContrato')
+			->join('tblcliente', 'tblcontrato.idCliente', '=', 'tblcliente.idCliente')
+			->join('tblequipoatencion', 'tblatencion.idEquipoAtencion', '=', 'tblequipoatencion.idEquipoAtencion')
+			->where('tblcontrato.estado', 1)
+			->where('tblatencion.idTipoAtencion', 2)
+			->where('tblequipoatencion.idEmpleado', $idEmpleado)
+			->select('tblcliente.*', 'tblatencion.*')
+			->groupBy('tblcontrato.idContrato')
+			->get();
+		return $fichas;
+	}
 }

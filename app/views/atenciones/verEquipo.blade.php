@@ -7,10 +7,16 @@
 	});
 	</script>
 	<div class="row">
+		<div class="col-md-11 text-right">
+			<a  href="{{URL::route('mantenciones')}}" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span>Volver</a>
+		</div>
+	</div>
+	<br/>
+	<div class="row">
 		<div class="col-md-11">
-			<div class="panel panel-default">
+			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title text-center">Detalle de la atención</h3>
+					<h4 class="panel-title">Detalles de atención</h4>
 				</div>
 				<div class="panel-body">
 					<div class="row">
@@ -27,44 +33,24 @@
 							<p>{{$contrato->codigoContrato}}</p>
 						</div>
 					</div>
-					<br/>
-					<div class="col-md-6">
-						<table class="table table-bordered">
-							<thead>
-								<tr class="active"><th>Servicios</th></tr>
-							</thead>
-							<tbody>
-								@foreach($detalleContrato as $servicio)
-								<tr><td>{{$servicio->detalleServicio}}</td></tr>
-								@endforeach
-							</tbody>
-						</table>
-					</div>
-					<div class="col-md-6">
-						<table class="table table-bordered">
-							<thead>
-								<tr class="active"><th>Colaboradores</th></tr>
-							</thead>
-							<tbody>
-								@foreach($detalleContrato as $servicio)
-								<tr><td>{{$servicio->detalleServicio}}</td></tr>
-								@endforeach
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel panel-heading"><h3 class="panel-title">Equipo de atención</h3></div>
-				<div class="panel-body"->
 					<div class="row">
-						<div class="col-lg-12 text-right">
-							<button class="btn btn-success" data-toggle="modal" data-target="#modalEmpleado"><span class="fa fa-user-plus"></span> Agregar trabajador</button>
+						<div class="col-md-2">
+							<p><strong>Servicios: </strong></p>
+						</div>
+						<div class="col-md-10">
+							@foreach($detalleContrato as $servicio)
+									<p>{{$servicio->detalleServicio}}</p>
+							@endforeach
 						</div>
 					</div>
-					<br/>
+					<hr>
 					<div class="row">
-						<table class="table table-stripped" id="tblEquipo">
+						<div class="col-md-12">
+							<div class="text-right">
+								<button class="btn btn-success" data-toggle="modal" data-target="#modalEmpleado"><span class="fa fa-user-plus"></span> Asignar trabajador</button>
+							</div>
+							<br/>
+							<table class="table table-bordered" id="tblEquipo">
 							<thead>
 								<tr class="active">
 									<th>Trabajador</th>
@@ -75,14 +61,15 @@
 								@foreach($equipo as $miembro)
 									<tr>
 										<td>{{$miembro->nombreEmpleado}} {{$miembro->apellidoPaternoEmpleado}} {{$miembro->apellidoMaternoEmpleado}}</td>
-										<td>Acciones</td>
+										<td><a href="{{URL::route('mantencion/equipo/remove',array($atencion->idAtencion,$miembro->idEmpleado))}}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a></td>
 									</tr>
 								@endforeach
 							</tbody>
 						</table>
-					<div>
-				</div><!-- panel body -->
-			</div><!-- panel default -->
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -109,7 +96,7 @@
       									@if(!in_array($trabajador->idEmpleado, $arrEquipo))
 											<td><a href="{{URL::route('mantencion/equipo/add',array($atencion->idAtencion,$trabajador->idEmpleado))}}" class="btn btn-success"><span class="glyphicon glyphicon-ok"> Asignar</span></a></td>
 										@else
-											<td><a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"> Quitar </span></a></td>
+											<td><a href="{{URL::route('mantencion/equipo/add',array($atencion->idAtencion,$trabajador->idEmpleado))}}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"> Quitar </span></a></td>
 	      								@endif
       								</tr>
       							@endforeach

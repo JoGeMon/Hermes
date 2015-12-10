@@ -17,7 +17,7 @@
 <div class="container">
 	<header>
 		<div class="page-header">
-			<h1><img src="img/logo.png"></h1>
+			<h1><img src="{{asset('/assets/images/emalogo.png')}}"></h1>
 		</div>
     </header>
     <div class="row">
@@ -31,7 +31,7 @@
 				
 				<div class="carousel-inner">
                     <div class="item active">
-                        <img data-src="holder.js/840x400/sky/text:Primer consejo de seguridad" alt="First slide">
+                        <img src="{{asset('/assets/images/riesgo1.jpg')}}" alt="riesgo1">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Ejemplo 1</h1>
@@ -41,7 +41,7 @@
                     </div>
 					
                     <div class="item">
-                        <img data-src="holder.js/840x400/vine/text:Segunda slide" alt="Second slide">
+                        <img src="{{asset('/assets/images/riesgo2.jpg')}}" alt="riesgo2">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Ejemplo 2</h1>
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img data-src="holder.js/840x400/industrial/text:Tercera slide" alt="Third slide">
+                        <img src="{{asset('/assets/images/riesgo3.jpg')}}" alt="riesgo3">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Ejemplo 3</h1>
